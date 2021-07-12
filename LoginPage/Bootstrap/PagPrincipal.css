@@ -1,0 +1,93 @@
+﻿
+.Rectangle52 {
+    /* Rectangle 52 */
+    position: absolute;
+    width: 4%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    /* Azules/70 */
+    background: #196FA5;
+    mix-blend-mode: normal;
+}
+
+.Rectangle52:hover{
+    width:200px;
+
+}
+
+.UserI {
+    /* User */
+
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    left:2%;
+    top: 2%;
+    overflow:visible;
+}
+
+.HomeI {
+    position: absolute;
+    width: 80%;
+    height: 8%;
+    left: 12%;
+    top: 15%;
+}
+
+.StockI {
+    position: absolute;
+    width: 60%;
+    height: 6%;
+    left: 20%;
+    top: 25%;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+}
+
+.ProductoI {
+    position: absolute;
+    width: 60%;
+    height: 6%;
+    left: 20%;
+    top: 35%;
+}
+
+.SucursalI {
+    position: absolute;
+    width: 75%;
+    height: 7.5%;
+    left: 13.5%;
+    top: 45%;
+}
+
+.CompraI {
+    position: absolute;
+    width: 80%;
+    height: 8%;
+    left: 11%;
+    top: 55%;
+}
+
+.MovimientoI {
+    position: absolute;
+    width: 70%;
+    height: 7%;
+    left: 15%;
+    top: 65%;
+}
+
+.SettingsI {
+    position: absolute;
+    width: 70%;
+    height: 7%;
+    left: 15%;
+    top: 80%;
+}
+
+.SingOutI {
+    position: absolute;
+    width: 70%;
+    height: 7%;
+    left: 15%;
+    top: 95%;
+}
