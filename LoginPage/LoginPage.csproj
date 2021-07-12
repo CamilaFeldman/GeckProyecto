@@ -107,6 +107,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Bootstrap\BootstrapLogin.css" />
+    <Content Include="Bootstrap\PagPrincipal.css" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -125,7 +126,19 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Icons\.vs\Icons\v16\.suo" />
+    <Content Include="Icons\.vs\slnx.sqlite" />
+    <Content Include="Icons\.vs\VSWorkspaceState.json" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Icons\icon_compra.png" />
+    <Content Include="Icons\icon_de_stock.png" />
+    <Content Include="Icons\icon_home.png" />
+    <Content Include="Icons\icon_movimient.png" />
+    <Content Include="Icons\icon_product.png" />
+    <Content Include="Icons\icon_setting.png" />
+    <Content Include="Icons\icon_sing_out.png" />
+    <Content Include="Icons\icon_sucursal.png" />
+    <Content Include="Icons\icon_user.png" />
     <Content Include="Imagenes\Vector4.png" />
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
