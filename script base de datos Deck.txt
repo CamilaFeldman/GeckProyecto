@@ -1,0 +1,74 @@
+CREATE DATABASE Deck;
+USE Deck;
+CREATE TABLE Usuarios (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(30) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	password VARCHAR(20) NOT NULL,
+	fecha_registro DATETIME NOT NULL,
+	ban TINYINT NOT NULL,
+	PRIMARY KEY(id)
+);
+CREATE TABLE Stock (
+	id INT NOT NULL AUTO_INCREMENT;
+	nombre VARCHAR(40) NOT NULL,
+	sucursal VARCHAR(40) NOT NULL,
+	precio_unitario INT NOT NULL,
+	fecha_vencimiento DATETIME NOT NULL,
+	PRIMARY KEY(id)
+);
+
+CREATE TABLE Proveedor_especifico (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(30) NOT NULL,
+	direccion VARCHAR(100) NOT NULL,
+	telefono VARCHAR(14) NOT NULL,
+	email VARCHAR(255) NOT NULL,
+	PRIMARY KEY(id)
+);
+CREATE TABLE Proveedores (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(30) NOT NULL,
+	descripcion TEXT,
+	PRIMARY KEY(id)
+);
+CREATE TABLE Producto_especifico (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(40) NOT NULL,
+	precio INT NOT NULL,
+	marcas VARCHAR(20) NOT NULL,
+	stock TINYINT NOT NULL,
+	proveedor VARCHAR(30) NOT NULL,
+	cant_min INT NOT NULL,
+	cant_max INT NOT NULL,
+	presentacion VARCHAR(40) NOT NULL,
+	PRIMARY KEY(id)
+);
+CREATE TABLE Movimientos (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(30) NOT NULL,
+	cantidad INT NOT NULL,
+	sucursal VARCHAR(40) NOT NULL,
+	precio_unitario INT NOT NULL,
+	precio_final INT NOT NULL,
+	PRIMARY KEY(id)
+);
+CREATE TABLE Sucursales (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(30) NOT NULL,
+	direccion VARCHAR(100) NOT NULL,
+	PRIMARY KEY(id)
+);
+CREATE TABLE Carrito (
+	id INT NOT NULL AUTO_INCREMENT,
+	nombre VARCHAR(40) NOT NULL,
+	cantidad INT NOT NULL,
+	sucursal VARCHAR(40) NOT NULL,
+	precio_unitario INT NOT NULL,
+	precio_final INT NOT NULL,
+	total INT NOT NULL,
+	PRIMARY KEY(id)
+);
+
+
+
