@@ -1,0 +1,384 @@
+﻿.Vector-4 {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0px;
+    top: 0px;
+}
+
+
+.formulario-titulo {
+    /* Login */
+    position: absolute;
+    width: 7%;
+    height: 3%;
+    left: 47%;
+    top: 20%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 170%;
+    line-height: 56px;
+    /* Negro */
+    color: #212529;
+    
+}
+.rectangulo-google {
+    /* Rectangle 8 */
+    position: absolute;
+    width: 23%;
+    height: 5.5%;
+    left: 38%;
+    top: 35%;
+    /* Azules/azul medio oscuro */
+    background: #0F80AA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+}
+.texto-google {
+    /* o ingresar con google */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0%;
+    top: -55%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 150%;
+    line-height: 100%;
+    /* identical to box height */
+    text-align: center;
+    /* Blanco */
+    color: white;
+    /* Blanco */
+
+}
+.formulario-mail {
+    /* Ingresar email: */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 30%;
+    top: 40%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* identical to box height */
+    /* Negro */
+    color: #212529;
+
+}
+.formulario-barra {
+    /* Rectangle 5 */
+    position: absolute;
+    width: 38%;
+    height: 6%;
+    left: 30%;
+    top: 50%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+
+}
+.formulario-contraseña {
+    /* Contraseña: */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 30%;
+    top: 58%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* Negro */
+    color: #212529;
+}
+.formulario-barra2 {
+    /* Rectangle 8 */
+    position: absolute;
+    width: 38%;
+    height: 6%;
+    left: 30%;
+    top: 68%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.login-rectangulo {
+    /* Rectangle 7 */
+    position: absolute;
+    width: 10%;
+    height: 6%;
+    left: 30%;
+    top: 80%;
+    /* Azules/azul medio oscuro */
+    background: #0F80AA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+}
+.login-texto {
+    /* Login */
+    position: absolute;
+    width: 7%;
+    height: 5%;
+    left: 31.3%;
+    top: 80.5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 145%;
+    line-height: 140%;
+    /* identical to box height */
+    text-align: center;
+    /* Blanco */
+    color: white;
+    /* Blanco */
+    z-index: 1;
+}
+.recordar-contraseña {
+    /* ¿No recuerda su contraseña? */
+    position: absolute;
+    width: 20%;
+    height: 7%;
+    left: 52%;
+    top: 78%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120%;
+    line-height: 120%;
+    /* Azules/azul medio oscuro */
+    color: #0F80AA;
+}
+.no-registrado {
+    /* ¿Aún no esta registrado? Registrarse */
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    left: 30%;
+    top: 88%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 110%;
+    line-height: 110%;
+    color: black;
+    mix-blend-mode: normal;
+}
+.registrarse {
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    left: 44%;
+    top: 90.5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 110%;
+    line-height: 110%;
+    color: dodgerblue;
+    mix-blend-mode: normal;
+    text-decoration:none;
+}
+.completar-email {
+    text-decoration: none;
+    width: 90%;
+    height: 70%;
+    transform: translate(4%,20%);
+    border: none;
+    background-color: #BCE0FD;
+    font-size:140%;
+}
+    .completar-email:focus, active, focus-visible {
+        border: none;
+        border-color: none;
+        outline:none;
+    }
+    /*
+
+        A partir de aca comienza la pagina register
+
+    */
+
+.formulario-mail-register {
+    /* Ingresar email: */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 20%;
+    top: 40%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* identical to box height */
+    /* Negro */
+    color: #212529;
+}
+.formulario-barra-register {
+    /* Rectangle 5 */
+    position: absolute;
+    width: 25%;
+    height: 6%;
+    left: 20%;
+    top: 50%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.formulario-repetirUsuario-register {
+    /* Ingresar email: */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 20%;
+    top: 55%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* identical to box height */
+    /* Negro */
+    color: #212529;
+}
+.formulario-barra2-register {
+    /* Rectangle 5 */
+    position: absolute;
+    width: 25%;
+    height: 6%;
+    left: 20%;
+    top: 65%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.formulario-contraseña-register {
+    /* Contraseña: */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 53%;
+    top: 40%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* Negro */
+    color: #212529;
+}
+.formulario-barra3-register {
+    /* Rectangle 5 */
+    position: absolute;
+    width: 25%;
+    height: 6%;
+    left: 53%;
+    top: 50%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+.formulario-repetirContraseña-register {
+    /* Contraseña: */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 53%;
+    top: 55%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* Negro */
+    color: #212529;
+}
+.formulario-barra4-register {
+    /* Rectangle 5 */
+    position: absolute;
+    width: 25%;
+    height: 6%;
+    left: 53%;
+    top: 65%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.login-rectangulo-register {
+    /* Rectangle 7 */
+    position: absolute;
+    width: 10%;
+    height: 6%;
+    left: 20%;
+    top: 80%;
+    /* Azules/azul medio oscuro */
+    background: #0F80AA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+}
+
+.login-texto-register {
+    /* Login */
+    position: absolute;
+    width: 7%;
+    height: 5%;
+    left: 21.3%;
+    top: 80.5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 145%;
+    line-height: 140%;
+    /* identical to box height */
+    text-align: center;
+    /* Blanco */
+    color: white;
+    /* Blanco */
+    z-index: 1;
+}
+.ya-registrado {
+    /* ¿Aún no esta registrado? Registrarse */
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    left: 20%;
+    top: 88%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 110%;
+    line-height: 110%;
+    color: black;
+    mix-blend-mode: normal;
+}
+
+.loguearse {
+    position: absolute;
+    width: 30%;
+    height: 7%;
+    left: 31.5%;
+    top: 90.5%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 110%;
+    line-height: 110%;
+    color: dodgerblue;
+    mix-blend-mode: normal;
+    text-decoration: none;
+}
