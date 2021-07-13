@@ -38,20 +38,23 @@
 .main-menu {
     background: var(--blanco);
     border-right: 1px solid var(--gris);
-   
-    position: absolute;
-
     top: 0;
     bottom: 0;
-    height: 100%;
+    right: 100%;
+    height: 100vh;
     left: 0;
     width: 60px;
     overflow: hidden;
     -webkit-transition: width .05s linear;
     transition: width .05s linear;
     -webkit-transform: translateZ(0) scale(1,1);
-    z-index: 1000;
+    flex-direction: column;
+    position: fixed;
+    z-index: 10;
+    
+    margin: 0 auto;
 }
+
 
     .main-menu > ul {
         margin: 7px 0px 7px 0px;
@@ -80,11 +83,11 @@
     .main-menu .nav-icon {
         position: relative;
         display: table-cell;
-        width: 60px;
-        height: 36px;
+        width: 53px;
+        height: 53px;
         text-align: center;
         vertical-align: middle;
-        font-size: 18px;
+        font-size: 50px;
     }
 
     .main-menu .nav-text {
@@ -92,21 +95,17 @@
         display: table-cell;
         vertical-align: middle;
         width: 190px;
-        font-family: 'Titillium Web', sans-serif;
+        
+        font-family: Mandali;
+        font-style: normal;
+        
     }
 
     .main-menu > ul.logout {
         position: absolute;
         left: 0px;
         bottom: 0px;
-        /* Session-Leave */
-
-        /* position: absolute;
-        width: 53px;
-        height: 53px;
-        left: 67px;
-        top: 1062px;*/
-       
+             
     }
 
 .no-touch .scrollable.hover {
@@ -151,6 +150,8 @@ nav {
     float: left;
     background: var(--a-claro);
     width: 100%;
-    padding: 5px 40px 5px 80px ;
+    padding: 5px 40px 5px 80px;
     height: 100%;
+    
+    margin: 0 auto;
 }
