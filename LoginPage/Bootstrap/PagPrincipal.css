@@ -37,8 +37,8 @@
 }
 
 .main-menu {
-    background: #212121;
-    border-right: 1px solid #e5e5e5;
+    background: var(--blanco);
+    border-right: 1px solid var(--gris);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -67,7 +67,7 @@
             display: table;
             border-collapse: collapse;
             border-spacing: 0;
-            color: #999;
+            color: var(--gris);
             font-family: arial;
             font-size: 14px;
             text-decoration: none;
@@ -95,9 +95,9 @@
     }
 
     .main-menu > ul.logout {
-        position: relative;
-        left: 0;
-        bottom: 0;
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
     }
 
 .no-touch .scrollable.hover {
@@ -128,40 +128,25 @@ nav {
     }
 
     .main-menu li:hover > a, nav.main-menu li.active > a, .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus, .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus, .no-touch .dashboard-page nav.dashboard-menu ul li:hover a, .dashboard-page nav.dashboard-menu ul li.active a {
-        color: #fff;
-        background-color: #5fa2db;
+       color: var(--negro);
+        /*background-color: #5fa2db;*/
+       /* width: 319px;
+        height: 74px;
+        left: -1px;
+        top: 240px; */
+        background-color: #F1F9FF;
+        box-shadow: 0px 4px 44px rgba(0, 0, 0, 0.25);
     }
 
 .area {
     float: left;
-    background: #e2e2e2;
+    background: var(--a-claro);
     width: 100%;
     padding: 80px;
     height: 100%;
 }
 /*
-.main {
-    background: var(--a-claro);
-}
-.fa-2x {
-    font-size: 2em;
-}
 
-.fa {
-    position: relative;
-    display: table-cell;
-    width: 60px;
-    height: 36px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 20px;
-}
-
-
-.main-menu:hover, nav.main-menu.expanded {
-    width: 250px;
-    overflow: visible;
-}
 
 .main-menu {
     background: var(--blanco);
