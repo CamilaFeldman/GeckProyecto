@@ -9,14 +9,16 @@ CREATE TABLE Usuarios (
 	ban TINYINT NOT NULL,
 	PRIMARY KEY(id)
 );
+
 CREATE TABLE Stock (
-	id INT NOT NULL AUTO_INCREMENT;
+	id INT NOT NULL AUTO_INCREMENT,
 	nombre VARCHAR(40) NOT NULL,
 	sucursal VARCHAR(40) NOT NULL,
 	precio_unitario INT NOT NULL,
 	fecha_vencimiento DATETIME NOT NULL,
 	PRIMARY KEY(id)
 );
+
 
 CREATE TABLE Proveedor_especifico (
 	id INT NOT NULL AUTO_INCREMENT,
@@ -26,12 +28,14 @@ CREATE TABLE Proveedor_especifico (
 	email VARCHAR(255) NOT NULL,
 	PRIMARY KEY(id)
 );
+
 CREATE TABLE Proveedores (
 	id INT NOT NULL AUTO_INCREMENT,
 	nombre VARCHAR(30) NOT NULL,
 	descripcion TEXT,
 	PRIMARY KEY(id)
 );
+
 CREATE TABLE Producto_especifico (
 	id INT NOT NULL AUTO_INCREMENT,
 	nombre VARCHAR(40) NOT NULL,
@@ -44,6 +48,7 @@ CREATE TABLE Producto_especifico (
 	presentacion VARCHAR(40) NOT NULL,
 	PRIMARY KEY(id)
 );
+
 CREATE TABLE Movimientos (
 	id INT NOT NULL AUTO_INCREMENT,
 	nombre VARCHAR(30) NOT NULL,
@@ -53,6 +58,7 @@ CREATE TABLE Movimientos (
 	precio_final INT NOT NULL,
 	PRIMARY KEY(id)
 );
+
 CREATE TABLE Sucursales (
 	id INT NOT NULL AUTO_INCREMENT,
 	nombre VARCHAR(30) NOT NULL,
@@ -69,6 +75,5 @@ CREATE TABLE Carrito (
 	total INT NOT NULL,
 	PRIMARY KEY(id)
 );
-
 
 
