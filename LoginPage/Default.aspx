@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="LoginPage._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+<div class="area">
 
     <div class="jumbotron">
         <h1>ASP.NET</h1>
@@ -38,5 +39,5 @@
             </p>
         </div>
     </div>
-
+</div>
 </asp:Content>
