@@ -30,7 +30,6 @@
     font-size: 20px;
 }
 
-
 .main-menu:hover, nav.main-menu.expanded {
     width: 250px;
     overflow: visible;
@@ -39,7 +38,9 @@
 .main-menu {
     background: var(--blanco);
     border-right: 1px solid var(--gris);
+   
     position: absolute;
+
     top: 0;
     bottom: 0;
     height: 100%;
@@ -98,6 +99,14 @@
         position: absolute;
         left: 0px;
         bottom: 0px;
+        /* Session-Leave */
+
+        /* position: absolute;
+        width: 53px;
+        height: 53px;
+        left: 67px;
+        top: 1062px;*/
+       
     }
 
 .no-touch .scrollable.hover {
@@ -142,67 +151,6 @@ nav {
     float: left;
     background: var(--a-claro);
     width: 100%;
-    padding: 80px;
+    padding: 5px 40px 5px 80px ;
     height: 100%;
 }
-/*
-
-
-.main-menu {
-    background: var(--blanco);
-    border-right: 1px solid #e5e5e5;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    height: 100%;
-    left: 0;
-    width: 60px;
-    overflow: hidden;
-    -webkit-transition: width .05s linear;
-    transition: width .05s linear;
-    -webkit-transform: translateZ(0) scale(1,1);
-    z-index: 1000;
-}
-
-nav {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-
-    nav ul, nav li {
-        outline: 0;
-        margin: 0;
-        padding: 0;
-    }
-.main-menu .nav-icon {
-    position: relative;
-    display: table-cell;
-    width: 60px;
-    height: 36px;
-    text-align: center;
-    vertical-align: middle;
-    font-size: 18px;
-    color: var(--gris);
-}
-    .main-menu.nav-icon:hover 
-    {
-        color: var(--negro);
-    }
-
-.main-menu .nav-text {
-    position: relative;
-    display: table-cell;
-    vertical-align: middle;
-    width: 190px;
-    font-family: Mandali;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 25px;
-    line-height: 49px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-    color:var(--negro);
-}*/
