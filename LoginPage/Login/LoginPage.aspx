@@ -18,7 +18,7 @@
               
               
              <form>
-                    <h3 class="formulario-mail">Ingresar email</h3>
+                    <h3 class="formulario-mail">Ingresar mail</h3>
                     <div class="formulario-barra"><input id="Text1" type="text" class="completar-email"/></div>
                     <h3 class="formulario-contraseña">Contraseña:</h3>
                     <div class="formulario-barra2"><input id="Text2" type="password" class="completar-email"/></div>
