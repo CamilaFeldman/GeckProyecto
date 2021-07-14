@@ -17,18 +17,16 @@
              </div> 
               
               
-             <form>
-                    <h3 class="formulario-mail">Ingresar mail</h3>
-                    <div class="formulario-barra"><input id="Text1" type="text" class="completar-email"/></div>
+             <form id="form1" runat="server">
+                    <h3 class="formulario-mail">Ingresar email</h3>
+                    <div class="formulario-barra"><asp:TextBox ID="TextBox1" runat="server" class="completar-email"></asp:TextBox></div>
                     <h3 class="formulario-contraseña">Contraseña:</h3>
-                    <div class="formulario-barra2"><input id="Text2" type="password" class="completar-email"/></div>
+                    <div class="formulario-barra2"><asp:TextBox ID="TextBox2" type="password" runat="server" class="completar-email"></asp:TextBox></div>
                     <div class="login-texto">Login</div>
-                    <div class="login-rectangulo"></div>
+                    <asp:Button ID="Button1" runat="server" Text="Button" class="login-rectangulo" OnClick="Button1_Click"/>
                     <p class="recordar-contraseña">¿No recuerda su contraseña?</p>
                     <p class="no-registrado">¿Aún no está registrado?</p>
                     <a href="/Login/RegisterPage.aspx" class="registrarse">Registrarse</a>
-                    
-                 
              </form>
 
       
