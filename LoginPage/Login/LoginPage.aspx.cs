@@ -17,7 +17,7 @@ namespace LoginPage.Login
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            /*
             Conexion.ObtenerConexion();
             Response.Write("<script>alert('Conexion')</script>");
 
@@ -25,8 +25,9 @@ namespace LoginPage.Login
 
 
             int resultado = UsuariosDAL.Agregar(pCliente);
-
+            */
 
         }
+
     }
 }

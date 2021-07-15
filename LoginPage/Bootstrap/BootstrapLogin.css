@@ -114,6 +114,7 @@
 
 .login-rectangulo {
     /* Rectangle 7 */
+    text-decoration: none;
     position: absolute;
     width: 10%;
     height: 6%;

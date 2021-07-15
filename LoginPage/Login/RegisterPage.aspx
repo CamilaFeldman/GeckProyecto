@@ -6,7 +6,7 @@
 <head runat="server">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
-    <link rel="stylesheet" href="~\Bootstrap\BootstrapLogin.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="~/Bootstrap\BootstrapLogin.css" type="text/css" media="screen"/>
 </head>
 <body>
     <img src="/Imagenes/Vector4.png" class="Vector-4"/>
@@ -14,17 +14,17 @@
     <div class="rectangulo-google">
     <p class="texto-google">o ingresar con google</p>
     </div> 
-    <form>
+    <form id="form1" runat="server">
         <h3 class="formulario-mail-register">Ingresar email</h3>
-        <div class="formulario-barra-register"><input id="Text1" type="text" class="completar-email"/></div>
-        <h3 class="formulario-repetirUsuario-register">Repetir usuario</h3>
-        <div class="formulario-barra2-register"><input id="Text2" type="text" class="completar-email"/></div>
+        <div class="formulario-barra-register"><asp:TextBox ID="TextBox1" runat="server" class="completar-email"></asp:TextBox></div>
+        <h3 class="formulario-repetirUsuario-register">Nombre de usuario</h3>
+        <div class="formulario-barra2-register"><asp:TextBox ID="TextBox2" runat="server" class="completar-email"></asp:TextBox></div>
         <h3 class="formulario-contraseña-register">Contraseña:</h3>
-        <div class="formulario-barra3-register"><input id="Text3" type="password" class="completar-email"/></div>
+        <div class="formulario-barra3-register"><asp:TextBox ID="TextBox3" runat="server" type="password" class="completar-email"></asp:TextBox></div>
         <h3 class="formulario-repetirContraseña-register">Repetir contraseña:</h3>
-        <div class="formulario-barra4-register"><input id="Text4" type="password" class="completar-email"/></div>
-        <div class="login-texto-register">Registro</div>
-        <div class="login-rectangulo-register"></div>
+        <div class="formulario-barra4-register"><asp:TextBox ID="TextBox4" runat="server" type="password" class="completar-email"></asp:TextBox></div>
+
+        <asp:Button ID="Button2" runat="server" class="login-rectangulo-register" OnClick="Button2_Click1"/>
         <p class="ya-registrado">¿Ya está registrado?</p>
         <a href="/Login/LoginPage.aspx" class="loguearse">Login</a>
     </form>
