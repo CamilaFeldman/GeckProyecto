@@ -23,12 +23,20 @@ namespace LoginPage.Login
             Response.Write("<script>alert('Conexion')</script>");
 
             Usuarios pCliente = new Usuarios(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text);
+            int condicion = 0;
+
+            if(pCliente.Mail == String.Empty || pCliente.User == String.Empty || pCliente.Password == String.Empty || pCliente.rePassword == String.Empty)
+            {
+                Response.Write("<script>alert('Hay espacios vacíos')</script>");
+                condicion = 1;
+            }
 
             if(pCliente.Password != pCliente.rePassword)
             {
                 Response.Write("<script>alert('Las contraseñas no coinciden')</script>");
+                condicion = 1;
             }
-            else
+            if(condicion != 1)
             {
                 int resultado = UsuariosDAL.Agregar(pCliente);
             }
