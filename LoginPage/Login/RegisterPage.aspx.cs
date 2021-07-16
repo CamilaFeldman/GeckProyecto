@@ -20,7 +20,6 @@ namespace LoginPage.Login
         {
 
             Conexion.ObtenerConexion();
-            Response.Write("<script>alert('Conexion')</script>");
 
             Usuarios pCliente = new Usuarios(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text);
             int condicion = 0;
