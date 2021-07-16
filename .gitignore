@@ -1,6 +1,0 @@
-
-*.config
-*.cs
-LoginPage/obj/Debug/LoginPage.csproj.FileListAbsolute.txt
-*.cache
-*.dll
