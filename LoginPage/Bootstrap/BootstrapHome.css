@@ -1,0 +1,129 @@
+﻿.Vector-4 {
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    left: 0px;
+    top: 0px;
+}
+
+.bienvenida {
+    position: absolute;
+    width: 7%;
+    height: 3%;
+    left: 47%;
+    top: 20%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 170%;
+    line-height: 56px;
+    /* Negro */
+    color: #212529;
+}
+
+.miCuenta {
+    /* Icono "Mi Cuenta" */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 30%;
+    top: 40%;
+    /*font-family: Roboto;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* identical to box height */
+    /* Negro */
+    color: #212529;
+}
+
+.quienesSomos {
+    /* Icono "¿Quienes somos?" */
+    position: absolute;
+    width: 38%;
+    height: 6%;
+    left: 30%;
+    top: 50%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.soporte {
+    /* Icono "Soporte" */
+    position: absolute;
+    width: 20%;
+    height: 4%;
+    left: 30%;
+    top: 58%;
+    /*font-family: Roboto;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 140%;
+    line-height: 140%;
+    /* Negro */
+    color: #212529;
+}
+
+.tutorial {
+    /* Icono "Tutorial" */
+    position: absolute;
+    width: 38%;
+    height: 6%;
+    left: 30%;
+    top: 68%;
+    /* Azules/azul claro */
+    background: #BCE0FD;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.actualizaciones {
+    /* Icono "Actualizaciones" */
+    position: absolute;
+    width: 10%;
+    height: 6%;
+    left: 30%;
+    top: 80%;
+    /* Azules/azul medio oscuro */
+    background: #0F80AA;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 26px;
+}
+
+.preguntasFrecuentes {
+    /* Icono PreguntasFrecuentes */
+    position: absolute;
+    width: 7%;
+    height: 5%;
+    left: 31.3%;
+    top: 80.5%;
+    /*font-family: Roboto;*/
+    font-style: normal;
+    font-weight: normal;
+    font-size: 145%;
+    line-height: 140%;
+    /* identical to box height */
+    text-align: center;
+    /* Blanco */
+    color: white;
+    /* Blanco */
+}
+
+.Rectangulo1 {
+    position: relative;
+    width: 5%;
+    height: 5%;
+    left: -10%;
+    top: -10%;
+}
+
+.Rectangulo2 {
+    position: relative;
+    width: 15%;
+    height: 15%;
+    left: 0px;
+    top: 0px;
+}
