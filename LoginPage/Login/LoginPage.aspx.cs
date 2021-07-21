@@ -17,16 +17,8 @@ namespace LoginPage.Login
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            /*
-            Conexion.ObtenerConexion();
-            Response.Write("<script>alert('Conexion')</script>");
-
             Usuarios pCliente = new Usuarios(TextBox1.Text, TextBox2.Text);
-
-
-            int resultado = UsuariosDAL.Agregar(pCliente);
-            */
-
+            if(pCliente.Mail)
         }
 
     }

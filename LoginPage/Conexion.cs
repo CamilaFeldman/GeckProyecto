@@ -12,7 +12,7 @@ namespace LoginPage
         public static MySqlConnection ObtenerConexion()
         {
 
-            MySqlConnection conectar = new MySqlConnection("server = 127.0.0.1; database = prueba_bd; Uid = root; pwd = ;");
+            MySqlConnection conectar = new MySqlConnection("server = 127.0.0.1; database = deck; Uid = root; pwd = ;");
 
             conectar.Open();
 

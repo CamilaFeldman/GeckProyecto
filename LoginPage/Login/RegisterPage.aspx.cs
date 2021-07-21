@@ -38,6 +38,7 @@ namespace LoginPage.Login
             if(condicion != 1)
             {
                 int resultado = UsuariosDAL.Agregar(pCliente);
+                Response.Write("<script>alert('Se ingresó correctamente')</script>");
             }
 
             

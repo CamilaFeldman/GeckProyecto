@@ -5,7 +5,7 @@ using System.Web;
 
 namespace LoginPage.Usuario
 {
-    public class Usuarios
+    public static class Usuarios
     {
 
         public string Mail { get; set; }
@@ -27,7 +27,11 @@ namespace LoginPage.Usuario
 
         }
 
-
+        public Usuarios(string lMail, string lPassword)
+        {
+            this.Mail = lMail;
+            this.Password = lPassword;
+        }
 
     }
 }
