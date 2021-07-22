@@ -18,7 +18,17 @@ namespace LoginPage.Login
         protected void Button1_Click(object sender, EventArgs e)
         {
             Usuarios pCliente = new Usuarios(TextBox1.Text, TextBox2.Text);
-            if(pCliente.Mail)
+            bool ingreso = UsuariosDAL.Login(pCliente);
+
+            if(ingreso == true)
+            {
+                Response.Write("<script>alert('Se ingresó correctamente')</script>");
+                Response.Redirect("~/Carrito/Carrito.aspx");
+            }
+            else
+            {
+                Response.Write("<script>alert('No existe')</script>");
+            }
         }
 
     }

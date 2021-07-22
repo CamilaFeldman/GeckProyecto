@@ -1,12 +1,13 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
 namespace LoginPage.Usuario
 {
-    public class UsuariosDAL
+    public class UsuariosDAL: Conexion
     {
 
         public static int Agregar(Usuarios pCliente)
@@ -19,26 +20,31 @@ namespace LoginPage.Usuario
             return retorno;
 
         }
-
+        
         public static bool Login(Usuarios pCliente)
         {
-            MySqlCommand command = new MySqlCommand();
-            command.CommandText = "select * from usuarios where (email=@user and password=@pass)";
+       
+            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "select *from usuarios where (email=@user and password=@pass)";
             command.Parameters.AddWithValue("@user", pCliente.Mail);
             command.Parameters.AddWithValue("@pass", pCliente.Password);
-            MySqlDataReader reader = command.ExecuteReader();
+            command.CommandType = CommandType.Text;
+
+            MySqlDataReader reader;
+            
+            reader = command.ExecuteReader();
+
             if (reader.HasRows)
-            {
-                while (reader.Read())//Obtenemos los datos de la columna y asignamos a los campos de la Cache de Usuario
-                {            
-                    Usuarios.Mail = reader.GetString(2);
-                    UserCache.Email = reader.GetString(6);
-                }
+            {             
                 return true;
             }
             else
                 return false;
+            
         }
+        
     }
       
 
