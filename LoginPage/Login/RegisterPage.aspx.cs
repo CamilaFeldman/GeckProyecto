@@ -23,6 +23,15 @@ namespace LoginPage.Login
 
             Usuarios pCliente = new Usuarios(TextBox1.Text, TextBox2.Text, TextBox3.Text, TextBox4.Text);
             int condicion = 0;
+            bool mailverif;
+
+            mailverif = UsuariosDAL.Register(pCliente);
+
+            if(mailverif == true)
+            {
+                Response.Write("<script>alert('Este mail ya existe')</script>");
+                condicion = 1;
+            }
 
             if(pCliente.Mail == String.Empty || pCliente.User == String.Empty || pCliente.Password == String.Empty || pCliente.rePassword == String.Empty)
             {

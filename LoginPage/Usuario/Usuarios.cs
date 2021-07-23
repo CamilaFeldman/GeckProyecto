@@ -33,5 +33,9 @@ namespace LoginPage.Usuario
             this.Password = lPassword;
         }
 
+        public Usuarios(string lMail)
+        {
+            this.Mail = lMail;
+        }
     }
 }
