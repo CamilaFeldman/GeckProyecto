@@ -206,9 +206,10 @@
 
 .noExisteCuenta {
     position: absolute;
-    left: 44%;
-    top: 90.5%;
-    font-size: 300%;
+    left: 30%;
+    top: 75%;
+    font-size: 100%;
+    color: indianred;
 }
     /*
 
