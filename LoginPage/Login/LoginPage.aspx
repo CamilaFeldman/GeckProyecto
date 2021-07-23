@@ -22,7 +22,7 @@
                     <div class="formulario-barra"><asp:TextBox ID="TextBox1" runat="server" class="completar-email"></asp:TextBox></div>
                     <h3 class="formulario-contraseña">Contraseña:</h3>
                     <div class="formulario-barra2"><asp:TextBox ID="TextBox2" type="password" runat="server" class="completar-email"></asp:TextBox></div>
-                    
+                    <asp:Label ID="Label1" runat="server" Text="Usuario no encontrado" Visible="false"></asp:Label>
                     <asp:Button ID="Button1" runat="server" Text="" class="login-rectangulo" OnClick="Button1_Click"/>
                     <p class="recordar-contraseña">¿No recuerda su contraseña?</p>
                     <p class="no-registrado">¿Aún no está registrado?</p>

@@ -198,11 +198,18 @@
     background-color: #BCE0FD;
     font-size:140%;
 }
-    .completar-email:focus, active, focus-visible {
+.completar-email:focus, active, focus-visible {
         border: none;
         border-color: none;
         outline:none;
-    }
+}
+
+.noExisteCuenta {
+    position: absolute;
+    left: 44%;
+    top: 90.5%;
+    font-size: 300%;
+}
     /*
 
         A partir de aca comienza la pagina register
