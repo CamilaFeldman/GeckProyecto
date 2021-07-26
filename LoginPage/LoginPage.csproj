@@ -171,6 +171,7 @@
     <Content Include="Imagenes\Vector4.png" />
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
+    <Content Include="Productos\Productos.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -253,6 +254,13 @@
     </Compile>
     <Compile Include="Login\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Productos\Productos.aspx.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Productos\Productos.aspx.designer.cs">
+      <DependentUpon>Productos.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
