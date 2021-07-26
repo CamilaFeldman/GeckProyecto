@@ -24,12 +24,14 @@ namespace LoginPage.Login
             {
                 Response.Write("<script>alert('Se ingresó correctamente')</script>");
                 Response.Redirect("~/Carrito/Carrito.aspx");
+               
             }
             else
             {
                 //Response.Write("<script>alert('No existe')</script>");
                 //Response.Write("<style type='text / css'> h3 { font-size:300%;} </ style > ");
                 Label1.Visible = true;
+
             }
         }
 

@@ -29,19 +29,41 @@ namespace LoginPage.Login
 
             if(mailverif == true)
             {
-                Response.Write("<script>alert('Este mail ya existe')</script>");
+                Label1.Visible = true;
+                Label2.Visible = false;
+                Label3.Visible = false;
+                Label4.Visible = false;
+                //Response.Write("<script>alert('Este mail ya existe')</script>");
                 condicion = 1;
             }
 
             if(pCliente.Mail == String.Empty || pCliente.User == String.Empty || pCliente.Password == String.Empty || pCliente.rePassword == String.Empty)
             {
-                Response.Write("<script>alert('Hay espacios vacíos')</script>");
+                Label1.Visible = false;
+                Label2.Visible = true;
+                Label3.Visible = false;
+                Label4.Visible = false;
+                //Response.Write("<script>alert('Hay espacios vacíos')</script>");
+                condicion = 1;
+            }
+
+            if(pCliente.Password.Length < 8 || pCliente.Password.Length > 20)
+            {
+
+                Label1.Visible = false;
+                Label2.Visible = false;
+                Label3.Visible = false;
+                Label4.Visible = true;
                 condicion = 1;
             }
 
             if(pCliente.Password != pCliente.rePassword)
             {
-                Response.Write("<script>alert('Las contraseñas no coinciden')</script>");
+                Label1.Visible = false;
+                Label2.Visible = false;
+                Label3.Visible = true;
+                Label4.Visible = false;
+                //Response.Write("<script>alert('Las contraseñas no coinciden')</script>");
                 condicion = 1;
             }
             if(condicion != 1)

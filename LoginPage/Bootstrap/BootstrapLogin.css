@@ -208,7 +208,14 @@
     position: absolute;
     left: 30%;
     top: 75%;
-    font-size: 100%;
+    font-size: 120%;
+    color: indianred;
+}
+.errorRegistro {
+    position: absolute;
+    left: 20%;
+    top: 73%;
+    font-size: 120%;
     color: indianred;
 }
     /*

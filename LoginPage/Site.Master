@@ -1,6 +1,4 @@
-﻿<asp:TextBox runat="server"></asp:TextBox>
-
-<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LoginPage.SiteMaster" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="LoginPage.SiteMaster" %>
 
 <!DOCTYPE html>
 
