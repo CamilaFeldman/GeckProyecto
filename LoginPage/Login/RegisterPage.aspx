@@ -16,13 +16,13 @@
     </div> 
     <form id="form1" runat="server">
         <h3 class="formulario-mail-register">Ingresar email</h3>
-        <div class="formulario-barra-register"><asp:TextBox ID="TextBox1" runat="server" class="completar-email"></asp:TextBox></div>
+        <div class="formulario-barra-register"><asp:TextBox ID="TextBox1" runat="server" class="completar-email" AutoComplete="off"></asp:TextBox></div>
         <h3 class="formulario-repetirUsuario-register">Nombre de usuario</h3>
-        <div class="formulario-barra2-register"><asp:TextBox ID="TextBox2" runat="server" class="completar-email"></asp:TextBox></div>
+        <div class="formulario-barra2-register"><asp:TextBox ID="TextBox2" runat="server" class="completar-email" AutoComplete="off"></asp:TextBox></div>
         <h3 class="formulario-contraseña-register">Contraseña:</h3>
-        <div class="formulario-barra3-register"><asp:TextBox ID="TextBox3" runat="server" type="password" class="completar-email"></asp:TextBox></div>
+        <div class="formulario-barra3-register"><asp:TextBox ID="TextBox3" runat="server" type="password" class="completar-email" AutoComplete="off"></asp:TextBox></div>
         <h3 class="formulario-repetirContraseña-register">Repetir contraseña:</h3>
-        <div class="formulario-barra4-register"><asp:TextBox ID="TextBox4" runat="server" type="password" class="completar-email"></asp:TextBox></div>
+        <div class="formulario-barra4-register"><asp:TextBox ID="TextBox4" runat="server" type="password" class="completar-email" AutoComplete="off"></asp:TextBox></div>
         <asp:Label ID="Label1" runat="server" Text="Este mail ya existe" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label2" runat="server" Text="Hay espacios vacios" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label3" runat="server" Text="Las contraseñas no coinciden" Visible="false" class="errorRegistro"></asp:Label>
