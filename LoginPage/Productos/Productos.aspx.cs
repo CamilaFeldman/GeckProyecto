@@ -13,5 +13,15 @@ namespace LoginPage.Productos
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+            ProductosBLL pProductos = new ProductosBLL(Nombre.Text, Precio.Text, Marcas.Text, Stock.Text, Proveedor.Text, CantidadMinima.Text, CantidadMaxima.Text, PresentacionComercial.Text);
+
+            ProductosDAL.Agregar(pProductos);
+            Response.Write("<script>alert('Se ingresó correctamente')</script>");
+
+        }
     }
 }
