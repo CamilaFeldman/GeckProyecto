@@ -9,12 +9,12 @@ namespace LoginPage.Productos
     {
 
         public string Nombre { get; set; }
-        public string Precio { get; set; }
+        public int Precio { get; set; }
         public string Marcas { get; set; }
-        public string Stock { get; set; }
+        public int Stock { get; set; }
         public string Proveedor { get; set; }
-        public string CantidadMinima { get; set; }
-        public string CantidadMaxima { get; set; }
+        public int CantidadMinima { get; set; }
+        public int CantidadMaxima { get; set; }
         public string Presentacion { get; set; }
 
 
@@ -22,16 +22,16 @@ namespace LoginPage.Productos
         {
 
         }
-        public ProductosBLL(string lNombre, string lPrecio, string lMarcas, string lStock, string lProveedor, string lCantidadMinima, string lCantidadMaxima, string lPresentacion)
+        public ProductosBLL(string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion)
         {
-            this.Nombre = Nombre;
-            this.Precio = Precio;
-            this.Marcas = Marcas;
-            this.Stock = Stock;
-            this.Proveedor = Proveedor;
-            this.CantidadMinima = CantidadMinima;
-            this.CantidadMaxima = CantidadMaxima;
-            this.Presentacion = Presentacion;
+            this.Nombre = lNombre;
+            this.Precio = lPrecio;
+            this.Marcas = lMarcas;
+            this.Stock = lStock;
+            this.Proveedor = lProveedor;
+            this.CantidadMinima = lCantidadMinima;
+            this.CantidadMaxima = lCantidadMaxima;
+            this.Presentacion = lPresentacion;
         }
        
 
