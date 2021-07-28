@@ -19,7 +19,7 @@
               
              <form id="form1" runat="server">
                     <h3 class="formulario-mail">Ingresar email</h3>
-                    <div class="formulario-barra"><asp:TextBox ID="TextBox1" runat="server" class="completar-email"></asp:TextBox></div>
+                    <div class="formulario-barra"><asp:TextBox ID="TextBox1" runat="server" class="completar-email" AutoCompleteType="None"></asp:TextBox></div>
                     <h3 class="formulario-contraseña">Contraseña:</h3>
                     <div class="formulario-barra2"><asp:TextBox ID="TextBox2" type="password" runat="server" class="completar-email"></asp:TextBox></div>
                     <asp:Label ID="Label1" runat="server" Text="Usuario no encontrado" Visible="false" class="noExisteCuenta"></asp:Label>

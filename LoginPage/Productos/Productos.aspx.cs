@@ -23,6 +23,7 @@ namespace LoginPage.Productos
             {
                 EspaciosVacios.Visible = true;
                 IngresoIncorrecto.Visible = false;
+                CantidadRequerida.Visible = false;
             }
             else
             {
@@ -30,17 +31,33 @@ namespace LoginPage.Productos
                 try
                 {
                     ProductosBLL pProductos = new ProductosBLL(Nombre.Text, Convert.ToInt32(Precio.Text), Marcas.Text, Convert.ToInt32(Stock.Text), Proveedor.Text, Convert.ToInt32(CantidadMinima.Text), Convert.ToInt32(CantidadMaxima.Text), PresentacionComercial.Text);
-                    int resultado = ProductosDAL.Agregar(pProductos);
-                    EspaciosVacios.Visible = false;
-                    Response.Write("<script>alert('Se ingresó correctamente')</script>");
-                    Nombre.Text = String.Empty;
-                    Precio.Text = String.Empty;
-                    Marcas.Text = String.Empty;
-                    Stock.Text = String.Empty;
-                    Proveedor.Text = String.Empty;
-                    CantidadMinima.Text = String.Empty;
-                    CantidadMaxima.Text = String.Empty;
-                    PresentacionComercial.Text = String.Empty;
+                    
+                   if(pProductos.CantidadMinima > pProductos.CantidadMaxima)
+                    {
+                        EspaciosVacios.Visible = false;
+                        IngresoIncorrecto.Visible = false;
+                        CantidadRequerida.Visible = true;
+                    }
+                    else
+                    {
+
+                        int resultado = ProductosDAL.Agregar(pProductos);
+                        EspaciosVacios.Visible = false;
+                        IngresoIncorrecto.Visible = false;
+                        CantidadRequerida.Visible = false;
+                        Response.Write("<script>alert('Se ingresó correctamente')</script>");
+                        Nombre.Text = String.Empty;
+                        Precio.Text = String.Empty;
+                        Marcas.Text = String.Empty;
+                        Stock.Text = String.Empty;
+                        Proveedor.Text = String.Empty;
+                        CantidadMinima.Text = String.Empty;
+                        CantidadMaxima.Text = String.Empty;
+                        PresentacionComercial.Text = String.Empty;
+
+                    }
+
+                    
                     
 
                 }
@@ -48,6 +65,7 @@ namespace LoginPage.Productos
                 {
                     IngresoIncorrecto.Visible = true;
                     EspaciosVacios.Visible = false;
+                    CantidadRequerida.Visible = false;
                 }
                     
                     
