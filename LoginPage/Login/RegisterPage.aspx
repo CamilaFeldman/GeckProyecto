@@ -27,6 +27,7 @@
         <asp:Label ID="Label2" runat="server" Text="Hay espacios vacios" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label3" runat="server" Text="Las contraseñas no coinciden" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label4" runat="server" Text="La contraseña debe tener entre 8 y 20 caracteres" Visible="false" class="errorRegistro"></asp:Label>
+        <asp:Label ID="Label5" runat="server" Text="Se ingresó correctamente" Visible="false" class="correctoRegistro"></asp:Label>
         <asp:Button ID="Button2" runat="server" class="login-rectangulo-register" OnClick="Button2_Click1"/>
         <p class="ya-registrado">¿Ya está registrado?</p>
         <a href="/Login/LoginPage.aspx" class="loguearse">Login</a>

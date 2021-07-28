@@ -218,6 +218,13 @@
     font-size: 120%;
     color: indianred;
 }
+.correctoRegistro {
+    position: absolute;
+    left: 20%;
+    top: 73%;
+    font-size: 120%;
+    color: green;
+}
     /*
 
         A partir de aca comienza la pagina register

@@ -6,6 +6,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace LoginPage.Login
 {
@@ -69,7 +71,13 @@ namespace LoginPage.Login
             if(condicion != 1)
             {
                 int resultado = UsuariosDAL.Agregar(pCliente);
-                Response.Write("<script>alert('Se ingresó correctamente')</script>");
+                Label5.Visible = true;
+                Label1.Visible = false;
+                Label2.Visible = false;
+                Label3.Visible = false;
+                Label4.Visible = false;
+                //Response.Write("<script>alert('Se ingresó correctamente')</script>");
+                Response.Redirect("~/Login/LoginPage.aspx");
             }
 
             
