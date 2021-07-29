@@ -6,8 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Threading;
-using System.Threading.Tasks;
+
 
 namespace LoginPage.Login
 {
@@ -76,8 +75,8 @@ namespace LoginPage.Login
                 Label2.Visible = false;
                 Label3.Visible = false;
                 Label4.Visible = false;
-                //Response.Write("<script>alert('Se ingresó correctamente')</script>");
-                Response.Redirect("~/Login/LoginPage.aspx");
+                //Response.Redirect("~/Login/LoginPage.aspx");
+                Response.AddHeader("REFRESH", "2;LoginPage.aspx");
             }
 
             
