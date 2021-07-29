@@ -23,7 +23,7 @@ namespace LoginPage.Login
             if(ingreso == true)
             {
                 Response.Write("<script>alert('Se ingresó correctamente')</script>");
-                Response.Redirect("~/Carrito/Carrito.aspx");
+                Response.Redirect("~/HomePage.aspx");
                
             }
             else

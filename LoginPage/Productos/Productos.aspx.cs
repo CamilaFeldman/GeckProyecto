@@ -16,7 +16,7 @@ namespace LoginPage.Productos
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            int condicion=0;
+            //int condicion=0;
             Conexion.ObtenerConexion();
 
             if (Nombre.Text == String.Empty || Precio.Text.Length == 0 || Marcas.Text == String.Empty || Stock.Text.Length == 0 || Proveedor.Text == String.Empty || CantidadMinima.Text.Length == 0 || CantidadMaxima.Text.Length == 0 || PresentacionComercial.Text == String.Empty)
