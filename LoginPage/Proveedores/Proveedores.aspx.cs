@@ -27,13 +27,26 @@ namespace LoginPage.Proveedores
             }
             else
             {
+                bool mailverif;
 
-                EspaciosVacios.Visible = false;
-                int resultado = ProveedoresDAL.Agregar(pProveedores);
-                Nombre.Text = String.Empty;
-                Direccion.Text = String.Empty;
-                Telefono.Text = String.Empty;
-                Email.Text = String.Empty;
+                mailverif = ProveedoresDAL.MailVerif(pProveedores);
+
+                if(mailverif == true)
+                {
+                    EspaciosVacios.Visible = false;
+                    MailProveedor.Visible = true;
+                }
+                else
+                {
+                    MailProveedor.Visible = false;
+                    EspaciosVacios.Visible = false;
+                    int resultado = ProveedoresDAL.Agregar(pProveedores);
+                    Nombre.Text = String.Empty;
+                    Direccion.Text = String.Empty;
+                    Telefono.Text = String.Empty;
+                    Email.Text = String.Empty;
+                }
+               
 
             }    
 

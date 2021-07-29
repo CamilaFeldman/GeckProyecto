@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -17,6 +18,28 @@ namespace LoginPage.Proveedores
             retorno = comando3.ExecuteNonQuery();
 
             return retorno;
+
+        }
+        public static bool MailVerif(ProveedoresBLL pProveedores)
+        {
+
+            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "select * from proveedor_especifico where (email=@user)";
+            command.Parameters.AddWithValue("@user", pProveedores.Email);
+            command.CommandType = CommandType.Text;
+
+            MySqlDataReader reader;
+
+            reader = command.ExecuteReader();
+
+            if (reader.HasRows)
+            {
+                return true;
+            }
+            else
+                return false;
 
         }
 

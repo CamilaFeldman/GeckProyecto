@@ -76,6 +76,7 @@ namespace LoginPage.Login
                 Label3.Visible = false;
                 Label4.Visible = false;
                 //Response.Redirect("~/Login/LoginPage.aspx");
+                Button2.Attributes.Add("onclick", "this.disabled=true;");
                 Response.AddHeader("REFRESH", "2;LoginPage.aspx");
             }
 

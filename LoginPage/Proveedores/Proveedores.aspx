@@ -11,4 +11,5 @@
     <asp:TextBox ID="Email" runat="server"></asp:TextBox>
     <asp:Button ID="Button1" runat="server" Text="Agregar" OnClick="Button1_Click" />
     <asp:Label ID="EspaciosVacios" runat="server" Text="Completar espacios vacíos" Visible="false"></asp:Label>
+    <asp:Label ID="MailProveedor" runat="server" Text="Ya existe un proveedor con este mail" Visible ="false"></asp:Label>
 </asp:Content>
