@@ -14,9 +14,19 @@ namespace LoginPage
 
             MySqlConnection conectar = new MySqlConnection("server = 127.0.0.1; database = deck; Uid = root; pwd = ;");
 
-            conectar.Open();
+            try
+            {
+                conectar.Open();
+            }
+            catch (Exception)
+            {
+
+            }
+
+            
 
             return conectar;
+
         }
 
 

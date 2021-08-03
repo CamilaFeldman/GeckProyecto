@@ -69,15 +69,23 @@ namespace LoginPage.Login
             if(condicion != 1)
             {
                 int resultado = UsuariosDAL.Agregar(pCliente);
-                //Response.Write("<script>alert('Se ingresó correctamente')</script>");
-                Label5.Visible = true;
-                Label1.Visible = false;
-                Label2.Visible = false;
-                Label3.Visible = false;
-                Label4.Visible = false;
-                //Response.Redirect("~/Login/LoginPage.aspx");
-                Button2.Attributes.Add("onclick", "this.disabled=true;");
-                Response.AddHeader("REFRESH", "2;LoginPage.aspx");
+                if(resultado != 0)
+                {
+                    //Response.Write("<script>alert('Se ingresó correctamente')</script>");
+                    Label5.Visible = true;
+                    Label1.Visible = false;
+                    Label2.Visible = false;
+                    Label3.Visible = false;
+                    Label4.Visible = false;
+                    //Response.Redirect("~/Login/LoginPage.aspx");
+                    Button2.Attributes.Add("onclick", "this.disabled=true;");
+                    Response.AddHeader("REFRESH", "2;LoginPage.aspx");
+                }
+                else
+                {
+                    Response.Write("<script>alert('No se encuentra conectado con la base de datos')</script>");
+                }
+               
             }
 
             

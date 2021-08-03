@@ -13,9 +13,17 @@ namespace LoginPage.Usuario
         public static int Agregar(Usuarios pCliente)
         {
             int retorno = 0;
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT into usuarios(email, nombre, password) values('{0}','{1}' , '{2}')",  pCliente.Mail, pCliente.User, pCliente.Password), Conexion.ObtenerConexion());
+            try
+            {
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT into usuarios(email, nombre, password) values('{0}','{1}' , '{2}')", pCliente.Mail, pCliente.User, pCliente.Password), Conexion.ObtenerConexion());
 
-            retorno = comando.ExecuteNonQuery();
+                retorno = comando.ExecuteNonQuery();
+            }
+            catch(Exception)
+            {
+               
+            }
+           
 
             return retorno;
 
@@ -32,16 +40,25 @@ namespace LoginPage.Usuario
             command.Parameters.AddWithValue("@pass", pCliente.Password);
             command.CommandType = CommandType.Text;
 
-            MySqlDataReader reader;
-            
-            reader = command.ExecuteReader();
+            try
+            {
+                MySqlDataReader reader;
 
-            if (reader.HasRows)
-            {             
-                return true;
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+                else
+                    return false;
             }
-            else
+            catch (Exception)
+            {
                 return false;
+            }
+
+            
             
         }
 
@@ -55,16 +72,24 @@ namespace LoginPage.Usuario
             command.Parameters.AddWithValue("@user", pCliente.Mail);
             command.CommandType = CommandType.Text;
 
-            MySqlDataReader reader;
-
-            reader = command.ExecuteReader();
-
-            if (reader.HasRows)
+            try
             {
-                return true;
+                MySqlDataReader reader;
+
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+                else
+                    return false;
             }
-            else
+            catch(Exception)
+            {
                 return false;
+            }
+            
 
         }
 
