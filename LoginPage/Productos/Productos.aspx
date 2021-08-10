@@ -10,7 +10,8 @@
     <asp:Label ID="Label4" runat="server" Text="Stock"></asp:Label>
     <asp:TextBox ID="Stock" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label5" runat="server" Text="Proveedor"></asp:Label>
-    <asp:TextBox ID="Proveedor" runat="server"></asp:TextBox>
+    <asp:DropDownList ID="DropDownList1" runat="server" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" AutoPostBack="True" DataSourceID="SqlDataSource1" DataTextField="nombre" DataValueField="nombre" Height="36px" Width="168px"></asp:DropDownList>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:deckConnectionString %>" OnSelecting="SqlDataSource1_Selecting" ProviderName="<%$ ConnectionStrings:deckConnectionString.ProviderName %>" SelectCommand="SELECT nombre FROM proveedor_especifico"></asp:SqlDataSource>
     <asp:Label ID="Label6" runat="server" Text="Cantidad mínima"></asp:Label>
     <asp:TextBox ID="CantidadMinima" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label7" runat="server" Text="Cantidad máxima"></asp:Label>
@@ -21,4 +22,5 @@
     <asp:Label ID="EspaciosVacios" runat="server" Text="Completar espacios vacíos" Visible="false"></asp:Label>
     <asp:Label ID="IngresoIncorrecto" runat="server" Text="Algun campo mal ingresado" Visible="false"></asp:Label>
     <asp:Label ID="CantidadRequerida" runat="server" Text="La cantidad mínima es mayor a la máxima" Visible ="false"></asp:Label>
+
 </asp:Content>

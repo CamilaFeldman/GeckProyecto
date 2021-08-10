@@ -19,7 +19,7 @@ namespace LoginPage.Productos
             //int condicion=0;
             Conexion.ObtenerConexion();
 
-            if (Nombre.Text == String.Empty || Precio.Text.Length == 0 || Marcas.Text == String.Empty || Stock.Text.Length == 0 || Proveedor.Text == String.Empty || CantidadMinima.Text.Length == 0 || CantidadMaxima.Text.Length == 0 || PresentacionComercial.Text == String.Empty)
+            if (Nombre.Text == String.Empty || Precio.Text.Length == 0 || Marcas.Text == String.Empty || Stock.Text.Length == 0 ||  CantidadMinima.Text.Length == 0 || CantidadMaxima.Text.Length == 0 || PresentacionComercial.Text == String.Empty)
             {
                 EspaciosVacios.Visible = true;
                 IngresoIncorrecto.Visible = false;
@@ -30,7 +30,7 @@ namespace LoginPage.Productos
               
                 try
                 {
-                    ProductosBLL pProductos = new ProductosBLL(Nombre.Text, Convert.ToInt32(Precio.Text), Marcas.Text, Convert.ToInt32(Stock.Text), Proveedor.Text, Convert.ToInt32(CantidadMinima.Text), Convert.ToInt32(CantidadMaxima.Text), PresentacionComercial.Text);
+                    ProductosBLL pProductos = new ProductosBLL(Nombre.Text, Convert.ToInt32(Precio.Text), Marcas.Text, Convert.ToInt32(Stock.Text), DropDownList1.SelectedValue ,Convert.ToInt32(CantidadMinima.Text), Convert.ToInt32(CantidadMaxima.Text), PresentacionComercial.Text);
                     
                    if(pProductos.CantidadMinima > pProductos.CantidadMaxima)
                     {
@@ -50,7 +50,6 @@ namespace LoginPage.Productos
                         Precio.Text = String.Empty;
                         Marcas.Text = String.Empty;
                         Stock.Text = String.Empty;
-                        Proveedor.Text = String.Empty;
                         CantidadMinima.Text = String.Empty;
                         CantidadMaxima.Text = String.Empty;
                         PresentacionComercial.Text = String.Empty;
@@ -80,6 +79,16 @@ namespace LoginPage.Productos
 
             
            
+        }
+
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
+        {
+
         }
     }
 }
