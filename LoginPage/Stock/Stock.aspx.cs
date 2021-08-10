@@ -13,14 +13,12 @@ namespace LoginPage.Stock
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor FROM deck.producto_especifico;", Conexion.ObtenerConexion());
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio unitario  FROM deck.producto_especifico;", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
             GridView1.DataSource = ds.Tables[0];
             GridView1.DataBind();
-
-
         }
     }
 }

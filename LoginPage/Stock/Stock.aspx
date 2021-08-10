@@ -1,15 +1,21 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Stock.aspx.cs" Inherits="LoginPage.Stock.Stock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Height="181px" Width="1013px" HorizontalAlign="Center">
-        <AlternatingRowStyle BackColor="#F7F7F7" />
-        <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" HorizontalAlign="Center" Wrap="True" Font-Underline="True" />
-        <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-        <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Center" />
-        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <SortedAscendingCellStyle BackColor="#F4F4FD" />
-        <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-        <SortedDescendingCellStyle BackColor="#D8D8F0" />
-        <SortedDescendingHeaderStyle BackColor="#3E3277" />
+    <style type="text/css">
+    .gvclass table th {text-align:center;}
+    </style>
+
+    <div class="gvclass">
+    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="181px" Width="1013px" HorizontalAlign="Center">
+        <AlternatingRowStyle BackColor="#DCDCDC" />
+        <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" Wrap="True" Font-Underline="True" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+        <SortedAscendingHeaderStyle BackColor="#0000A9" />
+        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+        <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
+    </div>
 </asp:Content>
