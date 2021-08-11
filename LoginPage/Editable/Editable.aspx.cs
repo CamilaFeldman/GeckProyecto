@@ -44,20 +44,27 @@ namespace LoginPage.Editable
         {
             try
             {
-                if(GridView1.SelectedRow.Cells[0].Text != null)
+
+                    GridViewRow seleccion = GridView1.SelectedRow; // lo tuve q crear para q no salte excepcion
+                    
+                    if(seleccion == null)
+                {
+
+                }
+                    else
                 {
                     string idNombre;
                     idNombre = GridView1.SelectedRow.Cells[0].Text;
 
                     EditableDAL.Eliminar(idNombre);
                 }
+                    
 
-                
                 
             }
             catch(Exception)
             {
-                throw;
+                
             }
 
             GridView1.DataBind();
