@@ -23,5 +23,44 @@ namespace LoginPage.Editable
 
             GridView1.DataBind();
         }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string idNombre;
+
+                idNombre = GridView1.SelectedRow.Cells[0].Text;
+            }
+            catch (Exception)
+            {
+
+            }
+            
+
+        }
+
+        protected void eliminar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(GridView1.SelectedRow.Cells[0].Text != null)
+                {
+                    string idNombre;
+                    idNombre = GridView1.SelectedRow.Cells[0].Text;
+
+                    EditableDAL.Eliminar(idNombre);
+                }
+
+                
+                
+            }
+            catch(Exception)
+            {
+                throw;
+            }
+
+            GridView1.DataBind();
+        }
     }
 }

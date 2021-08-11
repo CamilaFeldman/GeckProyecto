@@ -10,11 +10,12 @@
     </style>
 
     <div class="gvclass">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="60px" Width="361px" HorizontalAlign="Center">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="60px" Width="361px" HorizontalAlign="Center" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
             <asp:BoundField DataField="direccion" HeaderText="direccion" SortExpression="direccion" />
+            <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Select" />
         </Columns>
         <EditRowStyle BackColor="#7C6F57" />
         <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -40,6 +41,9 @@
     <asp:TextBox ID="direccionSucursalTxt" runat="server"></asp:TextBox>
     <br />
     <asp:Button ID="agregar" runat="server" Text="Agregar" OnClick="agregar_Click" />
+
+    <br />
+    <asp:Button ID="eliminar" runat="server" Text="Eliminar" OnClick="eliminar_Click" />
 
 
 </asp:Content>

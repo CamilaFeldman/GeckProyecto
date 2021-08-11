@@ -20,6 +20,15 @@ namespace LoginPage.Editable
 
         }
 
+        public static void Eliminar(string lNombre)
+        {
+            string nombre = lNombre;
 
+            
+            MySqlCommand comando2 = new MySqlCommand(string.Format("DELETE FROM sucursales WHERE nombre = '" +nombre+ "'"), Conexion.ObtenerConexion());
+
+            comando2.ExecuteNonQuery();
+
+        }
     }
 }
