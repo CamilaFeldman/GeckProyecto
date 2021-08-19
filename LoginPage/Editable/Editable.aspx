@@ -29,7 +29,8 @@
         <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
     </div>
-
+    <asp:Label ID="Completar" runat="server" Text="Completar espacios vacíos" Visible="false"></asp:Label>
+    <br />
     <asp:Label ID="nuevaSucursal" runat="server" Text="Nueva Sucursal"></asp:Label>
     <br />
     <asp:Label ID="nombreSucursal" runat="server" Text="Nombre de la sucursal"></asp:Label>

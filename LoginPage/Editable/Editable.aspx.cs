@@ -39,7 +39,15 @@ namespace LoginPage.Editable
             }
             else
             {
-                int resultado = EditableDAL.Agregar(pEditable);
+                if(nombreSucursalTxt.Text == String.Empty || direccionSucursalTxt.Text == String.Empty)
+                {
+                    Completar.Visible = true;
+                }
+                else
+                {
+                    int resultado = EditableDAL.Agregar(pEditable);
+                }
+                
             }
 
             Cargar();
