@@ -7,7 +7,7 @@
     </style>
 
     <div class="gvclass">
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataSourceID="SqlDataSource1" ForeColor="#333333" GridLines="None" Height="182px" Width="349px" HorizontalAlign="Center">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" ForeColor="#333333" GridLines="None" Height="182px" Width="349px" HorizontalAlign="Center">
         <AlternatingRowStyle BackColor="White" />
         <Columns>
             <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
@@ -25,8 +25,6 @@
         <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
     </div>
-
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:deckConnectionString2 %>" ProviderName="<%$ ConnectionStrings:deckConnectionString2.ProviderName %>" SelectCommand="SELECT nombre, direccion FROM sucursales"></asp:SqlDataSource>
 
 
 </asp:Content>

@@ -1,5 +1,7 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +13,17 @@ namespace LoginPage.Productos
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!IsPostBack)
+            {
 
+                MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM proveedor_especifico", Conexion.ObtenerConexion());
+                MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect.CommandText, Conexion.ObtenerConexion());
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                this.DropDownList1.DataSource = ds;
+                this.DropDownList1.DataBind();
+
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -86,9 +98,6 @@ namespace LoginPage.Productos
             
         }
 
-        protected void SqlDataSource1_Selecting(object sender, SqlDataSourceSelectingEventArgs e)
-        {
-
-        }
+       
     }
 }

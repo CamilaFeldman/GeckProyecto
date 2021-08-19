@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -12,16 +13,36 @@ namespace LoginPage.Editable
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Cargar();
+        }
 
+        private void Cargar()
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre, direccion FROM sucursales", Conexion.ObtenerConexion());
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            GridView1.DataSource = ds.Tables[0];
+            GridView1.DataBind();
         }
 
         protected void agregar_Click(object sender, EventArgs e)
         {
             DataSet dt;
             EditableBLL pEditable = new EditableBLL(nombreSucursalTxt.Text, direccionSucursalTxt.Text);
-            int resultado = EditableDAL.Agregar(pEditable);
 
-            GridView1.DataBind();
+            bool Comparacion = EditableDAL.Comparar(pEditable);
+
+            if (Comparacion == true)
+            {
+                Response.Write("<script language=JavaScript> alert('Ya existe esa sucursal'); </script>");
+            }
+            else
+            {
+                int resultado = EditableDAL.Agregar(pEditable);
+            }
+
+            Cargar();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
@@ -36,7 +57,7 @@ namespace LoginPage.Editable
             {
 
             }
-            
+
 
         }
 
@@ -45,29 +66,29 @@ namespace LoginPage.Editable
             try
             {
 
-                    GridViewRow seleccion = GridView1.SelectedRow; // lo tuve q crear para q no salte excepcion
-                    
-                    if(seleccion == null)
+                GridViewRow seleccion = GridView1.SelectedRow; // lo tuve q crear para q no salte excepcion
+
+                if (seleccion == null)
                 {
 
                 }
-                    else
+                else
                 {
                     string idNombre;
                     idNombre = GridView1.SelectedRow.Cells[0].Text;
 
                     EditableDAL.Eliminar(idNombre);
                 }
-                    
 
-                
+
+
             }
-            catch(Exception)
+            catch (Exception)
             {
-                
+
             }
 
-            GridView1.DataBind();
+            Cargar();
         }
     }
 }
