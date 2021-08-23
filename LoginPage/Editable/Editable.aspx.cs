@@ -14,6 +14,7 @@ namespace LoginPage.Editable
         protected void Page_Load(object sender, EventArgs e)
         {
             Cargar();
+            CargarCategoria();
         }
 
         private void Cargar()
@@ -24,6 +25,16 @@ namespace LoginPage.Editable
             da.Fill(ds);
             GridView1.DataSource = ds.Tables[0];
             GridView1.DataBind();
+        }
+
+        private void CargarCategoria()
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre FROM categorias", Conexion.ObtenerConexion());
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            GridView2.DataSource = ds.Tables[0];
+            GridView2.DataBind();
         }
 
         protected void agregar_Click(object sender, EventArgs e)
@@ -98,6 +109,15 @@ namespace LoginPage.Editable
             }
 
             Cargar();
+        }
+
+        protected void AgregarCategoria_Click(object sender, EventArgs e)
+        {
+
+            EditableBLL pEditable = new EditableBLL(NuevaCategoria.Text);
+            int resultado = EditableDAL.AgregarCategoria(pEditable);
+            CargarCategoria();
+
         }
     }
 }

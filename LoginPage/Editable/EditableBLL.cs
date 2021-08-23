@@ -11,11 +11,19 @@ namespace LoginPage.Editable
         public string Nombre { get; set; }
         public string Direccion { get; set; }
         
+        public string NombreCategoria { get; set; }
 
         public EditableBLL()
         {
 
-        } 
+        }
+
+        public EditableBLL(string lNombreCategoria)
+        {
+
+            this.NombreCategoria = lNombreCategoria;
+
+        }
 
         public EditableBLL(string lNombre, string lDireccion)
         {

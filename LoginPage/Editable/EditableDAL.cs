@@ -62,5 +62,15 @@ namespace LoginPage.Editable
 
 
         }
+        public static int AgregarCategoria(EditableBLL pEditable)
+        {
+            int retorno = 0;
+            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT into categorias(nombre) values('{0}')", pEditable.NombreCategoria), Conexion.ObtenerConexion());
+
+            retorno = comando2.ExecuteNonQuery();
+
+            return retorno;
+
+        }
     }
 }
