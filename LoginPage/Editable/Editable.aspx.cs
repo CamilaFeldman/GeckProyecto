@@ -46,6 +46,7 @@ namespace LoginPage.Editable
                 else
                 {
                     int resultado = EditableDAL.Agregar(pEditable);
+                    Completar.Visible = false;
                 }
                 
             }
