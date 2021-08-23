@@ -15,13 +15,20 @@ namespace LoginPage.Productos
         {
             if (!IsPostBack)
             {
-
+                
                 MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM proveedor_especifico", Conexion.ObtenerConexion());
                 MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect.CommandText, Conexion.ObtenerConexion());
                 DataSet ds = new DataSet();
                 da.Fill(ds);
                 this.DropDownList1.DataSource = ds;
                 this.DropDownList1.DataBind();
+                
+                MySqlCommand CategoriaSelect = new MySqlCommand("SELECT nombre FROM deck.categorias", Conexion.ObtenerConexion());
+                MySqlDataAdapter DA = new MySqlDataAdapter(CategoriaSelect.CommandText, Conexion.ObtenerConexion());
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+                this.Marcas.DataSource = DS;
+                this.Marcas.DataBind();
 
             }
         }

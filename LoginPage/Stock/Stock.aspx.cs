@@ -24,7 +24,7 @@ namespace LoginPage.Stock
         protected void Buscar_Click(object sender, EventArgs e)
         {
 
-            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico WHERE nombre LIKE '%" + Filtrado.Text + "%'", Conexion.ObtenerConexion());
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico WHERE nombre LIKE ('%" + Filtrado.Text + "%') || proveedor LIKE ('%" + Filtrado.Text + "%') ", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);

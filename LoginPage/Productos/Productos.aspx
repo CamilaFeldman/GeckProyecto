@@ -5,8 +5,8 @@
     <asp:TextBox ID="Nombre" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label2" runat="server" Text="Precio"></asp:Label>
     <asp:TextBox ID="Precio" runat="server" AutoComplete="Off"></asp:TextBox>
-    <asp:Label ID="Label3" runat="server" Text="Marcas"></asp:Label>
-    <asp:TextBox ID="Marcas" runat="server"></asp:TextBox>
+    <asp:Label ID="Label3" runat="server" Text="Categoria"></asp:Label>
+    <asp:DropDownList ID="Marcas" runat="server" Height="37px" Width="160px" AutoPostBack="True"  DataTextField="hoa" DataValueField="nombre"></asp:DropDownList>
     <asp:Label ID="Label4" runat="server" Text="Stock"></asp:Label>
     <asp:TextBox ID="Stock" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label5" runat="server" Text="Proveedor"></asp:Label>

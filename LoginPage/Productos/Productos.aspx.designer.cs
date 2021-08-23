@@ -66,7 +66,7 @@ namespace LoginPage.Productos
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Marcas;
+        protected global::System.Web.UI.WebControls.DropDownList Marcas;
 
         /// <summary>
         /// Control Label4.
