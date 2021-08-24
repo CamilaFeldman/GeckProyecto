@@ -72,5 +72,44 @@ namespace LoginPage.Editable
             return retorno;
 
         }
+        public static void EliminarCategoria(string lNombre)
+        {
+            string nombre = lNombre;
+
+            MySqlCommand comando2 = new MySqlCommand(string.Format("DELETE FROM categorias WHERE nombre = '" + nombre + "'"), Conexion.ObtenerConexion());
+
+            comando2.ExecuteNonQuery();
+
+        }
+        public static bool CompararCategoria(EditableBLL pEditable)
+        {
+
+            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "select * from categorias where (nombre=@user)";
+            command.Parameters.AddWithValue("@user", pEditable.NombreCategoria);
+            command.CommandType = CommandType.Text;
+
+            try
+            {
+                MySqlDataReader reader;
+
+                reader = command.ExecuteReader();
+
+                if (reader.HasRows)
+                {
+                    return true;
+                }
+                else
+                    return false;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+
+
+        }
     }
 }

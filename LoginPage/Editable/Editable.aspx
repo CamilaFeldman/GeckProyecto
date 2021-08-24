@@ -13,7 +13,7 @@
           <AlternatingRowStyle BackColor="White" />
           <Columns>
               <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
-              <asp:ButtonField ButtonType="Button" Text="Select" />
+              <asp:ButtonField ButtonType="Button" Text="Select" CommandName="Select" />
           </Columns>
           <EditRowStyle BackColor="#7C6F57" />
           <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
@@ -37,7 +37,7 @@
     <br />
     <asp:Button ID="AgregarCategoria" runat="server" Text="Agregar" OnClick="AgregarCategoria_Click" />
     <br />
-    <asp:Button ID="EliminarCategoria" runat="server" Text="Eliminar" />
+    <asp:Button ID="EliminarCategoria" runat="server" Text="Eliminar" OnClick="EliminarCategoria_Click" />
     <br />
 
     <br />

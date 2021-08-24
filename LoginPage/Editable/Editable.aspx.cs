@@ -115,7 +115,27 @@ namespace LoginPage.Editable
         {
 
             EditableBLL pEditable = new EditableBLL(NuevaCategoria.Text);
-            int resultado = EditableDAL.AgregarCategoria(pEditable);
+
+            bool Comparacion = EditableDAL.CompararCategoria(pEditable);
+
+            if (Comparacion == true)
+            {
+                Response.Write("<script language=JavaScript> alert('Ya existe esa categoria'); </script>");
+            }
+            else
+            {
+                if (NuevaCategoria.Text == String.Empty)
+                {
+                    Completar.Visible = true;
+                }
+                else
+                {
+                    int resultado = EditableDAL.AgregarCategoria(pEditable);
+                    Completar.Visible = false;
+                }
+
+            }
+
             CargarCategoria();
 
         }
@@ -136,7 +156,36 @@ namespace LoginPage.Editable
 
         }
 
+        protected void EliminarCategoria_Click(object sender, EventArgs e)
+        {
+
+            try
+            {
+
+                GridViewRow seleccion = GridView2.SelectedRow; // lo tuve q crear para q no salte excepcion
+
+                if (seleccion == null)
+                {
+
+                }
+                else
+                {
+                    string idNombre;
+                    idNombre = GridView2.SelectedRow.Cells[0].Text;
+
+                    EditableDAL.EliminarCategoria(idNombre);
+                }
 
 
+
+            }
+            catch (Exception)
+            {
+
+            }
+
+            CargarCategoria();
+
+        }
     }
 }
