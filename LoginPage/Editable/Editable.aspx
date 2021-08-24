@@ -9,8 +9,12 @@
     <br />
 
   <div class="gvclass">
-      <asp:GridView ID="GridView2" runat="server"  HorizontalAlign="Center" CellPadding="4" ForeColor="#333333" GridLines="None" Height="116px" Width="250px">
+      <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" HorizontalAlign="Center" CellPadding="4" ForeColor="#333333" GridLines="None" Height="116px" Width="250px" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
           <AlternatingRowStyle BackColor="White" />
+          <Columns>
+              <asp:BoundField DataField="nombre" HeaderText="nombre" SortExpression="nombre" />
+              <asp:ButtonField ButtonType="Button" Text="Select" />
+          </Columns>
           <EditRowStyle BackColor="#7C6F57" />
           <FooterStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" />
           <HeaderStyle BackColor="#1C5E55" Font-Bold="True" ForeColor="White" Font-Size="Large" />
