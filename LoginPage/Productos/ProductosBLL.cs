@@ -16,13 +16,14 @@ namespace LoginPage.Productos
         public int CantidadMinima { get; set; }
         public int CantidadMaxima { get; set; }
         public string Presentacion { get; set; }
+        public string Sucursal { get; set; }
 
 
         public ProductosBLL()
         {
 
         }
-        public ProductosBLL(string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion)
+        public ProductosBLL(string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion, string lSucursal)
         {
             this.Nombre = lNombre;
             this.Precio = lPrecio;
@@ -32,6 +33,7 @@ namespace LoginPage.Productos
             this.CantidadMinima = lCantidadMinima;
             this.CantidadMaxima = lCantidadMaxima;
             this.Presentacion = lPresentacion;
+            this.Sucursal = lSucursal;
         }
        
 

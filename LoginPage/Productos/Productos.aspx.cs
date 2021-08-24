@@ -30,6 +30,14 @@ namespace LoginPage.Productos
                 this.Marcas.DataSource = DS;
                 this.Marcas.DataBind();
 
+                MySqlCommand SucursalSqlSelect = new MySqlCommand("SELECT nombre FROM sucursales", Conexion.ObtenerConexion());
+                MySqlDataAdapter du = new MySqlDataAdapter(SucursalSqlSelect.CommandText, Conexion.ObtenerConexion());
+                DataSet DU = new DataSet();
+                da.Fill(DU);
+                this.Sucursales.DataSource = DU;
+                this.Sucursales.DataBind();
+
+
             }
         }
 
@@ -49,7 +57,7 @@ namespace LoginPage.Productos
               
                 try
                 {
-                    ProductosBLL pProductos = new ProductosBLL(Nombre.Text, Convert.ToInt32(Precio.Text), Marcas.Text, Convert.ToInt32(Stock.Text), DropDownList1.SelectedValue ,Convert.ToInt32(CantidadMinima.Text), Convert.ToInt32(CantidadMaxima.Text), PresentacionComercial.Text);
+                    ProductosBLL pProductos = new ProductosBLL(Nombre.Text, Convert.ToInt32(Precio.Text), Marcas.Text, Convert.ToInt32(Stock.Text), DropDownList1.SelectedValue ,Convert.ToInt32(CantidadMinima.Text), Convert.ToInt32(CantidadMaxima.Text), PresentacionComercial.Text, Sucursales.SelectedValue);
                     
                    if(pProductos.CantidadMinima > pProductos.CantidadMaxima)
                     {
