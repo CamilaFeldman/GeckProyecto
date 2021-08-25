@@ -14,7 +14,7 @@ namespace LoginPage.Carrito
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, proveedor AS Proveedor, stock AS Cantidad, precio AS Precio  FROM deck.producto_especifico;", Conexion.ObtenerConexion());
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, proveedor AS Proveedor, sucursal AS Sucursal, stock AS Cantidad, precio AS Precio  FROM deck.producto_especifico;", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
