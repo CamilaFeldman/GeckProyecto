@@ -16,7 +16,7 @@
     <asp:Label ID="Label7" runat="server" Text="Cantidad máxima"></asp:Label>
     <asp:TextBox ID="CantidadMaxima" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label8" runat="server" Text="Presentación comercial"></asp:Label>
-    <asp:TextBox ID="PresentacionComercial" runat="server"></asp:TextBox>
+    <asp:TextBox ID="PresentacionComercial" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label9" runat="server" Text="Sucursal"></asp:Label>
     <asp:DropDownList ID="Sucursales" runat="server" Height="37px" Width="160px" AutoPostBack="True"  DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
     <asp:Button ID="Button1" runat="server" Text="Agregar" OnClick="Button1_Click"/>

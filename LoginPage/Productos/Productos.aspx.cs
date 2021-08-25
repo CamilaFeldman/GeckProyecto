@@ -33,7 +33,7 @@ namespace LoginPage.Productos
                 MySqlCommand SucursalSqlSelect = new MySqlCommand("SELECT nombre FROM sucursales", Conexion.ObtenerConexion());
                 MySqlDataAdapter du = new MySqlDataAdapter(SucursalSqlSelect.CommandText, Conexion.ObtenerConexion());
                 DataSet DU = new DataSet();
-                da.Fill(DU);
+                du.Fill(DU);
                 this.Sucursales.DataSource = DU;
                 this.Sucursales.DataBind();
 
@@ -75,12 +75,10 @@ namespace LoginPage.Productos
                         Response.Write("<script>alert('Se ingresó correctamente')</script>");
                         Nombre.Text = String.Empty;
                         Precio.Text = String.Empty;
-                        Marcas.Text = String.Empty;
                         Stock.Text = String.Empty;
                         CantidadMinima.Text = String.Empty;
                         CantidadMaxima.Text = String.Empty;
                         PresentacionComercial.Text = String.Empty;
-
                     }
 
                     
@@ -93,21 +91,9 @@ namespace LoginPage.Productos
                     EspaciosVacios.Visible = false;
                     CantidadRequerida.Visible = false;
                 }
-                    
-                    
-                
-                    
-                
-                
-            }
             
-
-          
-
-            
-           
+            }       
         }
-
         protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
         {
             
