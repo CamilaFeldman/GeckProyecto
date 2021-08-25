@@ -57,7 +57,8 @@
                         <li><a runat="server" href="~/Productos/Productos.aspx">Productos</a></li>
                         <li><a runat="server" href="~/Stock/Stock.aspx">Stock</a></li>
                         <li><a runat="server" href="~/Sucursales/Sucursales.aspx">Sucursales</a></li>
-                        <li><a runat="server" href="~/Carrito/Carrito.aspx">Carrito</a></li>          
+                        <li><a runat="server" href="~/Carrito/Carrito.aspx">Carrito</a></li> 
+                        <li><a runat="server" href="~/Movimientos/Movimientos.aspx">Movimientos</a></li> 
                         <li><a runat="server" href="~/Editable/Editable.aspx">Editable</a></li>
                     </ul>
                 </div>

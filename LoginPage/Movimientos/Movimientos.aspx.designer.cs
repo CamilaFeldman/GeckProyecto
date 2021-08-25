@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace LoginPage.Carrito
+namespace LoginPage.Movimientos
 {
 
 
-    public partial class Carrito
+    public partial class Movimientos
     {
 
         /// <summary>
