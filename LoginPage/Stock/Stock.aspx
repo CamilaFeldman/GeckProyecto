@@ -5,8 +5,15 @@
     </style>
 
 
+    <br />
     <asp:TextBox ID="Filtrado" runat="server"></asp:TextBox>
     <asp:Button ID="Buscar" runat="server" Text="Buscar" OnClick="Buscar_Click" />
+    <br />
+    <br />
+    <p>Ordenar por:</p>
+    <asp:DropDownList ID="DropDownList1" runat="server" Height="26px" Width="126px"></asp:DropDownList>
+    <asp:Button ID="Button1" runat="server" Text="Ordenar" OnClick="Button1_Click" />
+    <br />
     <br />
     <div class="gvclass">
     <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="181px" Width="1013px" HorizontalAlign="Center">
