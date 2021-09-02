@@ -20,6 +20,7 @@
     <asp:Label ID="Label9" runat="server" Text="Sucursal"></asp:Label>
     <asp:DropDownList ID="Sucursal" runat="server" Height="37px" Width="160px" AutoPostBack="True"  DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
     <asp:Button ID="Button1" runat="server" Text="Agregar" OnClick="Button1_Click" />
+    <asp:Button ID="Eliminar" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
     <asp:Label ID="EspaciosVacios" runat="server" Text="Completar espacios vacíos" Visible="false"></asp:Label>
     <asp:Label ID="IngresoIncorrecto" runat="server" Text="Algun campo mal ingresado" Visible="false"></asp:Label>
     <asp:Label ID="CantidadRequerida" runat="server" Text="La cantidad mínima es mayor a la máxima" Visible ="false"></asp:Label>

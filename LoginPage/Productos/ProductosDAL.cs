@@ -67,6 +67,16 @@ namespace LoginPage.Productos
 
 
         }
+        public static void Eliminar(string lNombre, string lProveedor)
+        {
+            string nombre = lNombre;
+            string proveedor = lProveedor;
+
+            MySqlCommand comando = new MySqlCommand(string.Format("DELETE FROM producto_especifico WHERE nombre = '" + nombre + "' &&  proveedor = '" + proveedor + "'"), Conexion.ObtenerConexion());
+
+            comando.ExecuteNonQuery();
+
+        }
 
     }
 }

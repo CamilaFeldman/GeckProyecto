@@ -146,6 +146,18 @@ namespace LoginPage.Productos
             
         }
 
-       
+        protected void Eliminar_Click(object sender, EventArgs e)
+        {
+
+            ProductosDAL.Eliminar(Nombre.Text, DropDownList1.Text);
+            Nombre.Text = String.Empty;
+            Precio.Text = String.Empty;
+            Stock.Text = String.Empty;
+            CantidadMinima.Text = String.Empty;
+            CantidadMaxima.Text = String.Empty;
+            PresentacionComercial.Text = String.Empty;
+           
+
+        }
     }
 }
