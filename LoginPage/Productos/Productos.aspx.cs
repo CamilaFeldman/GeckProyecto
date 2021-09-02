@@ -46,8 +46,8 @@ namespace LoginPage.Productos
                     Nombre.Text = Request.QueryString["idProducto"].ToString();
                     DropDownList1.Text = Request.QueryString["idProveedor"].ToString();
 
-                    ProductosDAL.CompararProducto(Nombre.Text, DropDownList1.Text);
-
+                    string Obtener = ProductosDAL.CompararProducto(Nombre.Text, DropDownList1.Text);
+                    PresentacionComercial.Text = Obtener;
 
                 }
 

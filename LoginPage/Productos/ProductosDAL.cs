@@ -22,34 +22,38 @@ namespace LoginPage.Productos
         }
 
 
-        public static bool CompararProducto(string idProducto, string idProveedor)
+        public static string CompararProducto(string idProducto, string idProveedor)
         {
 
             MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "select * from productos where (nombre=@user && proveedor=@proveedor)";
+            command.CommandText = "select * from producto_especifico where (nombre=@user && proveedor=@proveedor)";
             command.Parameters.AddWithValue("@user", idProducto);
             command.Parameters.AddWithValue("@proveedor", idProveedor);
             command.CommandType = CommandType.Text;
 
-            try
-            {
+           // try
+            //{
                 MySqlDataReader reader;
 
                 reader = command.ExecuteReader();
-
-                if (reader.HasRows)
-                {
-                    return true;
-                }
-                else
-                    return false;
-            }
-            catch (Exception)
+            if(reader.Read())
             {
-                return false;
+                string PresentacionComercial = reader["presentacion"].ToString();
+
+                return PresentacionComercial;
             }
+            else
+            {
+                return "";
+            }
+                
+           // }
+           // catch (Exception)
+            //{
+            //    return "";
+            //}
 
 
         }
