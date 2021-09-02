@@ -16,8 +16,17 @@
     <br />
     <br />
     <div class="gvclass">
-    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="181px" Width="1013px" HorizontalAlign="Center">
+    <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="181px" Width="1013px" HorizontalAlign="Center" AutoGenerateColumns="False">
         <AlternatingRowStyle BackColor="#DCDCDC" />
+        <Columns>
+            <asp:ButtonField ButtonType="Button" CommandName="Select" Text="Select" >
+            <ItemStyle Width="20px" />
+            </asp:ButtonField>
+            <asp:BoundField DataField="Producto" HeaderText="Producto" />
+            <asp:BoundField DataField="Stock" HeaderText="Stock" />
+            <asp:BoundField DataField="Proveedor" HeaderText="Proveedor" />
+            <asp:BoundField DataField="Precio" HeaderText="Precio" />
+        </Columns>
         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" Wrap="True" Font-Underline="True" />
         <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
@@ -29,4 +38,7 @@
         <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
     </div>
+    <br />
+    <asp:Button ID="Editar" runat="server" Text="Editar" OnClick="Editar_Click" />
+    <br />
 </asp:Content>

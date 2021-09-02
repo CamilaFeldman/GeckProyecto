@@ -37,6 +37,21 @@ namespace LoginPage.Productos
                 this.Sucursal.DataSource = DSS;
                 this.Sucursal.DataBind();
 
+                if (Request.QueryString["idProducto"] == null || Request.QueryString["idProveedor"] == null)
+                {
+
+                }
+                else
+                {
+                    Nombre.Text = Request.QueryString["idProducto"].ToString();
+                    DropDownList1.Text = Request.QueryString["idProveedor"].ToString();
+
+                    ProductosDAL.CompararProducto(Nombre.Text, DropDownList1.Text);
+
+
+                }
+
+
             }
         }
 

@@ -92,5 +92,28 @@ namespace LoginPage.Stock
 
         }
 
+        protected void Editar_Click(object sender, EventArgs e)
+        {
+
+            GridViewRow seleccion = GridView1.SelectedRow; // lo tuve q crear para q no salte excepcion
+
+            if (seleccion == null)
+            {
+
+            }
+            else
+            {
+                string idProducto;
+                string idProveedor;
+                idProducto = GridView1.SelectedRow.Cells[1].Text;
+                idProveedor = GridView1.SelectedRow.Cells[3].Text;
+                Response.Redirect("~/Productos/Productos.aspx?idProducto=" + idProducto + "&idProveedor=" + idProveedor);
+
+
+            }
+
+
+
+        }
     }
 }
