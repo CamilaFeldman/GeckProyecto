@@ -50,7 +50,7 @@ namespace LoginPage.Productos
                     {
                         ProductosBLL recProducto = new ProductosBLL();
 
-                        recProducto = ProductosDAL.CompararProducto(Nombre.Text, DropDownList1.Text);
+                        recProducto = ProductosDAL.Editar(Nombre.Text, DropDownList1.Text);
 
                         Precio.Text = recProducto.sPrecio;
                         Marcas.Text = recProducto.Marcas;
@@ -101,18 +101,28 @@ namespace LoginPage.Productos
                     else
                     {
 
-                        int resultado = ProductosDAL.Agregar(pProductos);
-                        EspaciosVacios.Visible = false;
-                        IngresoIncorrecto.Visible = false;
-                        CantidadRequerida.Visible = false;
-                        Response.Write("<script>alert('Se ingresó correctamente')</script>");
-                        Nombre.Text = String.Empty;
-                        Precio.Text = String.Empty;
-                        Marcas.Text = String.Empty;
-                        Stock.Text = String.Empty;
-                        CantidadMinima.Text = String.Empty;
-                        CantidadMaxima.Text = String.Empty;
-                        PresentacionComercial.Text = String.Empty;
+                        bool comprobar = ProductosDAL.CompararProducto(pProductos.Nombre, pProductos.Proveedor);
+
+                        if(comprobar == true)
+                        {
+                            int resultado = ProductosDAL.Agregar(pProductos);
+                            EspaciosVacios.Visible = false;
+                            IngresoIncorrecto.Visible = false;
+                            CantidadRequerida.Visible = false;
+                            Response.Write("<script>alert('Se ingresó correctamente')</script>");
+                            Nombre.Text = String.Empty;
+                            Precio.Text = String.Empty;
+                            Marcas.Text = String.Empty;
+                            Stock.Text = String.Empty;
+                            CantidadMinima.Text = String.Empty;
+                            CantidadMaxima.Text = String.Empty;
+                            PresentacionComercial.Text = String.Empty;
+                        }
+                        else
+                        {
+                            Response.Write("<script>alert('Ya existe ese producto')</script>");
+                        }
+                        
 
                     }
 

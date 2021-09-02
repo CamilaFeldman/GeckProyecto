@@ -21,8 +21,36 @@ namespace LoginPage.Productos
 
         }
 
+        public static bool CompararProducto(string idProducto, string idProveedor)
+        {
 
-        public static ProductosBLL CompararProducto(string idProducto, string idProveedor)
+            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "select * from producto_especifico where (nombre=@user && proveedor=@proveedor)";
+            command.Parameters.AddWithValue("@user", idProducto);
+            command.Parameters.AddWithValue("@proveedor", idProveedor);
+            command.CommandType = CommandType.Text;
+
+       
+            MySqlDataReader reader;
+
+            reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+
+
+        }
+
+
+            public static ProductosBLL Editar(string idProducto, string idProveedor)
         {
 
             MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
