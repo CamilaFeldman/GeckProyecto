@@ -46,8 +46,27 @@ namespace LoginPage.Productos
                     Nombre.Text = Request.QueryString["idProducto"].ToString();
                     DropDownList1.Text = Request.QueryString["idProveedor"].ToString();
 
-                    string Obtener = ProductosDAL.CompararProducto(Nombre.Text, DropDownList1.Text);
-                    PresentacionComercial.Text = Obtener;
+                    try
+                    {
+                        ProductosBLL recProducto = new ProductosBLL();
+
+                        recProducto = ProductosDAL.CompararProducto(Nombre.Text, DropDownList1.Text);
+
+                        Precio.Text = recProducto.sPrecio;
+                        Marcas.Text = recProducto.Marcas;
+                        Stock.Text = recProducto.sStock;
+                        CantidadMinima.Text = recProducto.sCantidadMinima;
+                        CantidadMaxima.Text = recProducto.sCantidadMaxima;
+                        PresentacionComercial.Text = recProducto.Presentacion;
+                        Sucursal.Text = recProducto.Sucursal;
+
+
+                    }
+                    catch(Exception)
+                    {
+
+                    }
+
 
                 }
 

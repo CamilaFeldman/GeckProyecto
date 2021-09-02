@@ -22,7 +22,7 @@ namespace LoginPage.Productos
         }
 
 
-        public static string CompararProducto(string idProducto, string idProveedor)
+        public static ProductosBLL CompararProducto(string idProducto, string idProveedor)
         {
 
             MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
@@ -40,13 +40,23 @@ namespace LoginPage.Productos
                 reader = command.ExecuteReader();
             if(reader.Read())
             {
-                string PresentacionComercial = reader["presentacion"].ToString();
 
-                return PresentacionComercial;
+                string Precio = reader["precio"].ToString();
+                string Categoria = reader["marcas"].ToString();
+                string Stock = reader["stock"].ToString();
+                string CantidadMinima = reader["cant_min"].ToString();
+                string CantidadMaxima = reader["cant_max"].ToString();
+                string PresentacionComercial = reader["presentacion"].ToString();
+                string Sucursal = reader["sucursal"].ToString();
+
+                ProductosBLL recProducto = new ProductosBLL(Precio, Categoria, Stock, CantidadMinima, CantidadMaxima, PresentacionComercial, Sucursal);
+
+                return recProducto;
             }
             else
             {
-                return "";
+                ProductosBLL Nada = new ProductosBLL();
+                return Nada;
             }
                 
            // }

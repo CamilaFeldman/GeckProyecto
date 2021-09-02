@@ -19,6 +19,16 @@ namespace LoginPage.Productos
 
         public string Sucursal { get; set; }
 
+
+        //variables para recuperar producto
+
+        public string sPrecio { get; set; }
+        public string sStock { get; set; }
+        public string sCantidadMinima { get; set; }
+        public string sCantidadMaxima { get; set; }
+
+        //
+
         public ProductosBLL()
         {
 
@@ -36,7 +46,18 @@ namespace LoginPage.Productos
             this.Sucursal = lSucursal;
 
         }
-       
+
+        public ProductosBLL(string lPrecio, string lMarcas, string lStock, string lCantidadMinima, string lCantidadMaxima, string lPresentacion, string lSucursal)
+        {
+            this.sPrecio = lPrecio;
+            this.Marcas = lMarcas;
+            this.sStock = lStock;
+            this.sCantidadMinima = lCantidadMinima;
+            this.sCantidadMaxima = lCantidadMaxima;
+            this.Presentacion = lPresentacion;
+            this.Sucursal = lSucursal;
+
+        }
 
     }
 }
