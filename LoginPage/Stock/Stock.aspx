@@ -24,6 +24,7 @@
             </asp:ButtonField>
             <asp:BoundField DataField="Producto" HeaderText="Producto" />
             <asp:BoundField DataField="Stock" HeaderText="Stock" />
+            <asp:BoundField DataField="Categoria" HeaderText="Categoria" />
             <asp:BoundField DataField="Proveedor" HeaderText="Proveedor" />
             <asp:BoundField DataField="Precio" HeaderText="Precio" />
         </Columns>

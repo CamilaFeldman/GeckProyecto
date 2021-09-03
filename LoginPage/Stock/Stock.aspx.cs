@@ -13,7 +13,7 @@ namespace LoginPage.Stock
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -41,7 +41,7 @@ namespace LoginPage.Stock
         protected void Buscar_Click(object sender, EventArgs e)
         {
 
-            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico WHERE nombre LIKE ('%" + Filtrado.Text + "%') || proveedor LIKE ('%" + Filtrado.Text + "%') ", Conexion.ObtenerConexion());
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico WHERE nombre LIKE ('%" + Filtrado.Text + "%') || proveedor LIKE ('%" + Filtrado.Text + "%') ", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -55,7 +55,7 @@ namespace LoginPage.Stock
 
             if (DropDownList1.SelectedValue == "1")
             {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
+                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
                 MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
                 DataSet dss = new DataSet();
                 daa.Fill(dss);
@@ -64,7 +64,7 @@ namespace LoginPage.Stock
             }
             if (DropDownList1.SelectedValue == "2")
             {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto DESC;", Conexion.ObtenerConexion());
+                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto DESC;", Conexion.ObtenerConexion());
                 MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
                 DataSet dss = new DataSet();
                 daa.Fill(dss);
@@ -73,7 +73,7 @@ namespace LoginPage.Stock
             }
             if (DropDownList1.SelectedValue == "3")
             {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Proveedor ASC;", Conexion.ObtenerConexion());
+                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Proveedor ASC;", Conexion.ObtenerConexion());
                 MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
                 DataSet dss = new DataSet();
                 daa.Fill(dss);
@@ -82,7 +82,7 @@ namespace LoginPage.Stock
             }
             if (DropDownList1.SelectedValue == "4")
             {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Precio DESC;", Conexion.ObtenerConexion());
+                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Precio DESC;", Conexion.ObtenerConexion());
                 MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
                 DataSet dss = new DataSet();
                 daa.Fill(dss);
@@ -106,7 +106,7 @@ namespace LoginPage.Stock
                 string idProducto;
                 string idProveedor;
                 idProducto = GridView1.SelectedRow.Cells[1].Text;
-                idProveedor = GridView1.SelectedRow.Cells[3].Text;
+                idProveedor = GridView1.SelectedRow.Cells[4].Text;
                 Response.Redirect("~/Productos/Productos.aspx?idProducto=" + idProducto + "&idProveedor=" + idProveedor);
 
 
