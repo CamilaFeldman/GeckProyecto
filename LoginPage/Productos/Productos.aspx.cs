@@ -51,7 +51,7 @@ namespace LoginPage.Productos
                         ProductosBLL recProducto = new ProductosBLL();
 
                         recProducto = ProductosDAL.Editar(Nombre.Text, DropDownList1.Text);
-
+                        
                         Precio.Text = recProducto.sPrecio;
                         Marcas.Text = recProducto.Marcas;
                         Stock.Text = recProducto.sStock;
@@ -59,7 +59,7 @@ namespace LoginPage.Productos
                         CantidadMaxima.Text = recProducto.sCantidadMaxima;
                         PresentacionComercial.Text = recProducto.Presentacion;
                         Sucursal.Text = recProducto.Sucursal;
-
+                        
 
                     }
                     catch(Exception)
@@ -167,6 +167,15 @@ namespace LoginPage.Productos
             CantidadMaxima.Text = String.Empty;
             PresentacionComercial.Text = String.Empty;
            
+
+        }
+
+        protected void Actualizar_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(Request.QueryString["id"].ToString());
+
+            ProductosBLL pProductos = new ProductosBLL(id, Nombre.Text, Convert.ToInt32(Precio.Text), Marcas.Text, Convert.ToInt32(Stock.Text), DropDownList1.SelectedValue, Convert.ToInt32(CantidadMinima.Text), Convert.ToInt32(CantidadMaxima.Text), PresentacionComercial.Text, Sucursal.SelectedValue);
+            ProductosDAL.Actualizar(pProductos);
 
         }
     }

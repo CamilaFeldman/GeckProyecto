@@ -13,6 +13,7 @@ namespace LoginPage.Productos
         public string Marcas { get; set; }
         public int Stock { get; set; }
         public string Proveedor { get; set; }
+     
         public int CantidadMinima { get; set; }
         public int CantidadMaxima { get; set; }
         public string Presentacion { get; set; }
@@ -22,12 +23,12 @@ namespace LoginPage.Productos
 
         //variables para recuperar producto
 
+        public int Id { get; set; }
+        //
         public string sPrecio { get; set; }
         public string sStock { get; set; }
         public string sCantidadMinima { get; set; }
         public string sCantidadMaxima { get; set; }
-
-        //
 
         public ProductosBLL()
         {
@@ -46,7 +47,7 @@ namespace LoginPage.Productos
             this.Sucursal = lSucursal;
 
         }
-
+        
         public ProductosBLL(string lPrecio, string lMarcas, string lStock, string lCantidadMinima, string lCantidadMaxima, string lPresentacion, string lSucursal)
         {
             this.sPrecio = lPrecio;
@@ -54,6 +55,34 @@ namespace LoginPage.Productos
             this.sStock = lStock;
             this.sCantidadMinima = lCantidadMinima;
             this.sCantidadMaxima = lCantidadMaxima;
+            this.Presentacion = lPresentacion;
+            this.Sucursal = lSucursal;
+
+        }
+        
+        public ProductosBLL(string lNombre, string lProveedor, string lPrecio, string lMarcas, string lStock, string lCantidadMinima, string lCantidadMaxima, string lPresentacion, string lSucursal)
+        {
+            this.Nombre = lNombre;
+            this.Proveedor = lProveedor;
+            this.sPrecio = lPrecio;
+            this.Marcas = lMarcas;
+            this.sStock = lStock;
+            this.sCantidadMinima = lCantidadMinima;
+            this.sCantidadMaxima = lCantidadMaxima;
+            this.Presentacion = lPresentacion;
+            this.Sucursal = lSucursal;
+
+        }
+        public ProductosBLL(int lId, string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion, string lSucursal)
+        {
+            this.Id = lId;
+            this.Nombre = lNombre;
+            this.Proveedor = lProveedor;
+            this.Precio = lPrecio;
+            this.Marcas = lMarcas;
+            this.Stock = lStock;
+            this.CantidadMinima = lCantidadMinima;
+            this.CantidadMaxima = lCantidadMaxima;
             this.Presentacion = lPresentacion;
             this.Sucursal = lSucursal;
 
