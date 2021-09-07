@@ -14,7 +14,17 @@ namespace LoginPage.Carrito
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, proveedor AS Proveedor, sucursal AS Sucursal, stock AS Cantidad, precio AS Precio  FROM deck.producto_especifico;", Conexion.ObtenerConexion());
+            
+        }
+
+        protected void BuscarBtn_Click(object sender, EventArgs e)
+        {
+
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.CommandText = "SELECT nombre, stock, sucursal, precio FROM producto_especifico WHERE nombre=@nombre";
+            cmd.Connection = Conexion.ObtenerConexion();
+            cmd.Parameters.AddWithValue("@nombre", BuscarTxt.Text);
+            cmd.CommandType = CommandType.Text;
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
