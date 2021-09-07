@@ -11,34 +11,47 @@ namespace LoginPage.Productos
 {
     public partial class Productos : System.Web.UI.Page
     {
+        string verificacion;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            if (Session["verificar"] != null)
             {
-                
-                MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM proveedor_especifico", Conexion.ObtenerConexion());
-                MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect.CommandText, Conexion.ObtenerConexion());
-                DataSet ds = new DataSet();
-                da.Fill(ds);
-                this.DropDownList1.DataSource = ds;
-                this.DropDownList1.DataBind();
-                
-                MySqlCommand CategoriaSelect = new MySqlCommand("SELECT nombre FROM deck.categorias", Conexion.ObtenerConexion());
-                MySqlDataAdapter DA = new MySqlDataAdapter(CategoriaSelect.CommandText, Conexion.ObtenerConexion());
-                DataSet DS = new DataSet();
-                DA.Fill(DS);
-                this.Marcas.DataSource = DS;
-                this.Marcas.DataBind();
-
-                MySqlCommand SucursalSqlSelect = new MySqlCommand("SELECT nombre FROM sucursales", Conexion.ObtenerConexion());
-                MySqlDataAdapter du = new MySqlDataAdapter(SucursalSqlSelect.CommandText, Conexion.ObtenerConexion());
-                DataSet DU = new DataSet();
-                du.Fill(DU);
-                this.Sucursales.DataSource = DU;
-                this.Sucursales.DataBind();
-
+                verificacion = Convert.ToString(Session["verificar"]);
 
             }
+            if (verificacion != "Si")
+            {
+                Response.Redirect("~/Login/LoginPage.aspx");
+            }
+            else
+            {
+                if (!IsPostBack)
+                {
+                
+                    MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM proveedor_especifico", Conexion.ObtenerConexion());
+                    MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect.CommandText, Conexion.ObtenerConexion());
+                    DataSet ds = new DataSet();
+                    da.Fill(ds);
+                    this.DropDownList1.DataSource = ds;
+                    this.DropDownList1.DataBind();
+                
+                    MySqlCommand CategoriaSelect = new MySqlCommand("SELECT nombre FROM deck.categorias", Conexion.ObtenerConexion());
+                    MySqlDataAdapter DA = new MySqlDataAdapter(CategoriaSelect.CommandText, Conexion.ObtenerConexion());
+                    DataSet DS = new DataSet();
+                    DA.Fill(DS);
+                    this.Marcas.DataSource = DS;
+                    this.Marcas.DataBind();
+
+                    MySqlCommand SucursalSqlSelect = new MySqlCommand("SELECT nombre FROM sucursales", Conexion.ObtenerConexion());
+                    MySqlDataAdapter du = new MySqlDataAdapter(SucursalSqlSelect.CommandText, Conexion.ObtenerConexion());
+                    DataSet DU = new DataSet();
+                    du.Fill(DU);
+                    this.Sucursales.DataSource = DU;
+                    this.Sucursales.DataBind();
+                }
+            }
+            
+
         }
 
         protected void Button1_Click(object sender, EventArgs e)

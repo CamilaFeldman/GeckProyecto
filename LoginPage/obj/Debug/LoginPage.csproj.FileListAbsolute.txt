@@ -333,3 +333,15 @@ C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage
 C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\obj\Debug\LoginPage.csproj.CopyComplete
 C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\obj\Debug\LoginPage.dll
 C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\obj\Debug\LoginPage.pdb
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.Helpers.dll
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.Mvc.dll
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.Razor.dll
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.WebPages.dll
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.WebPages.Razor.dll
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.Helpers.xml
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.Mvc.xml
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.Razor.xml
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.WebPages.xml
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Usuario\Documents\Trabajos escolares 2021\GitHub\GeckProyecto\LoginPage\bin\System.Web.WebPages.Razor.xml

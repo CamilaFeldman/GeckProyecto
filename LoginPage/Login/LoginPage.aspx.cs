@@ -8,8 +8,10 @@ using System.Web.UI.WebControls;
 
 namespace LoginPage.Login
 {
+   
     public partial class LoginPage : System.Web.UI.Page
     {
+        public string verificar;
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -22,6 +24,8 @@ namespace LoginPage.Login
 
             if(ingreso == true)
             {
+                verificar = "Si";
+                Session["verificar"] = verificar;
                 Response.Write("<script>alert('Se ingresó correctamente')</script>");
                 Response.Redirect("~/HomePage.aspx");
                
