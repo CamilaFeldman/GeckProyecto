@@ -11,8 +11,19 @@ namespace LoginPage.Editable
 {
     public partial class Editable : System.Web.UI.Page
     {
+        private string verificacion;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["verificar"] != null)
+            {
+                verificacion = Convert.ToString(Session["verificar"]);
+
+            }
+            if (verificacion != "Si")
+            {
+                Response.Redirect("~/Login/LoginPage.aspx");
+            }
+
             Cargar();
             CargarCategoria();
         }

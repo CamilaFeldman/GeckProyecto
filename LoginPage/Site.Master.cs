@@ -11,7 +11,10 @@ namespace LoginPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["administrador"] == "Si")
+            {
+                Editable.Visible = true;
+            }
         }
     }
 }

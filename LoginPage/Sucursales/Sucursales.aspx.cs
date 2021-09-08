@@ -11,8 +11,18 @@ namespace LoginPage.Sucursales
 {
     public partial class Sucursales : System.Web.UI.Page
     {
+        private string verificacion;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["verificar"] != null)
+            {
+                verificacion = Convert.ToString(Session["verificar"]);
+
+            }
+            if (verificacion != "Si")
+            {
+                Response.Redirect("~/Login/LoginPage.aspx");
+            }
 
             MySqlCommand cmd = new MySqlCommand("SELECT nombre, direccion FROM sucursales", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);

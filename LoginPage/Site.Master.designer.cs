@@ -15,6 +15,15 @@ namespace LoginPage
     {
 
         /// <summary>
+        /// Control Editable.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor Editable;
+
+        /// <summary>
         /// Control MainContent.
         /// </summary>
         /// <remarks>

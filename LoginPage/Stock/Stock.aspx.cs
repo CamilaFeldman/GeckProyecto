@@ -11,8 +11,19 @@ namespace LoginPage.Stock
 {
     public partial class Stock : System.Web.UI.Page
     {
+        private string verificacion;
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["verificar"] != null)
+            {
+                verificacion = Convert.ToString(Session["verificar"]);
+
+            }
+            if (verificacion != "Si")
+            {
+                Response.Redirect("~/Login/LoginPage.aspx");
+            }
+
             MySqlCommand cmd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
