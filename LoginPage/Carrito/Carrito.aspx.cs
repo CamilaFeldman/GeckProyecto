@@ -35,12 +35,46 @@ namespace LoginPage.Carrito
             cmd.Connection = Conexion.ObtenerConexion();
             cmd.Parameters.AddWithValue("@nombre", BuscarTxt.Text);
             cmd.CommandType = CommandType.Text;
+
+            MySqlDataReader reader;
+
+            reader = cmd.ExecuteReader();
+            if (reader.Read())
+            {
+
+                string Nombre = reader["nombre"].ToString();
+                int Stock = 1;
+                string Sucursal = reader["sucursal"].ToString();
+                int Precio = Convert.ToInt32(reader["precio"].ToString());
+                int PrecioFinal = Stock * Precio;
+
+                CarritoDAL.AgregarCarrito(Nombre, Stock, Sucursal, Precio, PrecioFinal);
+
+                MySqlCommand comando2 = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
+                MySqlDataAdapter DA = new MySqlDataAdapter(comando2);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+                GridView1.DataSource = DS.Tables[0];
+                GridView1.DataBind();
+
+
+            }
+            /*
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
             DataSet ds = new DataSet();
             da.Fill(ds);
             GridView1.DataSource = ds.Tables[0];
             GridView1.DataBind();
+            */
+        }
 
+        protected void Update_Click(object sender, EventArgs e)
+        {
+            MySqlCommand comando3 = new MySqlCommand(string.Format("DELETE FROM carrito"), Conexion.ObtenerConexion());
+
+            comando3.ExecuteNonQuery();
+
+            GridView1.DataBind();
         }
     }
 }

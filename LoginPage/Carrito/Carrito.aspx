@@ -21,8 +21,8 @@
                 </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="sucursal" HeaderText="Sucursal" />
-                <asp:BoundField DataField="precio" HeaderText="Precio unitario" />
-                <asp:BoundField HeaderText="Precio final" />
+                <asp:BoundField DataField="precio_unitario" HeaderText="Precio unitario" />
+                <asp:BoundField DataField="precio_final" HeaderText="Precio final" />
             </Columns>
         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -35,7 +35,12 @@
         <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
 
-
     </div>
+
+    
+    <br />
+    <asp:Button ID="Remover" runat="server" Text="Remover" Height="28px" Width="100px" OnClick="Update_Click" />
+    <br />
+
     
 </asp:Content>
