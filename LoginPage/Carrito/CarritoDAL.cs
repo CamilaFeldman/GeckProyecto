@@ -18,5 +18,15 @@ namespace LoginPage.Carrito
 
         }
 
+        public static void EliminarCarrito()
+        {
+
+            MySqlCommand comando3 = new MySqlCommand(string.Format("DELETE FROM carrito"), Conexion.ObtenerConexion());
+
+            comando3.ExecuteNonQuery();
+
+
+        }
+
     }
 }
