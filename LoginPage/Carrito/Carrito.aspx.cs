@@ -71,22 +71,15 @@ namespace LoginPage.Carrito
 
 
             }
-            /*
-            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            GridView1.DataSource = ds.Tables[0];
-            GridView1.DataBind();
-            */
+      
         }
 
         protected void Update_Click(object sender, EventArgs e)
         {
-            MySqlCommand comando3 = new MySqlCommand(string.Format("DELETE FROM carrito"), Conexion.ObtenerConexion());
 
-            comando3.ExecuteNonQuery();
-
+            CarritoDAL.EliminarCarrito();
             GridView1.DataBind();
+
         }
 
         protected void Actualizar_Click(object sender, EventArgs e)
@@ -97,15 +90,23 @@ namespace LoginPage.Carrito
 
             for (int counter = 0; counter < (GridView1.Rows.Count); counter++)
             {
+                try
+                {
 
-                TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;
+                    TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;
 
-                cantidad[counter] = Convert.ToInt32(txtValor.Text);
+                    cantidad[counter] = Convert.ToInt32(txtValor.Text);
 
-                precio[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
+                    precio[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
 
-                GridView1.Rows[counter].Cells[4].Text = Convert.ToString(cantidad[counter] * precio[counter]);
+                    GridView1.Rows[counter].Cells[4].Text = Convert.ToString(cantidad[counter] * precio[counter]);
 
+                }
+                catch (Exception)
+                {
+
+                }
+            
 
             }
 
