@@ -40,7 +40,9 @@
     
     <br />
     <asp:Button ID="Remover" runat="server" Text="Remover" Height="28px" Width="100px" OnClick="Update_Click" />
+    <asp:Button ID="Actualizar" runat="server" Text="Actualizar" Height="28px" Width="100px" OnClick="Actualizar_Click" />
     <br />
-
+    <asp:Label ID="PrecioTotal" runat="server" Text="Precio Total:"></asp:Label>
+    <br />
     
 </asp:Content>
