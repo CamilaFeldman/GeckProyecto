@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 
@@ -28,5 +29,29 @@ namespace LoginPage.Carrito
 
         }
 
+        public static bool CompararProducto(string idProducto)
+        {
+
+            MySqlCommand command = new MySqlCommand();
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "SELECT * FROM carrito where (nombre=@user)";
+            command.Parameters.AddWithValue("@user", idProducto);
+            command.CommandType = CommandType.Text;
+
+
+            MySqlDataReader reader;
+
+            reader = command.ExecuteReader();
+            if (reader.HasRows)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+
+        }
     }
 }

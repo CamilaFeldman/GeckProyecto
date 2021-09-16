@@ -11,7 +11,7 @@
     <asp:Button ID="BuscarBtn" runat="server" Text="Buscar" OnClick="BuscarBtn_Click" />
     <br /><br />
     <div class="gvclass">
-        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="254px" Width="751px" HorizontalAlign="Center" AutoGenerateColumns="False">
+        <asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="254px" Width="751px" HorizontalAlign="Center" AutoGenerateColumns="False" OnRowDeleting="GridView1_RowDeleting1">
         <AlternatingRowStyle BackColor="#DCDCDC" />
             <Columns>
                 <asp:BoundField DataField="nombre" HeaderText="Producto" />
@@ -23,6 +23,7 @@
                 <asp:BoundField DataField="sucursal" HeaderText="Sucursal" />
                 <asp:BoundField DataField="precio_unitario" HeaderText="Precio unitario" />
                 <asp:BoundField DataField="precio_final" HeaderText="Precio final" />
+                <asp:ButtonField ButtonType="Button" CommandName="DELETE" Text="Borrar" />
             </Columns>
         <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
         <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
@@ -37,11 +38,14 @@
 
     </div>
     <br />
-    <asp:Label ID="PrecioTotal" runat="server" Text="Precio Total:"></asp:Label>
+    <asp:Label ID="TextoPrecioTotal" runat="server" Text="Precio total:"></asp:Label>
+    <asp:Label ID="PrecioTotal" runat="server" Text=""></asp:Label>
     <br />
     <br />
     <asp:Button ID="Remover" runat="server" Text="Remover" Height="28px" Width="100px" OnClick="Update_Click" />
     <asp:Button ID="Actualizar" runat="server" Text="Actualizar" Height="28px" Width="100px" OnClick="Actualizar_Click" />
+    <asp:Button ID="FinalizarCompra" runat="server" Text="Finalizar compra" Height="28px" Width="145px" OnClick="FinalizarCompra_Click" />
+
     <br />
     
     
