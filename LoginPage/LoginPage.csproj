@@ -2127,6 +2127,7 @@
     <Content Include="AdminLTE-3.1.0\plugins\uplot\uPlot.min.css" />
     <Content Include="AdminLTE-3.1.0\starter.html" />
     <Content Include="Bootstrap\BootstrapLogin.css" />
+    <Content Include="CambiarContra\CambiarContra.aspx" />
     <Content Include="Carrito\Carrito.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Default.aspx" />
@@ -2456,6 +2457,13 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CambiarContra\CambiarContra.aspx.cs">
+      <DependentUpon>CambiarContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CambiarContra\CambiarContra.aspx.designer.cs">
+      <DependentUpon>CambiarContra.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Carrito\Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
