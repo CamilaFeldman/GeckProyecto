@@ -25,7 +25,7 @@
                     <asp:Label ID="Label1" runat="server" Text="Usuario no encontrado" Visible="false" class="noExisteCuenta"></asp:Label>
                     <asp:Label ID="Label2" runat="server" Text="Completar espacios vacios" Visible="false" class="noExisteCuenta"></asp:Label>
                     <asp:Button ID="Button1" runat="server" Text="" class="login-rectangulo" OnClick="Button1_Click"/>
-                    <p class="recordar-contraseña">¿No recuerda su contraseña?</p>
+                    <a href="/CambiarContra/CambiarContra.aspx" class="recordar-contraseña">¿No recuerda su contraseña? </a>
                     <p class="no-registrado">¿Aún no está registrado?</p>
                     <a href="/Login/RegisterPage.aspx" class="registrarse">Registrarse</a>
              </form>
