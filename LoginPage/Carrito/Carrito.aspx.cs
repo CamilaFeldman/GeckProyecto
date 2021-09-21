@@ -119,17 +119,7 @@ namespace LoginPage.Carrito
 
         }
 
-        protected void Update_Click(object sender, EventArgs e)
-        {
-
-            CarritoDAL.EliminarCarrito();
-            GridView1.DataBind();
-
-            DataTable dt = GetData();
-
-            Session["data"] = dt;
-
-        }
+        
 
         protected void Actualizar_Click(object sender, EventArgs e)
         {
@@ -178,7 +168,29 @@ namespace LoginPage.Carrito
         protected void FinalizarCompra_Click(object sender, EventArgs e)
         {
 
+            CarritoDAL.EliminarCarrito();
 
+            for (int counter = 0; counter < (GridView1.Rows.Count); counter++)
+            {
+                try
+                {
+
+                    string Nombre = GridView1.Rows[counter].Cells[0].Text;
+                    TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;                   
+                    int Stock = Convert.ToInt32(txtValor.Text);
+                    string Sucursal = GridView1.Rows[counter].Cells[2].Text;
+                    int Precio = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
+                    int PrecioFinal = Convert.ToInt32(GridView1.Rows[counter].Cells[4].Text);
+
+                    CarritoDAL.AgregarCarrito(Nombre, Stock, Sucursal, Precio, PrecioFinal);
+
+                }
+                catch (Exception)
+                {
+
+                }
+
+            }
 
         }
 

@@ -42,9 +42,8 @@
     <asp:Label ID="PrecioTotal" runat="server" Text=""></asp:Label>
     <br />
     <br />
-    <asp:Button ID="Remover" runat="server" Text="Remover" Height="28px" Width="100px" OnClick="Update_Click" />
-    <asp:Button ID="Actualizar" runat="server" Text="Actualizar" Height="28px" Width="100px" OnClick="Actualizar_Click" />
-    <asp:Button ID="FinalizarCompra" runat="server" Text="Finalizar compra" Height="28px" Width="145px" OnClick="FinalizarCompra_Click" />
+    <asp:Button ID="Actualizar" runat="server" Text="Actualizar precio" Height="28px" Width="162px" OnClick="Actualizar_Click" />
+    <asp:Button ID="FinalizarCompra" runat="server" Text="Finalizar compra" Height="28px" Width="152px" OnClick="FinalizarCompra_Click" />
 
     <br />
     
