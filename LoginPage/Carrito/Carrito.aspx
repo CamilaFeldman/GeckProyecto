@@ -17,7 +17,7 @@
                 <asp:BoundField DataField="nombre" HeaderText="Producto" />
                 <asp:TemplateField HeaderText="Cantidad">
                  <ItemTemplate>
-                <asp:TextBox runat="server" ID="txtQuantity" Columns="5"></asp:TextBox><br />
+                <asp:TextBox runat="server" ID="txtQuantity" Columns="3" Text="1"></asp:TextBox><br />
                 </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="sucursal" HeaderText="Sucursal" />
