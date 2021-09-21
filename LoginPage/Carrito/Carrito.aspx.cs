@@ -34,10 +34,42 @@ namespace LoginPage.Carrito
                 GridView1.DataSource = DS.Tables[0];
                 GridView1.DataBind();
 
+                DataTable dt = GetData();
+
+                Session["data"] = dt;
+
+                GridView1.DataSource = dt;
+                GridView1.DataBind();
+
             }
 
 
+
+            PrecioTotal.Text = Convert.ToString(0);
+
         }
+
+        private DataTable GetData()
+        {
+            try
+            {
+
+                MySqlCommand comando2 = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
+                MySqlDataAdapter DA = new MySqlDataAdapter(comando2);
+                DataTable dt = new DataTable();
+                DA.Fill(dt);
+
+                return dt;
+                
+            }
+            catch (Exception)
+            {
+                
+                return null;
+            }
+        }
+
+        
 
         protected void BuscarBtn_Click(object sender, EventArgs e)
         {
@@ -79,6 +111,9 @@ namespace LoginPage.Carrito
                 GridView1.DataSource = DS.Tables[0];
                 GridView1.DataBind();
 
+                DataTable dt = GetData();
+
+                Session["data"] = dt;
 
             }
 
@@ -89,6 +124,10 @@ namespace LoginPage.Carrito
 
             CarritoDAL.EliminarCarrito();
             GridView1.DataBind();
+
+            DataTable dt = GetData();
+
+            Session["data"] = dt;
 
         }
 
@@ -117,6 +156,10 @@ namespace LoginPage.Carrito
 
                     sumaFinal = sumaFinal + precioFinal[counter];
 
+                    DataTable dt = GetData();
+
+                    Session["data"] = dt;
+
                 }
                 catch (Exception)
                 {
@@ -141,6 +184,7 @@ namespace LoginPage.Carrito
 
         protected void GridView1_RowDeleting1(object sender, GridViewDeleteEventArgs e)
         {
+
             DataTable dt = (DataTable)Session["data"];
             dt.Rows.RemoveAt(e.RowIndex);
 
@@ -149,6 +193,7 @@ namespace LoginPage.Carrito
 
             GridView1.DataSource = dt;
             GridView1.DataBind();
+
         }
 
 
