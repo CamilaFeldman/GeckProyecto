@@ -54,6 +54,44 @@ namespace LoginPage.Carrito
 
         }
 
+        public static bool VerificarStock(string lNombre, string lSucursal, int lCantidad)
+        {
+
+            MySqlCommand command = new MySqlCommand();
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "SELECT stock FROM producto_especifico WHERE (nombre=@producto AND sucursal=@sucursal)";
+            command.Parameters.AddWithValue("@producto", lNombre);
+            command.Parameters.AddWithValue("@sucursal", lSucursal);
+            command.CommandType = CommandType.Text;
+
+
+            MySqlDataReader reader;
+
+            reader = command.ExecuteReader();
+            if (reader.Read())
+            {
+
+                int Stock = Convert.ToInt32(reader["stock"].ToString());
+                int StockRestante = Stock - lCantidad;
+                if(StockRestante > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+
+                
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
         public static void RestarStock(string lNombre, string lSucursal, int lCantidad)
         {
 

@@ -168,6 +168,7 @@ namespace LoginPage.Carrito
         protected void FinalizarCompra_Click(object sender, EventArgs e)
         {
 
+            bool operacionExitosa = false;
             CarritoDAL.EliminarCarrito();
 
             for (int counter = 0; counter < (GridView1.Rows.Count); counter++)
@@ -182,7 +183,22 @@ namespace LoginPage.Carrito
                     int Precio = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
                     int PrecioFinal = Convert.ToInt32(GridView1.Rows[counter].Cells[4].Text);
 
-                    CarritoDAL.RestarStock(Nombre, Sucursal, Stock);
+                    bool verificarstock = CarritoDAL.VerificarStock(Nombre, Sucursal, Stock);
+
+                    if(verificarstock == true)
+                    {
+                        CarritoDAL.RestarStock(Nombre, Sucursal, Stock);
+                        operacionExitosa = true;
+                    }
+                    else
+                    {
+                        Response.Write("<script language=JavaScript> alert('No se puede realizar ya que no hay suficiente stock'); </script>");
+                        operacionExitosa = false;
+                        
+                    }
+                    
+
+
 
                 }
                 catch (Exception)
@@ -191,9 +207,14 @@ namespace LoginPage.Carrito
                 }
 
             }
+            if(operacionExitosa == true)
+            {
 
-            CarritoDAL.EliminarCarrito();
-            Cargar();
+                CarritoDAL.EliminarCarrito();
+                Cargar();
+
+            }
+            
 
         }
 
