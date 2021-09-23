@@ -189,6 +189,8 @@ namespace LoginPage.Carrito
                     {
                         CarritoDAL.RestarStock(Nombre, Sucursal, Stock);
                         operacionExitosa = true;
+                        Response.Write("<script language=JavaScript> alert('Su venta fue realizada exitosamente'); </script>");
+
                     }
                     else
                     {
