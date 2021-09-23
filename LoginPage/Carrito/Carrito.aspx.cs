@@ -182,7 +182,7 @@ namespace LoginPage.Carrito
                     int Precio = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
                     int PrecioFinal = Convert.ToInt32(GridView1.Rows[counter].Cells[4].Text);
 
-                    CarritoDAL.AgregarCarrito(Nombre, Stock, Sucursal, Precio, PrecioFinal);
+                    CarritoDAL.RestarStock(Nombre, Sucursal, Stock);
 
                 }
                 catch (Exception)
@@ -191,6 +191,9 @@ namespace LoginPage.Carrito
                 }
 
             }
+
+            CarritoDAL.EliminarCarrito();
+            Cargar();
 
         }
 
@@ -206,6 +209,16 @@ namespace LoginPage.Carrito
             GridView1.DataSource = dt;
             GridView1.DataBind();
 
+        }
+
+        private void Cargar()
+        {
+            MySqlCommand cmd = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            GridView1.DataSource = ds.Tables[0];
+            GridView1.DataBind();
         }
 
 

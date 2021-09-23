@@ -53,5 +53,27 @@ namespace LoginPage.Carrito
             }
 
         }
+
+        public static void RestarStock(string lNombre, string lSucursal, int lCantidad)
+        {
+
+            string nombre = lNombre;
+            string sucursal = lSucursal;
+            int cantidad = lCantidad;
+
+            MySqlCommand command = new MySqlCommand();
+
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "UPDATE producto_especifico SET stock = stock-@cantventa WHERE (nombre=@producto AND sucursal=@sucursal)";
+            command.Parameters.AddWithValue("@producto", nombre );
+            command.Parameters.AddWithValue("@sucursal", sucursal);
+            command.Parameters.AddWithValue("@cantventa", cantidad);
+            command.CommandType = CommandType.Text;
+
+
+            command.ExecuteNonQuery();
+
+        }
+
     }
 }
