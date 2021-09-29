@@ -45,7 +45,7 @@ namespace LoginPage.Carrito
 
 
 
-            PrecioTotal.Text = Convert.ToString(0);
+            ActualizarPrecio();
 
         }
 
@@ -111,6 +111,8 @@ namespace LoginPage.Carrito
                 GridView1.DataSource = DS.Tables[0];
                 GridView1.DataBind();
 
+                ActualizarPrecio();
+
                 DataTable dt = GetData();
 
                 Session["data"] = dt;
@@ -124,44 +126,8 @@ namespace LoginPage.Carrito
         protected void Actualizar_Click(object sender, EventArgs e)
         {
 
-            int[] cantidad = new int[GridView1.Rows.Count];
-            int[] precio = new int[GridView1.Rows.Count];
-            int[] precioFinal = new int[GridView1.Rows.Count];
-            int sumaFinal = 0;
-
-            for (int counter = 0; counter < (GridView1.Rows.Count); counter++)
-            {
-                try
-                {
-
-                    TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;
-
-                    cantidad[counter] = Convert.ToInt32(txtValor.Text);
-
-                    precio[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
-
-                    GridView1.Rows[counter].Cells[4].Text = Convert.ToString(cantidad[counter] * precio[counter]);
-
-                    precioFinal[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[4].Text);
-
-                    sumaFinal = sumaFinal + precioFinal[counter];
-
-                    DataTable dt = GetData();
-
-                    Session["data"] = dt;
-
-                }
-                catch (Exception)
-                {
-
-                }
-
-            }
-
-            PrecioTotal.Text = Convert.ToString(sumaFinal);
-
-
-
+            ActualizarPrecio();
+            
         }
 
 
@@ -244,6 +210,46 @@ namespace LoginPage.Carrito
             GridView1.DataBind();
         }
 
+        private void ActualizarPrecio()
+        {
+
+            int[] cantidad = new int[GridView1.Rows.Count];
+            int[] precio = new int[GridView1.Rows.Count];
+            int[] precioFinal = new int[GridView1.Rows.Count];
+            int sumaFinal = 0;
+
+            for (int counter = 0; counter < (GridView1.Rows.Count); counter++)
+            {
+                try
+                {
+
+                    TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;
+
+                    cantidad[counter] = Convert.ToInt32(txtValor.Text);
+
+                    precio[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
+
+                    GridView1.Rows[counter].Cells[4].Text = Convert.ToString(cantidad[counter] * precio[counter]);
+
+                    precioFinal[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[4].Text);
+
+                    sumaFinal = sumaFinal + precioFinal[counter];
+
+                    DataTable dt = GetData();
+
+                    Session["data"] = dt;
+
+                }
+                catch (Exception)
+                {
+
+                }
+
+            }
+
+            PrecioTotal.Text = Convert.ToString(sumaFinal);
+
+        }
 
     }
 }

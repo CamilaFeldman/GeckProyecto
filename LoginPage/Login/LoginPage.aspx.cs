@@ -23,7 +23,11 @@ namespace LoginPage.Login
 
             if (TextBox1.Text == "admin" && TextBox2.Text == "admin")
             {
+                verificar = "Si";
+                Session["verificar"] = verificar;
                 Session["administrador"] = "Si";
+                Response.Redirect("~/HomePage.aspx");
+               
             }
 
             if (ingreso == true)
