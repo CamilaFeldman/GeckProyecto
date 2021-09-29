@@ -19,7 +19,7 @@ namespace LoginPage.Productos
         public string Presentacion { get; set; }
 
         public string Sucursal { get; set; }
-
+        public string Fecha { get; set; }
 
         //variables para recuperar producto
 
@@ -47,7 +47,22 @@ namespace LoginPage.Productos
             this.Sucursal = lSucursal;
 
         }
-        
+
+        public ProductosBLL(string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion, string lSucursal, string lFecha)
+        {
+            this.Nombre = lNombre;
+            this.Precio = lPrecio;
+            this.Marcas = lMarcas;
+            this.Stock = lStock;
+            this.Proveedor = lProveedor;
+            this.CantidadMinima = lCantidadMinima;
+            this.CantidadMaxima = lCantidadMaxima;
+            this.Presentacion = lPresentacion;
+            this.Sucursal = lSucursal;
+            this.Fecha = lFecha;
+
+        }
+
         public ProductosBLL(string lPrecio, string lMarcas, string lStock, string lCantidadMinima, string lCantidadMaxima, string lPresentacion, string lSucursal)
         {
             this.sPrecio = lPrecio;
@@ -73,7 +88,7 @@ namespace LoginPage.Productos
             this.Sucursal = lSucursal;
 
         }
-        public ProductosBLL(int lId, string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion, string lSucursal)
+        public ProductosBLL(int lId, string lNombre, int lPrecio, string lMarcas, int lStock, string lProveedor, int lCantidadMinima, int lCantidadMaxima, string lPresentacion, string lSucursal, string lFecha)
         {
             this.Id = lId;
             this.Nombre = lNombre;
@@ -85,6 +100,7 @@ namespace LoginPage.Productos
             this.CantidadMaxima = lCantidadMaxima;
             this.Presentacion = lPresentacion;
             this.Sucursal = lSucursal;
+            this.Fecha = lFecha;
 
         }
 
