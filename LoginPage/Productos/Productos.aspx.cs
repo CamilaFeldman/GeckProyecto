@@ -123,7 +123,6 @@ namespace LoginPage.Productos
                             Response.Write("<script>alert('Se ingresó correctamente')</script>");
                             Nombre.Text = String.Empty;
                             Precio.Text = String.Empty;
-                            Marcas.Text = String.Empty;
                             Stock.Text = String.Empty;
                             CantidadMinima.Text = String.Empty;
                             CantidadMaxima.Text = String.Empty;
@@ -136,9 +135,6 @@ namespace LoginPage.Productos
                         
 
                     }
-
-                    
-                    
 
                 }
                 catch(Exception)
