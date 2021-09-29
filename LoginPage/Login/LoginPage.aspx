@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="~\Bootstrap\BootstrapLogin.css" type="text/css" media="screen"/>
 </head>
 <body>       
+    <!--https://codepen.io/FlorinPop17/pen/vPKWjd-->
         </>
          <img src="/Imagenes/Vector4.png" class="Vector-4"/> 
              <h2 class="formulario-titulo">Login</h2>
