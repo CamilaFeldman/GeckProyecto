@@ -13,7 +13,7 @@ namespace LoginPage.Productos
         public static int Agregar(ProductosBLL pProductos)
         {
             int retorno = 0;
-            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT into producto_especifico(nombre, precio, marcas, stock, proveedor, cant_min, cant_max, presentacion, sucursal, fecha) values('{0}','{1}' , '{2}', '{3}','{4}' , '{5}', '{6}', '{7}', '{8}', '{9}')", pProductos.Nombre, pProductos.Precio, pProductos.Marcas, pProductos.Stock, pProductos.Proveedor, pProductos.CantidadMinima, pProductos.CantidadMaxima, pProductos.Presentacion, pProductos.Sucursal, pProductos.Fecha), Conexion.ObtenerConexion());
+            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT INTO producto_especifico(nombre, precio, marcas, stock, proveedor, cant_min, cant_max, presentacion, sucursal, fecha) values('{0}','{1}' , '{2}', '{3}','{4}' , '{5}', '{6}', '{7}', '{8}', '{9}')", pProductos.Nombre, pProductos.Precio, pProductos.Marcas, pProductos.Stock, pProductos.Proveedor, pProductos.CantidadMinima, pProductos.CantidadMaxima, pProductos.Presentacion, pProductos.Sucursal, pProductos.Fecha), Conexion.ObtenerConexion());
 
             retorno = comando2.ExecuteNonQuery();
 
@@ -102,7 +102,7 @@ namespace LoginPage.Productos
         public static void Actualizar(ProductosBLL pProductos)
         {
 
-            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+            MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();       
             command.CommandText = "UPDATE producto_especifico SET nombre=@nombre, precio=@precio, marcas=@marcas, stock=@stock, proveedor=@proveedor, cant_min=@cant_min, cant_max=@cant_max, presentacion=@presentacion, sucursal=@sucursal, fecha=@fecha WHERE (id=@id)";

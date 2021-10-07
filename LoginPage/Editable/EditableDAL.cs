@@ -13,7 +13,7 @@ namespace LoginPage.Editable
         public static int Agregar(EditableBLL pEditable)
         {
             int retorno = 0;
-            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT into sucursales(nombre, direccion) values('{0}','{1}')", pEditable.Nombre, pEditable.Direccion), Conexion.ObtenerConexion());
+            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT INTO sucursales(nombre, direccion) values('{0}','{1}')", pEditable.Nombre, pEditable.Direccion), Conexion.ObtenerConexion());
 
             retorno = comando2.ExecuteNonQuery();
 
@@ -35,10 +35,10 @@ namespace LoginPage.Editable
         public static bool Comparar(EditableBLL pEditable)
         {
 
-            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+            MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "select * from sucursales where (nombre=@user)";
+            command.CommandText = "SELECT * FROM sucursales WHERE (nombre=@user)";
             command.Parameters.AddWithValue("@user", pEditable.Nombre);
             command.CommandType = CommandType.Text;
 
@@ -65,7 +65,7 @@ namespace LoginPage.Editable
         public static int AgregarCategoria(EditableBLL pEditable)
         {
             int retorno = 0;
-            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT into categorias(nombre) values('{0}')", pEditable.NombreCategoria), Conexion.ObtenerConexion());
+            MySqlCommand comando2 = new MySqlCommand(string.Format("INSERT INTO categorias(nombre) values('{0}')", pEditable.NombreCategoria), Conexion.ObtenerConexion());
 
             retorno = comando2.ExecuteNonQuery();
 
@@ -84,10 +84,10 @@ namespace LoginPage.Editable
         public static bool CompararCategoria(EditableBLL pEditable)
         {
 
-            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+            MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "select * from categorias where (nombre=@user)";
+            command.CommandText = "SELECT * FROM categorias WHERE (nombre=@user)";
             command.Parameters.AddWithValue("@user", pEditable.NombreCategoria);
             command.CommandType = CommandType.Text;
 

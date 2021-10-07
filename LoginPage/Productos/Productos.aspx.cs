@@ -87,7 +87,6 @@ namespace LoginPage.Productos
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-            //int condicion=0;
             Conexion.ObtenerConexion();
 
 
@@ -134,7 +133,6 @@ namespace LoginPage.Productos
                         {
                             Response.Write("<script>alert('Ya existe ese producto')</script>");
                         }
-                        
 
                     }
 
@@ -145,18 +143,8 @@ namespace LoginPage.Productos
                     EspaciosVacios.Visible = false;
                     CantidadRequerida.Visible = false;
                 }
-                    
-                    
-                
-                    
-                
-                
+ 
             }
-            
-
-          
-
-            
            
         }
 

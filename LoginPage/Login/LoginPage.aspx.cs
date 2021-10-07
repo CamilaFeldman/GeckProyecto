@@ -40,8 +40,7 @@ namespace LoginPage.Login
             }
             else
             {
-                //Response.Write("<script>alert('No existe')</script>");
-                //Response.Write("<style type='text / css'> h3 { font-size:300%;} </ style > ");
+              
                 Label1.Visible = true;
                 Label2.Visible = false;
             }
