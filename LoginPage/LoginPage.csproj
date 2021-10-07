@@ -168,6 +168,7 @@
     <Content Include="Imagenes\Vector4.png" />
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
+    <Content Include="Movimientos\AbrirCaja.aspx" />
     <Content Include="Movimientos\Movimientos.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
@@ -373,6 +374,13 @@
     </Compile>
     <Compile Include="Login\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\AbrirCaja.aspx.cs">
+      <DependentUpon>AbrirCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos\AbrirCaja.aspx.designer.cs">
+      <DependentUpon>AbrirCaja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Movimientos\Movimientos.aspx.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>

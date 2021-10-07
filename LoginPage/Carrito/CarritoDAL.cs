@@ -19,6 +19,14 @@ namespace LoginPage.Carrito
 
         }
 
+        public static void AgregarMovimientos(string Nombre, int Cantidad, string Sucursal, int Precio)
+        {
+
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT into movimientos(nombre, cantidad, sucursal, precio_unitario, fecha) values('{0}','{1}' , '{2}', '{3}', '{4}')", Nombre, Cantidad, Sucursal, Precio, DateTime.Now.ToString()), Conexion.ObtenerConexion());
+
+            comando.ExecuteNonQuery();
+
+        }
         public static void EliminarCarrito()
         {
 
