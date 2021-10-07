@@ -13,7 +13,7 @@ namespace LoginPage.Carrito
         public static void AgregarCarrito(string Nombre, int Stock, string Sucursal, int Precio, int PrecioFinal)
         {
 
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT into carrito(nombre, cantidad, sucursal, precio_unitario, precio_final) values('{0}','{1}' , '{2}', '{3}', '{4}')", Nombre, Stock, Sucursal, Precio, PrecioFinal), Conexion.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO carrito(nombre, cantidad, sucursal, precio_unitario, precio_final) values('{0}','{1}' , '{2}', '{3}', '{4}')", Nombre, Stock, Sucursal, Precio, PrecioFinal), Conexion.ObtenerConexion());
 
             comando.ExecuteNonQuery();
 
@@ -22,7 +22,7 @@ namespace LoginPage.Carrito
         public static void AgregarMovimientos(string Nombre, int Cantidad, string Sucursal, int Precio)
         {
 
-            MySqlCommand comando = new MySqlCommand(string.Format("INSERT into movimientos(nombre, cantidad, sucursal, precio_unitario, fecha) values('{0}','{1}' , '{2}', '{3}', '{4}')", Nombre, Cantidad, Sucursal, Precio, DateTime.Now.ToString()), Conexion.ObtenerConexion());
+            MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO movimientos(nombre, cantidad, sucursal, precio_unitario, fecha) values('{0}','{1}' , '{2}', '{3}', '{4}')", Nombre, Cantidad, Sucursal, Precio, DateTime.Now.ToString()), Conexion.ObtenerConexion());
 
             comando.ExecuteNonQuery();
 
@@ -43,7 +43,7 @@ namespace LoginPage.Carrito
             MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "SELECT * FROM carrito where (nombre=@user)";
+            command.CommandText = "SELECT * FROM carrito WHERE (nombre=@user)";
             command.Parameters.AddWithValue("@user", idProducto);
             command.CommandType = CommandType.Text;
 

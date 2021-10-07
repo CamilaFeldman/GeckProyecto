@@ -15,7 +15,7 @@ namespace LoginPage.Usuario
             int retorno = 0;
             try
             {
-                MySqlCommand comando = new MySqlCommand(string.Format("INSERT into usuarios(email, nombre, password) values('{0}','{1}' , '{2}')", pCliente.Mail, pCliente.User, pCliente.Password), Conexion.ObtenerConexion());
+                MySqlCommand comando = new MySqlCommand(string.Format("INSERT INTO usuarios(email, nombre, password) values('{0}','{1}' , '{2}')", pCliente.Mail, pCliente.User, pCliente.Password), Conexion.ObtenerConexion());
 
                 retorno = comando.ExecuteNonQuery();
             }
@@ -32,10 +32,10 @@ namespace LoginPage.Usuario
         public static bool Login(Usuarios pCliente)
         {
        
-            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+            MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "select *from usuarios where (email=@user and password=@pass)";
+            command.CommandText = "SELECT * FROM usuarios WHERE (email=@user and password=@pass)";
             command.Parameters.AddWithValue("@user", pCliente.Mail);
             command.Parameters.AddWithValue("@pass", pCliente.Password);
             command.CommandType = CommandType.Text;
@@ -65,10 +65,10 @@ namespace LoginPage.Usuario
         public static bool Register(Usuarios pCliente)
         {
 
-            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+            MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "select * from usuarios where (email=@user)";
+            command.CommandText = "SELECT * FROM usuarios WHERE (email=@user)";
             command.Parameters.AddWithValue("@user", pCliente.Mail);
             command.CommandType = CommandType.Text;
 

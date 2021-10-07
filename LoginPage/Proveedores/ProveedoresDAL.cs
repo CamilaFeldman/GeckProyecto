@@ -13,7 +13,7 @@ namespace LoginPage.Proveedores
         public static int Agregar(ProveedoresBLL pProveedores)
         {
             int retorno = 0;
-            MySqlCommand comando3 = new MySqlCommand(string.Format("INSERT into proveedor_especifico(nombre, direccion, telefono, email) values('{0}','{1}' , '{2}', '{3}')",pProveedores.Nombre, pProveedores.Direccion, pProveedores.Telefono, pProveedores.Email), Conexion.ObtenerConexion());
+            MySqlCommand comando3 = new MySqlCommand(string.Format("INSERT INTO proveedor_especifico(nombre, direccion, telefono, email) values('{0}','{1}' , '{2}', '{3}')",pProveedores.Nombre, pProveedores.Direccion, pProveedores.Telefono, pProveedores.Email), Conexion.ObtenerConexion());
 
             retorno = comando3.ExecuteNonQuery();
 
@@ -23,10 +23,10 @@ namespace LoginPage.Proveedores
         public static bool MailVerif(ProveedoresBLL pProveedores)
         {
 
-            MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+            MySqlCommand command = new MySqlCommand();
 
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "select * from proveedor_especifico where (email=@user)";
+            command.CommandText = "SELECT * FROM proveedor_especifico WHERE (email=@user)";
             command.Parameters.AddWithValue("@user", pProveedores.Email);
             command.CommandType = CommandType.Text;
 
