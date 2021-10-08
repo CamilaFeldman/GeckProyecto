@@ -2141,7 +2141,9 @@
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
     <Content Include="Movimientos\AbrirCaja.aspx" />
+    <Content Include="Movimientos\CerrarCaja.aspx" />
     <Content Include="Movimientos\Movimientos.aspx" />
+    <Content Include="Movimientos\ResumenCaja.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -2529,12 +2531,26 @@
     <Compile Include="Movimientos\AbrirCaja.aspx.designer.cs">
       <DependentUpon>AbrirCaja.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Movimientos\CerrarCaja.aspx.cs">
+      <DependentUpon>CerrarCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos\CerrarCaja.aspx.designer.cs">
+      <DependentUpon>CerrarCaja.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Movimientos\Movimientos.aspx.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Movimientos\Movimientos.aspx.designer.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\ResumenCaja.aspx.cs">
+      <DependentUpon>ResumenCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos\ResumenCaja.aspx.designer.cs">
+      <DependentUpon>ResumenCaja.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>

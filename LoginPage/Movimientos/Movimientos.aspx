@@ -29,7 +29,10 @@
 
     </div>
     <br />
-    <asp:Button ID="AbrirCajaBtn" runat="server" Text="Abrir monto de caja" OnClick="AbrirCajaBtn_Click" />
+    <asp:Button ID="AbrirCajaBtn" runat="server" Text="Abrir monto de caja" OnClick="AbrirCajaBtn_Click" Width="219px" />
+    <br />
+    <br />
+    <asp:Button ID="CerrarCajaBtn" runat="server" Text="Cerrar monto de caja" OnClick="CerrarCajaBtn_Click" Width="219px" />
     <br />
     
 

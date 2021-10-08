@@ -9,7 +9,7 @@ using System.Web.UI.WebControls;
 
 namespace LoginPage.Movimientos
 {
-    public partial class AbrirCaja : System.Web.UI.Page
+    public partial class CerrarCaja : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -18,19 +18,20 @@ namespace LoginPage.Movimientos
         protected void IngresarMontoBtn_Click(object sender, EventArgs e)
         {
 
-            AgregarCaja(Convert.ToInt32(IngresarMontoTxt.Text));
+            CerrarCajaFinal(Convert.ToInt32(IngresarMontoTxt.Text));
+            Response.Write("<script>window.open('ResumenCaja.aspx','popup','width=500,height=300') </script>");
             Response.Write("<script languaje=javascript>window.close();</script>");
 
         }
 
-        public static void AgregarCaja(int MontoInicio)
+        public static void CerrarCajaFinal(int MontoInicio)
         {
 
             MySqlCommand command = new MySqlCommand();
             command.Connection = Conexion.ObtenerConexion();
-            command.CommandText = "UPDATE caja SET inicio_caja=@inicio_caja WHERE (idcaja=@idcaja)";
+            command.CommandText = "UPDATE caja SET final_caja=@final_caja WHERE (idcaja=@idcaja)";
             command.Parameters.AddWithValue("@idcaja", "0");
-            command.Parameters.AddWithValue("@inicio_caja", MontoInicio);
+            command.Parameters.AddWithValue("@final_caja", MontoInicio);
             command.CommandType = CommandType.Text;
             MySqlDataReader reader;
             reader = command.ExecuteReader();
