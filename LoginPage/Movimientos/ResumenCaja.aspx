@@ -19,7 +19,8 @@
             <br />
             <asp:Label ID="Ingreso" runat="server" Text="El ingreso de caja es de:"></asp:Label>
             <asp:TextBox ID="IngresoTxt" runat="server" ReadOnly="True" Width="74px"></asp:TextBox>
-
+            <br />
+            <asp:Button ID="ContinuarBtn" runat="server" Text="Continuar" OnClick="ContinuarBtn_Click" Width="119px" />
         </div>
     </form>
 </body>

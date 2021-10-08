@@ -40,5 +40,24 @@ namespace LoginPage.Movimientos
 
 
         }
+
+        protected void ContinuarBtn_Click(object sender, EventArgs e)
+        {
+
+            MySqlCommand comando3 = new MySqlCommand(string.Format("DELETE FROM movimientos"), Conexion.ObtenerConexion());
+
+            comando3.ExecuteNonQuery();
+
+            MySqlCommand command = new MySqlCommand();
+            command.Connection = Conexion.ObtenerConexion();
+            command.CommandText = "UPDATE caja SET final_caja=0 AND inicio_caja=0 WHERE (idcaja=@idcaja)";
+            command.Parameters.AddWithValue("@idcaja", "0");
+            command.CommandType = CommandType.Text;
+            MySqlDataReader reader;
+            reader = command.ExecuteReader();
+
+            Response.Write("<script languaje=javascript>window.close();</script>");
+
+        }
     }
 }

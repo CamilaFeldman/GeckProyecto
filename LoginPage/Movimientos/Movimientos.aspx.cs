@@ -24,6 +24,7 @@ namespace LoginPage.Movimientos
                 Response.Redirect("~/Login/LoginPage.aspx");
             }
 
+
             MySqlCommand comando = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, fecha FROM movimientos ", Conexion.ObtenerConexion());
             MySqlDataAdapter DA = new MySqlDataAdapter(comando);
             DataSet DS = new DataSet();
