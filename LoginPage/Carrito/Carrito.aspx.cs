@@ -27,6 +27,13 @@ namespace LoginPage.Carrito
             if (!IsPostBack)
             {
 
+                MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM sucursales", Conexion.ObtenerConexion());
+                MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect.CommandText, Conexion.ObtenerConexion());
+                DataSet ds = new DataSet();
+                da.Fill(ds);
+                this.DropDownList1.DataSource = ds;
+                this.DropDownList1.DataBind();
+
                 MySqlCommand comando2 = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
                 MySqlDataAdapter DA = new MySqlDataAdapter(comando2);
                 DataSet DS = new DataSet();
@@ -74,50 +81,55 @@ namespace LoginPage.Carrito
         protected void BuscarBtn_Click(object sender, EventArgs e)
         {
 
-            MySqlCommand cmd = new MySqlCommand();
-            cmd.CommandText = "SELECT nombre, stock, sucursal, precio FROM producto_especifico WHERE nombre=@nombre";
-            cmd.Connection = Conexion.ObtenerConexion();
-            cmd.Parameters.AddWithValue("@nombre", BuscarTxt.Text);
-            cmd.CommandType = CommandType.Text;
-
-            MySqlDataReader reader;
-
-            reader = cmd.ExecuteReader();
-            if (reader.Read())
+            try
             {
+                MySqlCommand cmd = new MySqlCommand();
+                cmd.CommandText = "SELECT nombre, stock, sucursal, precio FROM producto_especifico WHERE nombre=@nombre";
+                cmd.Connection = Conexion.ObtenerConexion();
+                cmd.Parameters.AddWithValue("@nombre", DropDownList2.SelectedValue.ToString());
+                cmd.CommandType = CommandType.Text;
 
-                string Nombre = reader["nombre"].ToString();
-                int Stock = 1;
-                string Sucursal = reader["sucursal"].ToString();
-                int Precio = Convert.ToInt32(reader["precio"].ToString());
-                int PrecioFinal = Stock * Precio;
+                MySqlDataReader reader;
 
-                bool comparacion = CarritoDAL.CompararProducto(Nombre);
-
-                if (comparacion == true)
+                reader = cmd.ExecuteReader();
+                if (reader.Read())
                 {
-                    CarritoDAL.AgregarCarrito(Nombre, Stock, Sucursal, Precio, PrecioFinal);
+
+                    string Nombre = reader["nombre"].ToString();
+                    int Stock = 1;
+                    string Sucursal = reader["sucursal"].ToString();
+                    int Precio = Convert.ToInt32(reader["precio"].ToString());
+                    int PrecioFinal = Stock * Precio;
+
+                    bool comparacion = CarritoDAL.CompararProducto(Nombre);
+
+                    if (comparacion == true)
+                    {
+                        CarritoDAL.AgregarCarrito(Nombre, Stock, Sucursal, Precio, PrecioFinal);
+                    }
+                    else
+                    {
+                        Response.Write("<script>alert('Ya se encuentra en el carrito')</script>");
+                    }
+
+
+                    MySqlCommand comando2 = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
+                    MySqlDataAdapter DA = new MySqlDataAdapter(comando2);
+                    DataSet DS = new DataSet();
+                    DA.Fill(DS);
+                    GridView1.DataSource = DS.Tables[0];
+                    GridView1.DataBind();
+
+                    ActualizarPrecio();
+
+                    DataTable dt = GetData();
+
+                    Session["data"] = dt;
+
                 }
-                else
-                {
-                    Response.Write("<script>alert('Ya se encuentra en el carrito')</script>");
-                }
-
-
-                MySqlCommand comando2 = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
-                MySqlDataAdapter DA = new MySqlDataAdapter(comando2);
-                DataSet DS = new DataSet();
-                DA.Fill(DS);
-                GridView1.DataSource = DS.Tables[0];
-                GridView1.DataBind();
-
-                ActualizarPrecio();
-
-                DataTable dt = GetData();
-
-                Session["data"] = dt;
-
             }
+            catch (Exception) { }
+           
 
         }
 
@@ -252,5 +264,20 @@ namespace LoginPage.Carrito
 
         }
 
+        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DropDownList2.Visible = true;
+            SelecProducto.Visible = true;
+            
+
+            MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM producto_especifico WHERE (sucursal=@sucursal)", Conexion.ObtenerConexion());
+            OrdenSqlSelect.Parameters.AddWithValue("@sucursal", DropDownList1.SelectedValue.ToString());
+            MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+            this.DropDownList2.DataSource = ds;
+            this.DropDownList2.DataBind();
+
+        }
     }
 }
