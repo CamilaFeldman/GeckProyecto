@@ -40,5 +40,11 @@ namespace LoginPage.Movimientos
 
         }
 
+        protected void CerrarCajaBtn_Click(object sender, EventArgs e)
+        {
+
+            Response.Write("<script>window.open('CerrarCaja.aspx','popup','width=500,height=300') </script>");
+
+        }
     }
 }
