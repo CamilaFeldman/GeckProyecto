@@ -3,3 +3,9 @@
 .vs/LoginPage/v16/.suo
 .vs/LoginPage/v16/.suo
 LoginPage/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
+*.cache
+.vs/LoginPage/config/applicationhost.config
+.vs/LoginPage/v16/.suo
+*.dll
+*.pdb
+*.pdb
