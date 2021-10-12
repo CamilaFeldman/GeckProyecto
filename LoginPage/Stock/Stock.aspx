@@ -1,11 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Stock.aspx.cs" Inherits="LoginPage.Stock.Stock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <style type="text/css">
-    .gvclass table th {text-align:center;}
-    </style>
 
 
-    <br />
+   <br />
     <asp:TextBox ID="Filtrado" runat="server"></asp:TextBox>
     <asp:Button ID="Buscar" runat="server" Text="Buscar" OnClick="Buscar_Click" />
     <br />
@@ -43,3 +40,5 @@
     <asp:Button ID="Editar" runat="server" Text="Editar" OnClick="Editar_Click" />
     <br />
 </asp:Content>
+
+

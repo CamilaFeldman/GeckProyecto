@@ -442,7 +442,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .dark-mode .lockscreen-item {
-  background-color: #343a40;
+  background-color: #FDFDFD;
 }
 
 .dark-mode .lockscreen-logo a {
@@ -450,7 +450,7 @@ a.close.disabled, a.disabled.mailbox-attachment-close {
 }
 
 .dark-mode .lockscreen-credentials .btn {
-  background-color: #343a40;
+  background-color: #FDFDFD;
 }
 
 .dark-mode .lockscreen-image {
