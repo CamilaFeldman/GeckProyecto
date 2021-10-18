@@ -21,7 +21,7 @@
     <asp:DropDownList ID="Sucursal" runat="server" Height="37px" Width="160px" AutoPostBack="True"  DataTextField="nombre" DataValueField="nombre"></asp:DropDownList>
     <asp:Button ID="Button1" runat="server" Text="Agregar" OnClick="Button1_Click" />
     <asp:Button ID="Eliminar" runat="server" Text="Eliminar" OnClick="Eliminar_Click" />
-    <asp:Button ID="Actualizar" runat="server" Text="Editar" OnClick="Actualizar_Click" />
+    <asp:Button ID="Actualizar" runat="server" Text="Editar" OnClick="Actualizar_Click" OnClientClick="return confirm('¿Esta seguro?')" />
     <asp:Label ID="EspaciosVacios" runat="server" Text="Completar espacios vacíos" Visible="false"></asp:Label>
     <asp:Label ID="IngresoIncorrecto" runat="server" Text="Algun campo mal ingresado" Visible="false"></asp:Label>
     <asp:Label ID="CantidadRequerida" runat="server" Text="La cantidad mínima es mayor a la máxima" Visible ="false"></asp:Label>
