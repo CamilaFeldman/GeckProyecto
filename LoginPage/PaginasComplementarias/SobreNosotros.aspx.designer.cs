@@ -7,11 +7,11 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace LoginPage
+namespace LoginPage.PaginasComplementarias
 {
 
 
-    public partial class HomePage
+    public partial class SobreNosotros
     {
     }
 }

@@ -32,6 +32,41 @@ namespace LoginPage.Movimientos
             GridView1.DataSource = DS.Tables[0];
             GridView1.DataBind();
 
+            ActualizarPrecio();
+
+        }
+        private void ActualizarPrecio()
+        {
+
+            int[] cantidad = new int[GridView1.Rows.Count];
+            int[] precio = new int[GridView1.Rows.Count];
+            int[] precioFinal = new int[GridView1.Rows.Count];
+            int sumaFinal = 0;
+
+            for (int counter = 0; counter < (GridView1.Rows.Count); counter++)
+            {
+                try
+                {
+
+                    cantidad[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[2].Text);
+
+                    precio[counter] = Convert.ToInt32(GridView1.Rows[counter].Cells[4].Text);
+
+                    precioFinal[counter] = (Convert.ToInt32(cantidad[counter]) * Convert.ToInt32(precio[counter]));
+
+                    sumaFinal = sumaFinal + precioFinal[counter];
+
+
+                }
+                catch (Exception)
+                {
+
+                }
+
+            }
+
+            PrecioTotal.Text = Convert.ToString(sumaFinal);
+
         }
 
         protected void AbrirCajaBtn_Click(object sender, EventArgs e)

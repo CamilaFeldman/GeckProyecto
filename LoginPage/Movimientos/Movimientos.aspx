@@ -26,8 +26,11 @@
         <SortedDescendingCellStyle BackColor="#CAC9C9" />
         <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
-
     </div>
+    <br />
+    <asp:Label ID="Precio" runat="server" Text="El precio total es:"></asp:Label>
+    <asp:TextBox ID="PrecioTotal" runat="server" ReadOnly="True"></asp:TextBox>
+    <br />
     <br />
     <asp:Button ID="AbrirCajaBtn" runat="server" Text="Abrir monto de caja" OnClick="AbrirCajaBtn_Click" Width="219px" />
     <br />
@@ -39,3 +42,4 @@
 
 
 </asp:Content>
+

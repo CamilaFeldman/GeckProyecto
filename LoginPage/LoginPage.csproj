@@ -2144,6 +2144,7 @@
     <Content Include="Movimientos\CerrarCaja.aspx" />
     <Content Include="Movimientos\Movimientos.aspx" />
     <Content Include="Movimientos\ResumenCaja.aspx" />
+    <Content Include="PaginasComplementarias\SobreNosotros.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -2551,6 +2552,13 @@
     </Compile>
     <Compile Include="Movimientos\ResumenCaja.aspx.designer.cs">
       <DependentUpon>ResumenCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasComplementarias\SobreNosotros.aspx.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\SobreNosotros.aspx.designer.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
