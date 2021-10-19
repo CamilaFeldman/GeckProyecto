@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Stock.aspx.cs" Inherits="LoginPage.Stock.Stock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
-
+     <div class="content-wrapper">
+          <div class="content">
    <br />
     <asp:TextBox ID="Filtrado" runat="server"></asp:TextBox>
     <asp:Button ID="Buscar" runat="server" Text="Buscar" OnClick="Buscar_Click" />
@@ -39,6 +39,7 @@
     <br />
     <asp:Button ID="Editar" runat="server" Text="Editar" OnClick="Editar_Click" />
     <br />
+              </div></div>
 </asp:Content>
 
 
