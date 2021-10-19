@@ -150,7 +150,6 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Bootstrap\BootstrapLogin.css" />
-    <Content Include="CambiarContra\CambiarContra.aspx" />
     <Content Include="Carrito\Carrito.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-grid.css" />
@@ -173,6 +172,8 @@
     <Content Include="Movimientos\Movimientos.aspx" />
     <Content Include="Movimientos\ResumenCaja.aspx" />
     <Content Include="PaginasComplementarias\SobreNosotros.aspx" />
+    <Content Include="PasswordRecovery\CambiarContra.aspx" />
+    <Content Include="PasswordRecovery\PasswordRecovery.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -314,13 +315,6 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="CambiarContra\CambiarContra.aspx.cs">
-      <DependentUpon>CambiarContra.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="CambiarContra\CambiarContra.aspx.designer.cs">
-      <DependentUpon>CambiarContra.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Carrito\Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -412,6 +406,20 @@
     </Compile>
     <Compile Include="PaginasComplementarias\SobreNosotros.aspx.designer.cs">
       <DependentUpon>SobreNosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRecovery\CambiarContra.aspx.cs">
+      <DependentUpon>CambiarContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRecovery\CambiarContra.aspx.designer.cs">
+      <DependentUpon>CambiarContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRecovery\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRecovery\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
