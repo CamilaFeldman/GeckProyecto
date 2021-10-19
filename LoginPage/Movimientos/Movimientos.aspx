@@ -4,32 +4,42 @@
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
-    <div>
+    <div class="gvclass">
 
-<asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#E7E7FF" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Horizontal" Height="258px" Width="659px" HorizontalAlign="Center">
-        <AlternatingRowStyle BackColor="#F7F7F7" />
+<asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="258px" Width="720px" HorizontalAlign="Center" AutoGenerateColumns="False">
+        <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
-            <asp:ButtonField HeaderText="Seleccionar" Text="Botón" />
-            <asp:BoundField HeaderText="Nombre" />
-            <asp:BoundField HeaderText="Cantidad" />
-            <asp:BoundField HeaderText="Sucursal" />
-            <asp:BoundField HeaderText="Precio unitario" />
-            <asp:BoundField HeaderText="Fecha" />
+            <asp:ButtonField HeaderText="Selec" Text="Botón" ButtonType="Button" />
+            <asp:BoundField HeaderText="Nombre" DataField="nombre" />
+            <asp:BoundField HeaderText="Cantidad" DataField="cantidad" />
+            <asp:BoundField HeaderText="Sucursal" DataField="sucursal" />
+            <asp:BoundField HeaderText="Precio unitario" DataField="precio_unitario" />
+            <asp:BoundField HeaderText="Fecha" DataField="fecha" />
         </Columns>
-        <FooterStyle BackColor="#B5C7DE" ForeColor="#4A3C8C" />
-        <HeaderStyle BackColor="#4A3C8C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <PagerStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" HorizontalAlign="Right" />
-        <RowStyle BackColor="#E7E7FF" ForeColor="#4A3C8C" />
-        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="#F7F7F7" />
-        <SortedAscendingCellStyle BackColor="#F4F4FD" />
-        <SortedAscendingHeaderStyle BackColor="#5A4C9D" />
-        <SortedDescendingCellStyle BackColor="#D8D8F0" />
-        <SortedDescendingHeaderStyle BackColor="#3E3277" />
+        <FooterStyle BackColor="#CCCCCC" ForeColor="Black" />
+        <HeaderStyle BackColor="#000084" Font-Bold="True" ForeColor="White" />
+        <PagerStyle BackColor="#999999" ForeColor="Black" HorizontalAlign="Center" />
+        <RowStyle BackColor="#EEEEEE" ForeColor="Black" HorizontalAlign="Center" />
+        <SelectedRowStyle BackColor="#008A8C" Font-Bold="True" ForeColor="White" />
+        <SortedAscendingCellStyle BackColor="#F1F1F1" />
+        <SortedAscendingHeaderStyle BackColor="#0000A9" />
+        <SortedDescendingCellStyle BackColor="#CAC9C9" />
+        <SortedDescendingHeaderStyle BackColor="#000065" />
     </asp:GridView>
-
     </div>
+    <br />
+    <asp:Label ID="Precio" runat="server" Text="El precio total es:"></asp:Label>
+    <asp:TextBox ID="PrecioTotal" runat="server" ReadOnly="True"></asp:TextBox>
+    <br />
+    <br />
+    <asp:Button ID="AbrirCajaBtn" runat="server" Text="Abrir monto de caja" OnClick="AbrirCajaBtn_Click" Width="219px" />
+    <br />
+    <br />
+    <asp:Button ID="CerrarCajaBtn" runat="server" Text="Cerrar monto de caja" OnClick="CerrarCajaBtn_Click" Width="219px" />
+    <br />
     
 
 
 
 </asp:Content>
+

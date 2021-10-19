@@ -33,7 +33,6 @@ namespace LoginPage.Login
                 Label2.Visible = false;
                 Label3.Visible = false;
                 Label4.Visible = false;
-                //Response.Write("<script>alert('Este mail ya existe')</script>");
                 condicion = 1;
             }
 
@@ -43,7 +42,6 @@ namespace LoginPage.Login
                 Label2.Visible = true;
                 Label3.Visible = false;
                 Label4.Visible = false;
-                //Response.Write("<script>alert('Hay espacios vacíos')</script>");
                 condicion = 1;
             }
 
@@ -63,7 +61,6 @@ namespace LoginPage.Login
                 Label2.Visible = false;
                 Label3.Visible = true;
                 Label4.Visible = false;
-                //Response.Write("<script>alert('Las contraseñas no coinciden')</script>");
                 condicion = 1;
             }
             if(condicion != 1)
@@ -71,13 +68,11 @@ namespace LoginPage.Login
                 int resultado = UsuariosDAL.Agregar(pCliente);
                 if(resultado != 0)
                 {
-                    //Response.Write("<script>alert('Se ingresó correctamente')</script>");
                     Label5.Visible = true;
                     Label1.Visible = false;
                     Label2.Visible = false;
                     Label3.Visible = false;
                     Label4.Visible = false;
-                    //Response.Redirect("~/Login/LoginPage.aspx");
                     Button2.Attributes.Add("onclick", "this.disabled=true;");
                     Response.AddHeader("REFRESH", "2;LoginPage.aspx");
                 }

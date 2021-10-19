@@ -123,10 +123,10 @@ namespace LoginPage.Stock
                 idProveedor = GridView1.SelectedRow.Cells[4].Text;
 
 
-                MySqlCommand command = new MySqlCommand(/*string.Format("SELECT * from usuarios where(email, password) values('{0}','{1}')", pCliente.Mail, pCliente.Password), Conexion.ObtenerConexion()*/);
+                MySqlCommand command = new MySqlCommand();
 
                 command.Connection = Conexion.ObtenerConexion();
-                command.CommandText = "select id from producto_especifico where (nombre=@user && proveedor=@proveedor)";
+                command.CommandText = "SELECT id FROM producto_especifico WHERE (nombre=@user && proveedor=@proveedor)";
                 command.Parameters.AddWithValue("@user", idProducto);
                 command.Parameters.AddWithValue("@proveedor", idProveedor);
                 command.CommandType = CommandType.Text;

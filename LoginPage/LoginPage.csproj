@@ -167,7 +167,13 @@
     <Content Include="Imagenes\Vector4.png" />
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
+    <Content Include="Movimientos\AbrirCaja.aspx" />
+    <Content Include="Movimientos\CerrarCaja.aspx" />
     <Content Include="Movimientos\Movimientos.aspx" />
+    <Content Include="Movimientos\ResumenCaja.aspx" />
+    <Content Include="PaginasComplementarias\SobreNosotros.aspx" />
+    <Content Include="PasswordRecovery\CambiarContra.aspx" />
+    <Content Include="PasswordRecovery\PasswordRecovery.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
@@ -366,12 +372,54 @@
     <Compile Include="Login\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Movimientos\AbrirCaja.aspx.cs">
+      <DependentUpon>AbrirCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos\AbrirCaja.aspx.designer.cs">
+      <DependentUpon>AbrirCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\CerrarCaja.aspx.cs">
+      <DependentUpon>CerrarCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos\CerrarCaja.aspx.designer.cs">
+      <DependentUpon>CerrarCaja.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Movimientos\Movimientos.aspx.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Movimientos\Movimientos.aspx.designer.cs">
       <DependentUpon>Movimientos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Movimientos\ResumenCaja.aspx.cs">
+      <DependentUpon>ResumenCaja.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Movimientos\ResumenCaja.aspx.designer.cs">
+      <DependentUpon>ResumenCaja.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasComplementarias\SobreNosotros.aspx.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\SobreNosotros.aspx.designer.cs">
+      <DependentUpon>SobreNosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRecovery\CambiarContra.aspx.cs">
+      <DependentUpon>CambiarContra.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRecovery\CambiarContra.aspx.designer.cs">
+      <DependentUpon>CambiarContra.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PasswordRecovery\PasswordRecovery.aspx.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PasswordRecovery\PasswordRecovery.aspx.designer.cs">
+      <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
     <Compile Include="Productos\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>

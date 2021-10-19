@@ -23,7 +23,11 @@ namespace LoginPage.Login
 
             if (TextBox1.Text == "admin" && TextBox2.Text == "admin")
             {
+                verificar = "Si";
+                Session["verificar"] = verificar;
                 Session["administrador"] = "Si";
+                Response.Redirect("~/HomePage.aspx");
+               
             }
 
             if (ingreso == true)
@@ -36,8 +40,7 @@ namespace LoginPage.Login
             }
             else
             {
-                //Response.Write("<script>alert('No existe')</script>");
-                //Response.Write("<style type='text / css'> h3 { font-size:300%;} </ style > ");
+              
                 Label1.Visible = true;
                 Label2.Visible = false;
             }
