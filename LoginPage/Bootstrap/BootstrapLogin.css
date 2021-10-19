@@ -113,6 +113,7 @@
 
 .login-rectangulo {
     /* Rectangle 7 */
+    text-decoration: none;
     position: absolute;
     width: 10%;
     height: 6%;
@@ -196,11 +197,34 @@
     background-color: #BCE0FD;
     font-size:140%;
 }
-    .completar-email:focus, active, focus-visible {
+.completar-email:focus, active, focus-visible {
         border: none;
         border-color: none;
         outline:none;
-    }
+}
+
+.noExisteCuenta {
+    position: absolute;
+    left: 30%;
+    top: 75%;
+    font-size: 120%;
+    color: indianred;
+}
+.errorRegistro {
+    position: absolute;
+    left: 20%;
+    top: 73%;
+    font-size: 120%;
+    color: indianred;
+}
+
+.correctoRegistro {
+    position: absolute;
+    left: 20%;
+    top: 73%;
+    font-size: 120%;
+    color: green;
+}
     /*
 
         A partir de aca comienza la pagina register
