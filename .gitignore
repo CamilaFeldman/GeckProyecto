@@ -9,3 +9,9 @@ LoginPage/obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache
 *.dll
 *.pdb
 *.pdb
+*.suo
+*.user
+_ReShaper.*
+bin
+obj
+packages
