@@ -1,0 +1,7 @@
+
+*.pdb
+*.dll
+LoginPage/obj/Debug/LoginPage.csproj.FileListAbsolute.txt
+*.cache
+.vs/LoginPage/v16/.suo
+.vs/LoginPage/config/applicationhost.config
