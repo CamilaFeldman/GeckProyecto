@@ -7,30 +7,83 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <title></title>
     <link rel="stylesheet" href="~/Bootstrap\BootstrapLogin.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="/AdminLTE-3.1.0/plugins/fontawesome-free/css/all.min.css"/>
+  <!-- icheck bootstrap -->
+  <link rel="stylesheet" href="/AdminLTE-3.1.0/plugins/icheck-bootstrap/icheck-bootstrap.min.css"/>
+  <!-- Theme style -->
+  <link href="/AdminLTE-3.1.0/plugins/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- Theme style -->
+   <link href="/AdminLTE-3.1.0/dist/css/adminlte.min.css" rel="stylesheet" />
 </head>
-<body>
-    <img src="/Imagenes/Vector4.png" class="Vector-4"/>
-    <h2 class="formulario-titulo">Registro</h2>
-    <div class="rectangulo-google">
-    <p class="texto-google">o ingresar con google</p>
-    </div> 
+    <body class="hold-transition register-page">
     <form id="form1" runat="server">
-        <h3 class="formulario-mail-register">Ingresar email</h3>
-        <div class="formulario-barra-register"><asp:TextBox ID="TextBox1" runat="server" class="completar-email" AutoComplete="Off" TextMode="Email"></asp:TextBox></div>
-        <h3 class="formulario-repetirUsuario-register">Nombre de usuario</h3>
-        <div class="formulario-barra2-register"><asp:TextBox ID="TextBox2" runat="server" class="completar-email" AutoComplete="Off"></asp:TextBox></div>
-        <h3 class="formulario-contraseña-register">Contraseña:</h3>
-        <div class="formulario-barra3-register"><asp:TextBox ID="TextBox3" runat="server" type="password" class="completar-email" TextMode="Password"></asp:TextBox></div>
-        <h3 class="formulario-repetirContraseña-register">Repetir contraseña:</h3>
-        <div class="formulario-barra4-register"><asp:TextBox ID="TextBox4" runat="server" type="password" class="completar-email"></asp:TextBox></div>
+<div class="register-box">
+  <div class="card card-outline card-primary">
+    <div class="card-header text-center">
+      <asp:Label ID="RegistrarseLbl" runat="server" Text="Register" Font-Bold="true" Font-Size="Large"></asp:Label>
+    </div>
+    <div class="card-body">
+        <div class="input-group mb-3">
+        <asp:TextBox ID="TextBox1" runat="server" type="email" class="form-control" placeholder="Email"></asp:TextBox>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-envelope"></span>
+            </div>
+          </div>           
+        </div>
+        <div class="input-group mb-3">
+        <asp:TextBox ID="TextBox2" runat="server" class="form-control" placeholder="Nombre"></asp:TextBox>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-user"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+        <asp:TextBox ID="TextBox3" runat="server" type="password" class="form-control" placeholder="Password"></asp:TextBox>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
+        <div class="input-group mb-3">
+        <asp:TextBox ID="TextBox4" runat="server" type="password" class="form-control" placeholder="Retype password"></asp:TextBox>
+          <div class="input-group-append">
+            <div class="input-group-text">
+              <span class="fas fa-lock"></span>
+            </div>
+          </div>
+        </div>
         <asp:Label ID="Label1" runat="server" Text="Este mail ya existe" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label2" runat="server" Text="Hay espacios vacios" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label3" runat="server" Text="Las contraseñas no coinciden" Visible="false" class="errorRegistro"></asp:Label>
         <asp:Label ID="Label4" runat="server" Text="La contraseña debe tener entre 8 y 20 caracteres" Visible="false" class="errorRegistro"></asp:Label>
-        <asp:Button ID="Button2" runat="server" class="login-rectangulo-register" OnClick="Button2_Click1"/>
-        <p class="ya-registrado">¿Ya está registrado?</p>
-        <a href="/Login/LoginPage.aspx" class="loguearse">Login</a>
-        <asp:Label ID="Label5" runat="server" Text="Se ingresó correctamente" Visible="false" class="correctoRegistro"></asp:Label>
-    </form>
+        <asp:Label ID="Label5" runat="server" Text="Se ingresó correctamente" Visible="false" class="correctoRegistro"></asp:Label>    
+          <!-- /.col -->
+          <div class="col-4">
+          <asp:Button ID="Button2" text="Register" runat="server" type="submit" class="btn btn-primary btn-block" OnClick="Button2_Click1"/>
+          </div>
+          <!-- /.col -->
+        </div>
+     
+
+      <a href="LoginPage.aspx" class="text-center">Log In</a>
+    </div>
+    <!-- /.form-box -->
+  </div><!-- /.card -->
+</div>
+<!-- /.register-box -->
+
+<!-- jQuery -->
+<script src="../../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../../dist/js/adminlte.min.js"></script>
+</form>
 </body>
 </html>
+
