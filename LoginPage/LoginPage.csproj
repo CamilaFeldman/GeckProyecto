@@ -2531,6 +2531,8 @@
     <Content Include="AdminLTE-3.1.0\plugins\summernote\summernote.min.js.map" />
     <Content Include="AdminLTE-3.1.0\plugins\toastr\toastr.js.map" />
     <Content Include="AdminLTE-3.1.0\README.md" />
+    <Content Include=".gitignore" />
+    <Content Include="preguntasfrecuentes.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2808,6 +2810,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="preguntasfrecuentes.aspx.cs">
+      <DependentUpon>preguntasfrecuentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="preguntasfrecuentes.aspx.designer.cs">
+      <DependentUpon>preguntasfrecuentes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

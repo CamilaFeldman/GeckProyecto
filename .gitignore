@@ -15,3 +15,7 @@ LoginPage/obj/Debug/LoginPage.csproj.FileListAbsolute.txt
 LoginPage/obj/Debug/LoginPage.pdb
 .vs/LoginPage/v16/.suo
 .vs/LoginPage/v16/.suo
+.vs/LoginPage/config/applicationhost.config
+*.cache
+.vs/LoginPage/v16/.suo
+LoginPage/obj/Debug/LoginPage.csproj.AssemblyReference.cache
