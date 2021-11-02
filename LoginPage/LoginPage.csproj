@@ -150,6 +150,7 @@
   <ItemGroup>
     <Content Include=".gitignore" />
     <Content Include="About.aspx" />
+    <Content Include="PaginasComplementarias\actualizaciones.aspx" />
     <Content Include="AdminLTE-3.1.0\.babelrc.js" />
     <Content Include="AdminLTE-3.1.0\build\config\postcss.config.js" />
     <Content Include="AdminLTE-3.1.0\build\config\rollup.config.js" />
@@ -2127,7 +2128,8 @@
     <Content Include="AdminLTE-3.1.0\plugins\uplot\uPlot.min.css" />
     <Content Include="AdminLTE-3.1.0\starter.html" />
     <Content Include="Carrito\Carrito.aspx" />
-    <Content Include="Contact.aspx" />
+    <Content Include="PaginasComplementarias\Contact.aspx" />
+    <Content Include="PaginasComplementarias\contacto.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Editable\Editable.aspx" />
     <Content Include="favicon.ico" />
@@ -2138,6 +2140,7 @@
     <Content Include="Imagenes\Vector4.png" />
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
+    <Content Include="PaginasComplementarias\micuenta.aspx" />
     <Content Include="Movimientos\AbrirCaja.aspx" />
     <Content Include="Movimientos\CerrarCaja.aspx" />
     <Content Include="Movimientos\Movimientos.aspx" />
@@ -2147,8 +2150,10 @@
     <Content Include="PaginasComplementarias\Soporte.aspx" />
     <Content Include="PasswordRecovery\CambiarContra.aspx" />
     <Content Include="PasswordRecovery\PasswordRecovery.aspx" />
+    <Content Include="PaginasComplementarias\preguntasfrecuentes.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
+    <Content Include="PaginasComplementarias\quienesomos.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2448,12 +2453,20 @@
     <Content Include="Site.Master" />
     <Content Include="Stock\Stock.aspx" />
     <Content Include="Sucursales\Sucursales.aspx" />
+    <Content Include="PaginasComplementarias\tutoriales.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PaginasComplementarias\actualizaciones.aspx.cs">
+      <DependentUpon>actualizaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\actualizaciones.aspx.designer.cs">
+      <DependentUpon>actualizaciones.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -2473,12 +2486,19 @@
     <Compile Include="Carrito\CarritoBLL.cs" />
     <Compile Include="Carrito\CarritoDAL.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="Contact.aspx.cs">
+    <Compile Include="PaginasComplementarias\Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Contact.aspx.designer.cs">
+    <Compile Include="PaginasComplementarias\Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasComplementarias\contacto.aspx.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\contacto.aspx.designer.cs">
+      <DependentUpon>contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -2519,6 +2539,13 @@
     </Compile>
     <Compile Include="Login\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasComplementarias\micuenta.aspx.cs">
+      <DependentUpon>micuenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\micuenta.aspx.designer.cs">
+      <DependentUpon>micuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Movimientos\AbrirCaja.aspx.cs">
       <DependentUpon>AbrirCaja.aspx</DependentUpon>
@@ -2583,6 +2610,13 @@
     <Compile Include="PasswordRecovery\PasswordRecovery.aspx.designer.cs">
       <DependentUpon>PasswordRecovery.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PaginasComplementarias\preguntasfrecuentes.aspx.cs">
+      <DependentUpon>preguntasfrecuentes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\preguntasfrecuentes.aspx.designer.cs">
+      <DependentUpon>preguntasfrecuentes.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Productos\Productos.aspx.cs">
       <DependentUpon>Productos.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2607,6 +2641,13 @@
     </Compile>
     <Compile Include="Proveedores\ProveedoresBLL.cs" />
     <Compile Include="Proveedores\ProveedoresDAL.cs" />
+    <Compile Include="PaginasComplementarias\quienesomos.aspx.cs">
+      <DependentUpon>quienesomos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\quienesomos.aspx.designer.cs">
+      <DependentUpon>quienesomos.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2634,6 +2675,13 @@
     </Compile>
     <Compile Include="Sucursales\Sucursales.aspx.designer.cs">
       <DependentUpon>Sucursales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginasComplementarias\tutoriales.aspx.cs">
+      <DependentUpon>tutoriales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\tutoriales.aspx.designer.cs">
+      <DependentUpon>tutoriales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Usuario\Usuarios.cs" />
     <Compile Include="Usuario\UsuariosDAL.cs" />
