@@ -45,7 +45,7 @@
                 <h6 class="card-title">Special title treatment</h6>
 
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="PaginasComplementarias/quienessomos.aspx" class="btn btn-primary">Go somewhere</a>
+                <a href="PaginasComplementarias/SobreNosotros.aspx" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
