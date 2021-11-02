@@ -33,7 +33,7 @@
                 <h6 class="card-title">Special title treatment</h6>
 
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="micuenta.aspx" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
 
@@ -45,7 +45,7 @@
                 <h6 class="card-title">Special title treatment</h6>
 
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="quienessomos.aspx" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@
                 <h6 class="card-title">Special title treatment</h6>
 
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="tutoriales.aspx" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
 
@@ -71,7 +71,7 @@
                 <h6 class="card-title">Special title treatment</h6>
 
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="actualizaciones.aspx" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
                 <h6 class="card-title">Special title treatment</h6>
 
                 <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="contacto.aspx" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
              <div class="card card-primary card-outline">
