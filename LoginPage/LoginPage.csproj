@@ -2128,7 +2128,6 @@
     <Content Include="AdminLTE-3.1.0\plugins\uplot\uPlot.min.css" />
     <Content Include="AdminLTE-3.1.0\starter.html" />
     <Content Include="Carrito\Carrito.aspx" />
-    <Content Include="PaginasComplementarias\Contact.aspx" />
     <Content Include="PaginasComplementarias\contacto.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="Editable\Editable.aspx" />
@@ -2486,13 +2485,6 @@
     <Compile Include="Carrito\CarritoBLL.cs" />
     <Compile Include="Carrito\CarritoDAL.cs" />
     <Compile Include="Conexion.cs" />
-    <Compile Include="PaginasComplementarias\Contact.aspx.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PaginasComplementarias\Contact.aspx.designer.cs">
-      <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
     <Compile Include="PaginasComplementarias\contacto.aspx.cs">
       <DependentUpon>contacto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
