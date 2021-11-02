@@ -32,7 +32,7 @@ namespace LoginPage.Stock
             GridView1.DataBind();
 
 
-            if (!IsPostBack)
+            if (!Page.IsPostBack)
             {
                 ListItem i;
                 i = new ListItem("Producto A-Z", "1");
@@ -63,44 +63,44 @@ namespace LoginPage.Stock
 
         protected void Button1_Click(object sender, EventArgs e)
         {
-
-            if (DropDownList1.SelectedValue == "1")
-            {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
-                MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
-                DataSet dss = new DataSet();
-                daa.Fill(dss);
-                GridView1.DataSource = dss.Tables[0];
-                GridView1.DataBind();
-            }
-            if (DropDownList1.SelectedValue == "2")
-            {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto DESC;", Conexion.ObtenerConexion());
-                MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
-                DataSet dss = new DataSet();
-                daa.Fill(dss);
-                GridView1.DataSource = dss.Tables[0];
-                GridView1.DataBind();
-            }
-            if (DropDownList1.SelectedValue == "3")
-            {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Proveedor ASC;", Conexion.ObtenerConexion());
-                MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
-                DataSet dss = new DataSet();
-                daa.Fill(dss);
-                GridView1.DataSource = dss.Tables[0];
-                GridView1.DataBind();
-            }
-            if (DropDownList1.SelectedValue == "4")
-            {
-                MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Precio DESC;", Conexion.ObtenerConexion());
-                MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
-                DataSet dss = new DataSet();
-                daa.Fill(dss);
-                GridView1.DataSource = dss.Tables[0];
-                GridView1.DataBind();
-            }
-
+            
+                if (DropDownList1.SelectedValue == "1")
+                {
+                    MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto ASC;", Conexion.ObtenerConexion());
+                    MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
+                    DataSet dss = new DataSet();
+                    daa.Fill(dss);
+                    GridView1.DataSource = dss.Tables[0];
+                    GridView1.DataBind();
+                }
+                if (DropDownList1.SelectedValue == "2")
+                {
+                    MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Producto DESC;", Conexion.ObtenerConexion());
+                    MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
+                    DataSet dss = new DataSet();
+                    daa.Fill(dss);
+                    GridView1.DataSource = dss.Tables[0];
+                    GridView1.DataBind();
+                }
+                if (DropDownList1.SelectedValue == "3")
+                {
+                    MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Proveedor ASC;", Conexion.ObtenerConexion());
+                    MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
+                    DataSet dss = new DataSet();
+                    daa.Fill(dss);
+                    GridView1.DataSource = dss.Tables[0];
+                    GridView1.DataBind();
+                }
+                if (DropDownList1.SelectedValue == "4")
+                {
+                    MySqlCommand cmdd = new MySqlCommand("SELECT nombre AS Producto, stock AS Stock, marcas AS Categoria, proveedor AS Proveedor, precio AS Precio  FROM deck.producto_especifico ORDER BY Precio DESC;", Conexion.ObtenerConexion());
+                    MySqlDataAdapter daa = new MySqlDataAdapter(cmdd);
+                    DataSet dss = new DataSet();
+                    daa.Fill(dss);
+                    GridView1.DataSource = dss.Tables[0];
+                    GridView1.DataBind();
+                }
+            
         }
 
         

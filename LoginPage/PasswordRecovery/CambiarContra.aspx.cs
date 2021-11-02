@@ -36,7 +36,7 @@ namespace LoginPage.PasswordRecovery
 
         protected void AcceptButton(object sender, EventArgs e)
         {
-            if(txtCode.Text.Trim() == código)
+            if (txtCode.Text.Trim() == código)
             {
                 Repeat.Visible = false;
                 Label1.Visible = false;
@@ -49,9 +49,10 @@ namespace LoginPage.PasswordRecovery
                 RepetirPass.Visible = true;
                 txtRepetir.Visible = true;
                 End.Visible = true;
-                
 
-            }else
+
+            }
+            else
             {
                 Label2.ForeColor = Color.Red;
                 Label2.Text = "El código ingresado no coincide. Intente nuevamente.";
@@ -62,7 +63,7 @@ namespace LoginPage.PasswordRecovery
         protected void EndButton(object sender, EventArgs e)
         {
 
-            if(txtPass.Text.Trim() == txtRepetir.Text.Trim())
+            if (txtPass.Text.Trim() == txtRepetir.Text.Trim())
             {
                 MySqlCommand cmd = new MySqlCommand("UPDATE usuarios SET password=@pass WHERE email=@mail;", Conexion.ObtenerConexion());
                 cmd.Parameters.AddWithValue("@mail", mail);
@@ -77,7 +78,7 @@ namespace LoginPage.PasswordRecovery
                 Label3.Text = "Su contraseña ha sido cambiada correctamente.";
                 string URL = "~/Login/LoginPage.aspx";
                 URL = Page.ResolveClientUrl(URL);
-                Response.AddHeader("REFRESH", "2;"+URL+"");
+                Response.AddHeader("REFRESH", "2;" + URL + "");
             }
             else
             {

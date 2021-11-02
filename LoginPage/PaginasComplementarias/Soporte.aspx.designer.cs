@@ -11,7 +11,7 @@ namespace LoginPage.PaginasComplementarias
 {
 
 
-    public partial class Config
+    public partial class Soporte
     {
     }
 }

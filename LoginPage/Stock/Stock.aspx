@@ -1,20 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Stock.aspx.cs" Inherits="LoginPage.Stock.Stock" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-    <div class="content-wrapper">
-    <div class="content">
-    <style type="text/css">
-    .gvclass table th {text-align:center;}
-    </style>
-
-
-    <br />
+     <div class="content-wrapper">
+          <div class="content">
+   <br />
     <asp:TextBox ID="Filtrado" runat="server"></asp:TextBox>
-    <asp:Button ID="Buscar" runat="server" Text="Buscar" OnClick="Buscar_Click" />
+    <asp:Button ID="Buscar" runat="server" Text="Buscar"  UseSubmitBehavior="false" OnClick="Buscar_Click" />
     <br />
     <br />
     <p>Ordenar por:</p>
     <asp:DropDownList ID="DropDownList1" runat="server" Height="26px" Width="126px"></asp:DropDownList>
-    <asp:Button ID="Button1" runat="server" Text="Ordenar" OnClick="Button1_Click" />
+    <asp:Button ID="Button1" runat="server" Text="Ordenar" UseSubmitBehavior="false" OnClick="Button1_Click" />
     <br />
     <br />
     <div class="gvclass">
@@ -42,7 +37,9 @@
     </asp:GridView>
     </div>
     <br />
-    <asp:Button ID="Editar" runat="server" Text="Editar" OnClick="Editar_Click" />
+    <asp:Button ID="Editar" runat="server" Text="Editar" UseSubmitBehavior="false" OnClick="Editar_Click" />
     <br />
-        </div></div>
+    </div></div>
 </asp:Content>
+
+

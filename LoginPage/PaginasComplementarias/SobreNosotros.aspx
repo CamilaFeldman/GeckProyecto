@@ -5,5 +5,5 @@
     <p>¿Quiénes somos?</p><br />
     <p>Somos un grupo de programadores amateurs inspirados por el deseo de poder ofrecer una aplicacion óptima, cómoda y placentera para los usuarios. Nuestro objetivo es obtener nuevas experiencias y aprendizajes.
     </p>
-        </div></div>
+    </div></div>
 </asp:Content>

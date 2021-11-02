@@ -1,7 +1,9 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Movimientos.aspx.cs" Inherits="LoginPage.Movimientos.Movimientos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="content-wrapper">
-    <div class="content">
+          <div class="content">
+
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
@@ -38,9 +40,7 @@
     <br />
     <asp:Button ID="CerrarCajaBtn" runat="server" Text="Cerrar monto de caja" OnClick="CerrarCajaBtn_Click" Width="219px" />
     <br />
-    
-
-
-        </div></div>
+   </div>
+</div>
 </asp:Content>
 

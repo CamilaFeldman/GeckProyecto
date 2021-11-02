@@ -148,8 +148,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitignore" />
     <Content Include="About.aspx" />
-    <Content Include="actualizaciones.aspx" />
     <Content Include="AdminLTE-3.1.0\.babelrc.js" />
     <Content Include="AdminLTE-3.1.0\build\config\postcss.config.js" />
     <Content Include="AdminLTE-3.1.0\build\config\rollup.config.js" />
@@ -225,88 +225,6 @@
     <Content Include="AdminLTE-3.1.0\dist\js\pages\dashboard.js" />
     <Content Include="AdminLTE-3.1.0\dist\js\pages\dashboard2.js" />
     <Content Include="AdminLTE-3.1.0\dist\js\pages\dashboard3.js" />
-    <Content Include="AdminLTE-3.1.0\docs\404.html" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\adminlte.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\adminlte.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.components.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.components.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.core.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.core.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.extra-components.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.extra-components.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.pages.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.pages.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.plugins.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.plugins.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\docs.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\highlighter.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\AdminLTELogo.png" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\logo-xl.png" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\logo-xs.png" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user1-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user3-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user4-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user5-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user6-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user7-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\img\user8-128x128.jpg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\adminlte.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\adminlte.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\demo.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\pages\dashboard.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\pages\dashboard2.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\pages\dashboard3.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\all.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\all.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\brands.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\brands.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\fontawesome.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\fontawesome.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\regular.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\regular.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\solid.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\solid.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\svg-with-js.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\svg-with-js.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\v4-shims.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\css\v4-shims.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.svg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.svg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.svg" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\jquery\jquery.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\jquery\jquery.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\jquery\jquery.slim.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\jquery\jquery.slim.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\overlayScrollbars\css\OverlayScrollbars.min.css" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\overlayScrollbars\js\jquery.overlayScrollbars.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\overlayScrollbars\js\OverlayScrollbars.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper-utils.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper-utils.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper-utils.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper-utils.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper-utils.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper-utils.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper.js" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper.min.js" />
-    <Content Include="AdminLTE-3.1.0\docs\_includes\foot.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_includes\footer.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_includes\head.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_includes\navbar.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_includes\preloader.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_includes\sidebar.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_layouts\default.html" />
-    <Content Include="AdminLTE-3.1.0\docs\_layouts\page.html" />
     <Content Include="AdminLTE-3.1.0\iframe.html" />
     <Content Include="AdminLTE-3.1.0\index.html" />
     <Content Include="AdminLTE-3.1.0\index2.html" />
@@ -2208,38 +2126,29 @@
     <Content Include="AdminLTE-3.1.0\plugins\uplot\uPlot.iife.min.js" />
     <Content Include="AdminLTE-3.1.0\plugins\uplot\uPlot.min.css" />
     <Content Include="AdminLTE-3.1.0\starter.html" />
-    <Content Include="Bootstrap\BootstrapLogin.css" />
     <Content Include="Carrito\Carrito.aspx" />
     <Content Include="Contact.aspx" />
-    <Content Include="contacto.aspx" />
-    <Content Include="Content\bootstrap-grid.css" />
-    <Content Include="Content\bootstrap-grid.min.css" />
-    <Content Include="Content\bootstrap-reboot.css" />
-    <Content Include="Content\bootstrap-reboot.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Site.css" />
     <Content Include="Default.aspx" />
     <Content Include="Editable\Editable.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="HomePage.aspx" />
+    <Content Include="Imagenes\Geck %285%29.jpeg" />
+    <Content Include="Imagenes\side menu cerrado.png" />
     <Content Include="Imagenes\Vector4.png" />
-    <Content Include="intro\HtmlPage1.html" />
     <Content Include="Login\LoginPage.aspx" />
     <Content Include="Login\RegisterPage.aspx" />
-    <Content Include="micuenta.aspx" />
     <Content Include="Movimientos\AbrirCaja.aspx" />
     <Content Include="Movimientos\CerrarCaja.aspx" />
     <Content Include="Movimientos\Movimientos.aspx" />
     <Content Include="Movimientos\ResumenCaja.aspx" />
     <Content Include="PaginasComplementarias\Config.aspx" />
     <Content Include="PaginasComplementarias\SobreNosotros.aspx" />
+    <Content Include="PaginasComplementarias\Soporte.aspx" />
     <Content Include="PasswordRecovery\CambiarContra.aspx" />
     <Content Include="PasswordRecovery\PasswordRecovery.aspx" />
     <Content Include="Productos\Productos.aspx" />
     <Content Include="Proveedores\Proveedores.aspx" />
-    <Content Include="quienesomos.aspx" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -2257,30 +2166,11 @@
     <Content Include="Scripts\bootstrap.js.map" />
     <Content Include="Scripts\bootstrap.bundle.min.js.map" />
     <Content Include="Scripts\bootstrap.bundle.js.map" />
-    <Content Include="Content\bootstrap.min.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <Content Include="Content\bootstrap-reboot.min.css.map" />
-    <Content Include="Content\bootstrap-reboot.css.map" />
-    <Content Include="Content\bootstrap-grid.min.css.map" />
-    <Content Include="Content\bootstrap-grid.css.map" />
     <Content Include="AdminLTE-3.1.0\.browserslistrc" />
     <Content Include="AdminLTE-3.1.0\.bundlewatch.config.json" />
     <Content Include="AdminLTE-3.1.0\.editorconfig" />
     <Content Include="AdminLTE-3.1.0\.eslintignore" />
     <Content Include="AdminLTE-3.1.0\.eslintrc.json" />
-    <Content Include="AdminLTE-3.1.0\.gitattributes" />
-    <Content Include="AdminLTE-3.1.0\.github\codeql\codeql-config.yml" />
-    <Content Include="AdminLTE-3.1.0\.github\CONTRIBUTING.md" />
-    <Content Include="AdminLTE-3.1.0\.github\dependabot.yml" />
-    <Content Include="AdminLTE-3.1.0\.github\ISSUE_TEMPLATE\bug-report-for-adminlte-v3.1-x.md" />
-    <Content Include="AdminLTE-3.1.0\.github\ISSUE_TEMPLATE\feature-request-for-adminlte-v4-x.md" />
-    <Content Include="AdminLTE-3.1.0\.github\workflows\ci.yml" />
-    <Content Include="AdminLTE-3.1.0\.github\workflows\codeql.yml" />
-    <Content Include="AdminLTE-3.1.0\.github\workflows\docs.yml" />
-    <Content Include="AdminLTE-3.1.0\.github\workflows\lint.yml" />
-    <Content Include="AdminLTE-3.1.0\.gitignore" />
-    <Content Include="AdminLTE-3.1.0\.gitpod.yml" />
-    <Content Include="AdminLTE-3.1.0\.lgtm.yml" />
     <Content Include="AdminLTE-3.1.0\.npmignore" />
     <Content Include="AdminLTE-3.1.0\.stylelintignore" />
     <Content Include="AdminLTE-3.1.0\.stylelintrc" />
@@ -2388,88 +2278,6 @@
     <Content Include="AdminLTE-3.1.0\dist\js\.eslintrc.json" />
     <Content Include="AdminLTE-3.1.0\dist\js\adminlte.js.map" />
     <Content Include="AdminLTE-3.1.0\dist\js\adminlte.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\additional-styles.md" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\adminlte.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\adminlte.min.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.components.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.components.min.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.core.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.core.min.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.extra-components.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.extra-components.min.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.pages.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.pages.min.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.plugins.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\css\alt\adminlte.plugins.min.css.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\adminlte.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\js\adminlte.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.bundle.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.bundle.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\bootstrap\js\bootstrap.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.eot" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.ttf" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.woff2" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.eot" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.ttf" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-regular-400.woff2" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.eot" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.ttf" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\fontawesome-free\webfonts\fa-solid-900.woff2" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\jquery\jquery.min.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\jquery\jquery.slim.min.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper-utils.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper-utils.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\esm\popper.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper-utils.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper-utils.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\popper.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper-utils.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper-utils.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper.js.flow" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\assets\plugins\popper\umd\popper.min.js.map" />
-    <Content Include="AdminLTE-3.1.0\docs\browser-support.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\boxes.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\cards.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\control-sidebar.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\direct-chat.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\main-header.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\main-sidebar.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\miscellaneous.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\plugins.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\ribbons.md" />
-    <Content Include="AdminLTE-3.1.0\docs\components\timeline.md" />
-    <Content Include="AdminLTE-3.1.0\docs\dependencies.md" />
-    <Content Include="AdminLTE-3.1.0\docs\faq.md" />
-    <Content Include="AdminLTE-3.1.0\docs\Gemfile" />
-    <Content Include="AdminLTE-3.1.0\docs\Gemfile.lock" />
-    <Content Include="AdminLTE-3.1.0\docs\how-to-contribute.md" />
-    <Content Include="AdminLTE-3.1.0\docs\implementations.md" />
-    <Content Include="AdminLTE-3.1.0\docs\index.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\card-refresh.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\card-widget.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\control-sidebar.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\direct-chat.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\expandable-tables.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\iframe.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\layout.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\navbar-search.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\push-menu.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\sidebar-search.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\toasts.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\todo-list.md" />
-    <Content Include="AdminLTE-3.1.0\docs\javascript\treeview.md" />
-    <Content Include="AdminLTE-3.1.0\docs\layout.md" />
-    <Content Include="AdminLTE-3.1.0\docs\license.md" />
-    <Content Include="AdminLTE-3.1.0\docs\upgrade-guide.md" />
-    <Content Include="AdminLTE-3.1.0\docs\_config.yml" />
-    <Content Include="AdminLTE-3.1.0\LICENSE" />
     <Content Include="AdminLTE-3.1.0\package-lock.json" />
     <Content Include="AdminLTE-3.1.0\package.json" />
     <Content Include="AdminLTE-3.1.0\plugins\bootstrap-colorpicker\css\bootstrap-colorpicker.css.map" />
@@ -2535,9 +2343,10 @@
     <Content Include="AdminLTE-3.1.0\plugins\summernote\summernote.js.map" />
     <Content Include="AdminLTE-3.1.0\plugins\summernote\summernote.min.js.map" />
     <Content Include="AdminLTE-3.1.0\plugins\toastr\toastr.js.map" />
-    <Content Include="AdminLTE-3.1.0\README.md" />
-    <Content Include=".gitignore" />
-    <Content Include="preguntasfrecuentes.aspx" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -2639,19 +2448,12 @@
     <Content Include="Site.Master" />
     <Content Include="Stock\Stock.aspx" />
     <Content Include="Sucursales\Sucursales.aspx" />
-    <Content Include="tutoriales.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="actualizaciones.aspx.cs">
-      <DependentUpon>actualizaciones.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="actualizaciones.aspx.designer.cs">
-      <DependentUpon>actualizaciones.aspx</DependentUpon>
-    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -2677,12 +2479,6 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="contacto.aspx.cs">
-      <DependentUpon>contacto.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="contacto.aspx.designer.cs">
-      <DependentUpon>contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -2723,12 +2519,6 @@
     </Compile>
     <Compile Include="Login\RegisterPage.aspx.designer.cs">
       <DependentUpon>RegisterPage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="micuenta.aspx.cs">
-      <DependentUpon>micuenta.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="micuenta.aspx.designer.cs">
-      <DependentUpon>micuenta.aspx</DependentUpon>
     </Compile>
     <Compile Include="Movimientos\AbrirCaja.aspx.cs">
       <DependentUpon>AbrirCaja.aspx</DependentUpon>
@@ -2772,6 +2562,13 @@
     <Compile Include="PaginasComplementarias\SobreNosotros.aspx.designer.cs">
       <DependentUpon>SobreNosotros.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PaginasComplementarias\Soporte.aspx.cs">
+      <DependentUpon>Soporte.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginasComplementarias\Soporte.aspx.designer.cs">
+      <DependentUpon>Soporte.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PasswordRecovery\CambiarContra.aspx.cs">
       <DependentUpon>CambiarContra.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2796,6 +2593,11 @@
     <Compile Include="Productos\ProductosBLL.cs" />
     <Compile Include="Productos\ProductosDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Proveedores\Proveedores.aspx.cs">
       <DependentUpon>Proveedores.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2805,12 +2607,6 @@
     </Compile>
     <Compile Include="Proveedores\ProveedoresBLL.cs" />
     <Compile Include="Proveedores\ProveedoresDAL.cs" />
-    <Compile Include="quienesomos.aspx.cs">
-      <DependentUpon>quienesomos.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="quienesomos.aspx.designer.cs">
-      <DependentUpon>quienesomos.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -2839,12 +2635,6 @@
     <Compile Include="Sucursales\Sucursales.aspx.designer.cs">
       <DependentUpon>Sucursales.aspx</DependentUpon>
     </Compile>
-    <Compile Include="tutoriales.aspx.cs">
-      <DependentUpon>tutoriales.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="tutoriales.aspx.designer.cs">
-      <DependentUpon>tutoriales.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Usuario\Usuarios.cs" />
     <Compile Include="Usuario\UsuariosDAL.cs" />
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -2853,13 +2643,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="preguntasfrecuentes.aspx.cs">
-      <DependentUpon>preguntasfrecuentes.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="preguntasfrecuentes.aspx.designer.cs">
-      <DependentUpon>preguntasfrecuentes.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

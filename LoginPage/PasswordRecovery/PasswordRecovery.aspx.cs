@@ -1,17 +1,14 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Data;
 using System.Collections.Generic;
+using System.Data;
+using System.Drawing;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using System.Net;
-using System.Net.Mail;
-using System.Drawing;
-using System.Configuration;
-using System.Data.SqlClient;
-
 
 namespace LoginPage.PasswordRecovery
 {
