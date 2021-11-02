@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Movimientos.aspx.cs" Inherits="LoginPage.Movimientos.Movimientos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <div class="content-wrapper">
+    <div class="content">
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
@@ -40,6 +41,6 @@
     
 
 
-
+        </div></div>
 </asp:Content>
 

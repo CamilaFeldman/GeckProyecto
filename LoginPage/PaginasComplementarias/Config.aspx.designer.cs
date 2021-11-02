@@ -7,29 +7,29 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace LoginPage
+namespace LoginPage.PaginasComplementarias
 {
 
 
-    public partial class SiteMaster
+    public partial class Config
     {
 
         /// <summary>
-        /// Control Editable.
+        /// Control SucursalLbl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor Editable;
+        protected global::System.Web.UI.WebControls.Label SucursalLbl;
 
         /// <summary>
-        /// Control MainContent.
+        /// Control SucursalDdl.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.DropDownList SucursalDdl;
     }
 }
