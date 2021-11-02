@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoginPage {
-    
-    
-    public partial class actualizaciones {
+
+namespace LoginPage
+{
+    public partial class actualizaciones
+    {
     }
 }

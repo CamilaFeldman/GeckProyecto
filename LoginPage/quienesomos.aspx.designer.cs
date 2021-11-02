@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoginPage {
-    
-    
-    public partial class quienesomos {
+
+namespace LoginPage
+{
+    public partial class quienesomos
+    {
     }
 }

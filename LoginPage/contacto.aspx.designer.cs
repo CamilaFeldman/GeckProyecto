@@ -7,9 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace LoginPage {
-    
-    
-    public partial class contacto {
+
+namespace LoginPage
+{
+    public partial class contacto
+    {
     }
 }
