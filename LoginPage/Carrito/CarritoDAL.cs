@@ -82,7 +82,7 @@ namespace LoginPage.Carrito
 
                 int Stock = Convert.ToInt32(reader["stock"].ToString());
                 int StockRestante = Stock - lCantidad;
-                if(StockRestante > 0)
+                if(StockRestante >= 0)
                 {
                     return true;
                 }

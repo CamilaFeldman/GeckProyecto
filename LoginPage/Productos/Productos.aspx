@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Productos.aspx.cs" Inherits="LoginPage.Productos.Productos" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <div class="content-wrapper">
+    <div class="content">
     <asp:Label ID="Label1" runat="server" Text="Nombre"></asp:Label>
     <asp:TextBox ID="Nombre" runat="server" AutoComplete="Off"></asp:TextBox>
     <asp:Label ID="Label2" runat="server" Text="Precio"></asp:Label>
@@ -25,5 +26,5 @@
     <asp:Label ID="EspaciosVacios" runat="server" Text="Completar espacios vacíos" Visible="false"></asp:Label>
     <asp:Label ID="IngresoIncorrecto" runat="server" Text="Algun campo mal ingresado" Visible="false"></asp:Label>
     <asp:Label ID="CantidadRequerida" runat="server" Text="La cantidad mínima es mayor a la máxima" Visible ="false"></asp:Label>
-
+        </div></div>
 </asp:Content>

@@ -1,7 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Sucursales.aspx.cs" Inherits="LoginPage.Sucursales.Sucursales" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
-
+    <div class="content-wrapper">
+    <div class="content">
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
@@ -25,6 +26,6 @@
         <SortedDescendingHeaderStyle BackColor="#15524A" />
         </asp:GridView>
     </div>
-
+        </div></div>
 
 </asp:Content>
