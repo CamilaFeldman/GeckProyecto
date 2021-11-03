@@ -5,8 +5,8 @@
 
 <div class="about-section">
   <h1>About Us Page</h1>
-  <p>Some text about who we are and what we do.</p>
-  <p>Resize the browser window to see that this page is responsive by the way.</p>
+  <p>Somos un grupo de alumnos del último año de electrónica con un deseo de poder ofrecer una aplicacion óptima, cómoda y placentera para los usuarios. Nuestro objetivo es obtener nuevas experiencias y aprendizajes.</p>
+  
 </div>
 
 <h2 style="text-align:center">Our Team</h2>
