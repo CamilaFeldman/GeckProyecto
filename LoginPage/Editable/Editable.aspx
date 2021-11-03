@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Editable.aspx.cs" Inherits="LoginPage.Editable.Editable" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <div class="content-wrapper">
+          <div class="content">
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
@@ -78,5 +79,5 @@
     <br />
     <asp:Button ID="eliminar" runat="server" Text="Eliminar" OnClick="eliminar_Click" />
 
-
+              </div></div>
 </asp:Content>
