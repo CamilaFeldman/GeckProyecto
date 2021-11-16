@@ -32,6 +32,7 @@ namespace LoginPage.Movimientos
             GridView1.DataSource = DS.Tables[0];
             GridView1.DataBind();
 
+
             ActualizarPrecio();
 
         }
@@ -80,6 +81,48 @@ namespace LoginPage.Movimientos
         {
 
             Response.Write("<script>window.open('CerrarCaja.aspx','popup','width=500,height=300') </script>");
+
+        }
+
+        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string idNombre;
+                string idCantidad;
+                idNombre = GridView1.SelectedRow.Cells[1].Text;
+                idCantidad = GridView1.SelectedRow.Cells[2].Text;
+                string sucursal = Session["sucursal"].ToString();
+
+                MySqlCommand command = new MySqlCommand();
+
+                command.Connection = Conexion.ObtenerConexion();
+                command.CommandText = "UPDATE producto_especifico SET stock = stock+@cantidad WHERE (nombre=@nombre AND sucursal=@sucursal)";
+                command.Parameters.AddWithValue("@nombre", idNombre);
+                command.Parameters.AddWithValue("@cantidad", idCantidad);
+                command.Parameters.AddWithValue("@sucursal", idCantidad);
+                command.CommandType = CommandType.Text;
+
+
+                command.ExecuteNonQuery();
+
+                MySqlCommand comando2 = new MySqlCommand(string.Format("DELETE FROM movimientos WHERE nombre = '" + idNombre + "'"), Conexion.ObtenerConexion());
+
+                comando2.ExecuteNonQuery();
+
+                MySqlCommand comando = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, fecha FROM movimientos ", Conexion.ObtenerConexion());
+                MySqlDataAdapter DA = new MySqlDataAdapter(comando);
+                DataSet DS = new DataSet();
+                DA.Fill(DS);
+                GridView1.DataSource = DS.Tables[0];
+                GridView1.DataBind();
+            }
+            catch (Exception)
+            {
+                Response.Write("<script>alert('Se debe seleccionar una sucursal en configuración')</script>");
+            }
+
+
 
         }
     }

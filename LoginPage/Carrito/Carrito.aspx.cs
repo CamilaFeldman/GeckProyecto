@@ -24,15 +24,19 @@ namespace LoginPage.Carrito
                 Response.Redirect("~/Login/LoginPage.aspx");
             }
 
+            string sucursal = Convert.ToString(Session["sucursal"]);
+            SucursalLbl.Text = sucursal;
+
             if (!IsPostBack)
             {
-
-                MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM sucursales", Conexion.ObtenerConexion());
-                MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect.CommandText, Conexion.ObtenerConexion());
+                MySqlCommand OrdenSqlSelectDDl = new MySqlCommand("SELECT nombre FROM producto_especifico WHERE (sucursal=@sucursal)", Conexion.ObtenerConexion());
+                OrdenSqlSelectDDl.Parameters.AddWithValue("@sucursal", sucursal);
+                MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelectDDl);
                 DataSet ds = new DataSet();
                 da.Fill(ds);
-                this.DropDownList1.DataSource = ds;
-                this.DropDownList1.DataBind();
+                this.DropDownList2.DataSource = ds;
+                this.DropDownList2.DataBind();
+
 
                 MySqlCommand comando2 = new MySqlCommand("SELECT nombre, cantidad, sucursal, precio_unitario, precio_final FROM carrito ", Conexion.ObtenerConexion());
                 MySqlDataAdapter DA = new MySqlDataAdapter(comando2);
@@ -67,16 +71,16 @@ namespace LoginPage.Carrito
                 DA.Fill(dt);
 
                 return dt;
-                
+
             }
             catch (Exception)
             {
-                
+
                 return null;
             }
         }
 
-        
+
 
         protected void BuscarBtn_Click(object sender, EventArgs e)
         {
@@ -129,17 +133,17 @@ namespace LoginPage.Carrito
                 }
             }
             catch (Exception) { }
-           
+
 
         }
 
-        
+
 
         protected void Actualizar_Click(object sender, EventArgs e)
         {
 
             ActualizarPrecio();
-            
+
         }
 
 
@@ -155,7 +159,7 @@ namespace LoginPage.Carrito
                 {
 
                     string Nombre = GridView1.Rows[counter].Cells[0].Text;
-                    TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;                   
+                    TextBox txtValor = GridView1.Rows[counter].Cells[1].FindControl("txtQuantity") as TextBox;
                     int Stock = Convert.ToInt32(txtValor.Text);
                     string Sucursal = GridView1.Rows[counter].Cells[2].Text;
                     int Precio = Convert.ToInt32(GridView1.Rows[counter].Cells[3].Text);
@@ -163,7 +167,7 @@ namespace LoginPage.Carrito
 
                     bool verificarstock = CarritoDAL.VerificarStock(Nombre, Sucursal, Stock);
 
-                    if(verificarstock == true)
+                    if (verificarstock == true)
                     {
                         CarritoDAL.RestarStock(Nombre, Sucursal, Stock);
                         operacionExitosa = true;
@@ -175,9 +179,9 @@ namespace LoginPage.Carrito
                     {
                         Response.Write("<script language=JavaScript> alert('No se puede realizar ya que no hay suficiente stock'); </script>");
                         operacionExitosa = false;
-                        
+
                     }
-                    
+
 
 
 
@@ -188,14 +192,14 @@ namespace LoginPage.Carrito
                 }
 
             }
-            if(operacionExitosa == true)
+            if (operacionExitosa == true)
             {
 
                 CarritoDAL.EliminarCarrito();
                 Cargar();
 
             }
-            
+
 
         }
 
@@ -264,20 +268,7 @@ namespace LoginPage.Carrito
 
         }
 
-        protected void DropDownList1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DropDownList2.Visible = true;
-            SelecProducto.Visible = true;
-            
 
-            MySqlCommand OrdenSqlSelect = new MySqlCommand("SELECT nombre FROM producto_especifico WHERE (sucursal=@sucursal)", Conexion.ObtenerConexion());
-            OrdenSqlSelect.Parameters.AddWithValue("@sucursal", DropDownList1.SelectedValue.ToString());
-            MySqlDataAdapter da = new MySqlDataAdapter(OrdenSqlSelect);
-            DataSet ds = new DataSet();
-            da.Fill(ds);
-            this.DropDownList2.DataSource = ds;
-            this.DropDownList2.DataBind();
 
-        }
     }
 }

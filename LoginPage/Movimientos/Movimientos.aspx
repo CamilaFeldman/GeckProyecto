@@ -1,16 +1,18 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Movimientos.aspx.cs" Inherits="LoginPage.Movimientos.Movimientos" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="content-wrapper">
-    <div class="content">
+          <div class="content">
+
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
     <div class="gvclass">
 
-<asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="258px" Width="720px" HorizontalAlign="Center" AutoGenerateColumns="False">
+<asp:GridView ID="GridView1" runat="server" BackColor="White" BorderColor="#999999" BorderStyle="None" BorderWidth="1px" CellPadding="3" GridLines="Vertical" Height="258px" Width="720px" HorizontalAlign="Center" AutoGenerateColumns="False" OnSelectedIndexChanged="GridView1_SelectedIndexChanged">
         <AlternatingRowStyle BackColor="#DCDCDC" />
         <Columns>
-            <asp:ButtonField HeaderText="Selec" Text="Botón" ButtonType="Button" />
+            <asp:ButtonField HeaderText="Eliminar" Text="Eliminar" ButtonType="Button" CommandName="SELECT" />
             <asp:BoundField HeaderText="Nombre" DataField="nombre" />
             <asp:BoundField HeaderText="Cantidad" DataField="cantidad" />
             <asp:BoundField HeaderText="Sucursal" DataField="sucursal" />
@@ -38,9 +40,7 @@
     <br />
     <asp:Button ID="CerrarCajaBtn" runat="server" Text="Cerrar monto de caja" OnClick="CerrarCajaBtn_Click" Width="219px" />
     <br />
-    
-
-
-        </div></div>
+   </div>
+</div>
 </asp:Content>
 

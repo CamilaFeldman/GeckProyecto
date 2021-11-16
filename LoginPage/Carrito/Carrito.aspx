@@ -1,18 +1,17 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="LoginPage.Carrito.Carrito" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <div class="content-wrapper">
-    <div class="content">
+          <div class="content">
     <style type="text/css">
     .gvclass table th {text-align:center;}
     </style>
     <br />
-    <asp:Label ID="SelecSucursal" runat="server" Text="Seleccionar sucursal"></asp:Label>
-    <br />
-    <asp:DropDownList ID="DropDownList1" runat="server" AutoPostBack="True"  DataTextField="nombre" DataValueField="nombre" OnSelectedIndexChanged="DropDownList1_SelectedIndexChanged" Width="142px"></asp:DropDownList>
+    <asp:Label ID="Label1" runat="server" Text="Sucursal:"></asp:Label><asp:Label ID="SucursalLbl" runat="server" Text=""></asp:Label>
     <br />
     <asp:Label ID="SelecProducto" runat="server" Text="Seleccionar producto" Visible="false"></asp:Label>
     <br />
-    <asp:DropDownList ID="DropDownList2" Visible="false" runat="server" AutoPostBack="True"  DataTextField="nombre" DataValueField="nombre" Width="201px"></asp:DropDownList>
+    <asp:DropDownList ID="DropDownList2" runat="server" AutoPostBack="True"  DataTextField="nombre" DataValueField="nombre" Width="201px"></asp:DropDownList>
     <br />
     <br />
     <asp:Button ID="BuscarBtn" runat="server" Text="Agregar al carrito" OnClick="BuscarBtn_Click" Width="136px" />

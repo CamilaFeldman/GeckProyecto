@@ -21,19 +21,25 @@ namespace LoginPage.PaginasComplementarias
                 da.Fill(ds);
                 this.SucursalDdl.DataSource = ds;
                 this.SucursalDdl.DataBind();
+                try
+                {
+                    string sucursalActual = Session["sucursal"].ToString();
+                    SucursalDdl.SelectedValue = sucursalActual;
+                }
+                catch (Exception) { }
+
+                Session["sucursal"] = SucursalDdl.SelectedValue;
 
             }
 
-            Session["sucursal"] = SucursalDdl.SelectedValue;
 
         }
 
         protected void SucursalDdl_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (!IsPostBack)
-            {
-                Session["sucursal"] = SucursalDdl.SelectedValue;
-            }
+
+            Session["sucursal"] = SucursalDdl.SelectedValue;
+
         }
     }
 }
